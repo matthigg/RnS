@@ -1,0 +1,31 @@
+I'm able to deploy a Django application just fine using this tutorial:
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html
+
+... however, if I upgrade Django from 2.1.1 to 2.2.3 in the requirements.txt file & deploy to AWS I get a 500 error and this message show up in the logs:
+
+mod_wsgi (pid=3748): Target WSGI script '/opt/python/current/app/config/wsgi.py' cannot be loaded as Python module.
+mod_wsgi (pid=3748): Exception occurred processing WSGI script '/opt/python/current/app/config/wsgi.py'.
+Traceback (most recent call last):
+  File "/opt/python/current/app/config/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in 
+    get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/opt/python/run/venv/local/lib/python3.6/site-packages/django/apps/registry.py", line 83, in populate
+    raise RuntimeError("populate() isn't reentrant")
+    RuntimeError: populate() isn't reentrant
+
+I've ssh'd into the instance to check the version of Python:
+
+$ python --version
+Python 2.7.16
+
+$ python3 --version
+Python 3.6.8
+
+After upgrading Django to 2.2.3 everything runs fine locally, running $ python3 manage.py check shows 0 errors, but I'm not sure what's breaking in the AWS elastic beanstalk instance.
+
+Has anyone else had any issues upgrading Django? Downgrading to Django 2.1.1 (or 2.1.10) removes the problem but it'd be nice to run the latest version. Thanks.
