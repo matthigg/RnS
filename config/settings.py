@@ -76,20 +76,20 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
 
     # SQLite3
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 
     # Postgres
-    # 'default': {
-    #   'ENGINE':   'django.db.backends.postgresql',
-    #   'NAME':     os.environ['RNS_DATABASE_NAME'],
-    #   'USER':     os.environ['RNS_DATABASE_USER'],
-    #   'PASSWORD': os.environ['RNS_DATABASE_PASSWORD'],
-    #   'HOST':     os.environ['RNS_DATABASE_HOST'],
-    #   'PORT':     os.environ['RNS_DATABASE_PORT'],
-    # }
+    'default': {
+      'ENGINE':   'django.db.backends.postgresql',
+      'NAME':     os.environ['RNS_DATABASE_NAME'],
+      'USER':     os.environ['RNS_DATABASE_USER'],
+      'PASSWORD': os.environ['RNS_DATABASE_PASSWORD'],
+      'HOST':     os.environ['RNS_DATABASE_HOST'],
+      'PORT':     os.environ['RNS_DATABASE_PORT'],
+    }
 }
 
 
