@@ -59,6 +59,13 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
     left: 35vw;
     opacity: 1;
     position: absolute;
+    & .icon-phone {
+      & circle {
+        fill: $primary-color;
+      }
+      height: calc(1rem + 1vw);
+      width: calc(1rem + 1vw);
+    }
     @media (max-width: 1160px) {
       opacity: 0;
       position: absolute; // this is here to remove it from the DOM

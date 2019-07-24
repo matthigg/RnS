@@ -13,7 +13,10 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbar-rns">
-    <span class="navbar-brand-phone">{% include 'business_information/phone-number.html' %}</span>
+    <span class="navbar-brand-phone">
+      {% include 'svg/phone.svg' %}
+      {% include 'business_information/phone-number.html' %}
+    </span>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link nav-link-home" href="{% url 'index' %}">HOME</a>

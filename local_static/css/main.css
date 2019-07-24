@@ -731,6 +731,15 @@
   position: absolute;
 }
 
+.navbar .navbar-brand-phone .icon-phone {
+  height: calc(1rem + 1vw);
+  width: calc(1rem + 1vw);
+}
+
+.navbar .navbar-brand-phone .icon-phone circle {
+  fill: white;
+}
+
 @media (max-width: 1160px) {
   .navbar .navbar-brand-phone {
     opacity: 0;
