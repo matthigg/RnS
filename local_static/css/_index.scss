@@ -19,10 +19,10 @@
     & .landing-page-background {
       background-image: 
         linear-gradient(
-          rgba(0, 42, 29, 0.5),
-          rgba(0, 42, 29, 0.5),
+          rgba(2, 3, 5, 0.5),
+          rgba(2, 3, 5, 0.5),
         ),
-        url('/static/img/house2.jpg');
+        url('/static/img/house-01.jpg');
       height: 100vh;
       left: 0;
       position: fixed;
@@ -31,88 +31,24 @@
       z-index: -1;
       @extend %background-fixed;
     }
-    & .landing-page-h1 {
-      color: $primary-color;
-      font-size: calc(1rem + 0.5vw);
-      font-style: italic;
-      font-weight: 500;
-      left: 0;
-      margin: auto;
-      position: absolute;
-      right: 0;
-      text-align: center;
-      top: 25vh;
-    }
-    & .landing-page-headline {
-      color: $primary-color;
-      font-size: calc(1rem + 3vw);
-      left: 5vw;
-      position: absolute;
-      top: 75vh;
-      white-space: nowrap;  // prevent line breaks in text w/position: absolute
-      & .lph-line-1 {
-        font-weight: 100;
-        position: absolute;
-      }
-      & .lph-line-2 {
-        left: calc(4rem + 11.5vw);
-        position: absolute;
-      }
-      & .lph-line-3 {
-        left: calc(10rem + 30vw);
-        position: absolute;
-      }
-      & .lph-line-4 {
-        left: calc(10rem + 30vw);
-        position: absolute;
-        top: calc(2rem + 1.25vw);
-      }
-      & .lph-bold {
-        font-weight: 600;
-      }
-      & .lph-alpha-bold {
-        color: $secondary-color;
-        font-weight: 900;
-        font-style: italic;
-      }
-      & .lph-alpha-dash {
-        position: relative;
-        top: calc(-0.5rem - 1.5vw);
-      }
-      & .lph-omega-bold {
-        font-weight: 900;
-        font-style: italic;
-      }
-      & .lph-omega-dash {
-        color: $secondary-color;
-        position: relative;
-        top: calc(-0.5rem - 1.5vw);
-      }
-      @media (max-width: 769px) {
-        top: 70vh;
-        & .lph-line-2 {
-          left: 0;
-          top: calc(1.5rem + 1vw);
-        }
-        & .lph-line-3 {
-          left: calc(6rem + 0.75vw);
-          top: calc(3rem + 2vw);
-        }
-        & .lph-line-4 {
-          left: calc(6rem + 0.75vw);
-          top: calc(4.5rem + 3vw);
-        }
-      }
-    }
     & .landing-page-placeholder {
-      height: 100vh;
+      height: 90vh;
       width: 100%;
     }
   }
 
-  & .landing-page-bottom-border {
-    background-color: $secondary-color-rgba;
-    height: calc(1rem + 1vw);
+  & .landing-page-headline {
+    align-items: center;
+    background-color: $senary-color-rgba;
+    color: $primary-color;
+    display: flex;
+    font-size: calc(1rem + 0.25vw);
+    font-style: italic;
+    height: 10vh;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+    width: 100%;
   }
 
   // Section 1
