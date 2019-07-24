@@ -4,10 +4,6 @@ $navbar-free-quote-minimize-transition: 0.2s ease-in;
 $navbar-free-quote-hover-transition: 0.15s ease-in;
 $navbar-call-phone-hover-transition: 0.15s ease-in;
 
-#navbar-simple-clean {
-  width: 200px;
-}
-
 .navbar {
   background-color: $secondary-color;
   padding: calc(0.5rem + 0.25vw);
@@ -29,7 +25,7 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
       opacity: 1;
       position: relative;
     }
-    @media (max-width: 1080px) {
+    @media (max-width: 1260px) {
       & .navbar-brand-phone {
         opacity: 0;
         position: absolute; // this is here to remove it from the DOM
@@ -52,7 +48,7 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
   }
   & .nav-link {
     color: $primary-color;
-    font-size: calc(1rem + 0.5vw);
+    font-size: calc(0.75rem + 0.5vw);
     margin: calc(1rem + 0.5vw) auto;
     padding: 0;
     position: relative;
@@ -89,17 +85,20 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
         width: 50%;
       }
     }
+    @media (max-width: 768px) {
+      font-size: calc(1rem + 0.25vw);
+    }
   }
   @media (min-width: 768px) {
     background-color: $secondary-color-rgba;
     margin: 0;
-    padding: 0 calc(1rem + 1vw);
     transition: $navbar-transition;
     &.navbar-minimized-false {
-      top: calc(0.25rem + 0.25vw);
+      padding: calc(0.5rem + 1vw);
     }
     &.navbar-minimized-true {
       background-color: $secondary-color;
+      padding: 0 calc(1rem + 1vw);
       position: fixed;
       top: 0;
       z-index: 10;
