@@ -839,14 +839,14 @@
 }
 
 .navbar-call-now {
-  background-color: #F3D333;
-  border: 2px solid white;
-  border-radius: calc(0.5rem + 0.1vw);
+  background-color: #020305;
+  border: 2px solid #F3D333;
+  border-radius: calc(1rem + 0.1vw);
   color: white;
   display: none;
   font-size: calc(1rem + 0.25vw);
   font-style: italic;
-  font-weight: 800;
+  font-weight: 600;
   padding: calc(0.25rem + 0.25vw) calc(0.5rem + 0.25vw);
   position: fixed;
   left: calc(1rem + 0.5vw);
@@ -866,12 +866,18 @@
 }
 
 .navbar-call-now .icon-phone path {
-  fill: #F3D333;
+  fill: #020305;
 }
 
 .navbar-call-now:hover {
-  background-color: white;
-  color: #F3D333;
+  background-color: #F3D333;
+  color: white;
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
+}
+
+.navbar-call-now:hover .icon-phone path {
+  fill: #F3D333;
   -webkit-transition: 0.15s ease-in;
   transition: 0.15s ease-in;
 }

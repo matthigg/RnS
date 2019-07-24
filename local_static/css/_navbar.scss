@@ -152,14 +152,14 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
 
 // Navbar "Call Now" Button
 .navbar-call-now {
-  background-color: $secondary-color;
-  border: 2px solid $primary-color;
-  border-radius: calc(0.5rem + 0.1vw);
+  background-color: $senary-color;
+  border: 2px solid $secondary-color;
+  border-radius: calc(1rem + 0.1vw);
   color: $primary-color;
   display: none;
   font-size: calc(1rem + 0.25vw);
   font-style: italic;
-  font-weight: 800;
+  font-weight: 600;
   padding: calc(0.25rem + 0.25vw) calc(0.5rem + 0.25vw);
   position: fixed;
   left: calc(1rem + 0.5vw);
@@ -172,13 +172,19 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
       fill: $primary-color;
     }
     & path {
-      fill: $secondary-color;
+      fill: $senary-color;
     }
   }
   &:hover {
-    background-color: $primary-color;
-    color: $secondary-color;
-    transition: $navbar-free-quote-hover-transition;
+    background-color: $secondary-color;
+    color: $primary-color;
+    transition: $navbar-call-phone-hover-transition;
+    & .icon-phone{
+      & path {
+        fill: $secondary-color;
+        transition: $navbar-call-phone-hover-transition;
+      }
+    }
   }
   &:focus {
     outline: none;
