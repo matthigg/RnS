@@ -670,6 +670,7 @@
 
 .navbar {
   background-color: #020305;
+  border-bottom: 2px solid #F3D333;
   position: fixed;
   width: 100%;
   z-index: 10;
