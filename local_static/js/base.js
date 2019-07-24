@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   
   const navbar = document.querySelector('.navbar');
-  const nbni = document.querySelectorAll('.nbni'); // "navbar-brand-non-initials"
-  const nbsh = document.querySelector('.nbsh'); // "navbar-brand-sub-heading"
+  const navbar_brand = document.querySelector('.navbar-brand');
   const navbar_free_quote = document.querySelector('.navbar-free-quote');
 
   window.addEventListener('scroll', () => {
@@ -12,40 +11,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // Change the appearance of the navbar when the user scrolls down the page
     if (window.scrollY > 1) {
 
-      // "Minimize" the navbar
+      // Shrink the navbar
       navbar.classList.add('navbar-minimized-true');
       navbar.classList.remove('navbar-minimized-false');
 
-      // Hide the navbar brand non-initials
-      nbni.forEach((nbni) => {
-        nbni.classList.add('nbni-hide');
-        nbni.classList.remove('nbni-show');
-      });
+      // Shrink the navbar brand/logo
+      navbar_brand.classList.add('shrink');
+      navbar_brand.classList.remove('expand');
 
-      // Make the navbar sub-heading small
-      nbsh.classList.add('nbsh-small');
-      nbsh.classList.remove('nbsh-large');
-
-      // "Minimize" the 'free quote' button
+      // Reposition/move up the 'free quote' button
       navbar_free_quote.classList.add('navbar-free-quote-minimized-true');
       navbar_free_quote.classList.remove('navbar-free-quote-minimized-false');
     } else {
 
-      // "Maximize" the navbar
+      // Expand the navbar
       navbar.classList.add('navbar-minimized-false');
       navbar.classList.remove('navbar-minimized-true');
 
-      // Show the navbar brand non-initials
-      nbni.forEach((nbni) => {
-        nbni.classList.add('nbni-show');
-        nbni.classList.remove('nbni-hide');
-      });
+      // Shrink the navbar brand/logo
+      navbar_brand.classList.add('expand');
+      navbar_brand.classList.remove('shrink');
 
-      // Make the navbar sub-heading large
-      nbsh.classList.add('nbsh-large');
-      nbsh.classList.remove('nbsh-small');
-
-      // "Maximize" the 'free quote' button
+      // Reposition/move down the 'free quote' button
       navbar_free_quote.classList.add('navbar-free-quote-minimized-false');
       navbar_free_quote.classList.remove('navbar-free-quote-minimized-true');
     }
