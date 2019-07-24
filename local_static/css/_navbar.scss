@@ -15,36 +15,38 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
     font-size: calc(1.25rem + 1vw);
     line-height: 1;
     text-align: center;
-    &.expand {
-      & .nbni {
-        transition: $navbar-brand-transition;
+    @media (min-width: 768px) {
+      &.expand {
+        & .nbni {
+          transition: $navbar-brand-transition;
+        }
+        & .nbni-dash {
+          opacity: 0;
+          transition: $navbar-brand-transition;
+        }
+        & .nbsh {
+          display: block;
+          font-size: calc(1rem + 1vw);
+          opacity: 1;
+          transition: $navbar-brand-transition;
+        }
       }
-      & .nbni-dash {
-        opacity: 0;
-        position: absolute;
-        transition: $navbar-brand-transition;
-      }
-      & .nbsh {
-        display: block;
-        font-size: calc(1rem + 1vw);
-        transition: $navbar-brand-transition;
-      }
-    }
-    &.shrink {
-      & .nbni {
-        font-size: 0;
-        opacity: 0;
-        transition: $navbar-brand-transition;
-      }
-      & .nbni-dash {
-        opacity: 1;
-        position: inline;
-        transition: $navbar-brand-transition;
-      }
-      & .nbsh {
-        display: block;
-        font-size: calc(0.5rem + 0.5vw);
-        transition: $navbar-brand-transition;
+      &.shrink {
+        & .nbni {
+          font-size: 0;
+          opacity: 0;
+          transition: $navbar-brand-transition;
+        }
+        & .nbni-dash {
+          opacity: 1;
+          transition: $navbar-brand-transition;
+        }
+        & .nbsh {
+          display: block;
+          font-size: 0;
+          opacity: 0;
+          transition: $navbar-brand-transition;
+        }
       }
     }
   }
