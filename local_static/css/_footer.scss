@@ -1,0 +1,120 @@
+.footer {
+  background-color: $secondary-color-rgba;
+
+  // Brand
+  .footer-brand {
+    color: $primary-color;
+    margin: calc(1rem + 1vw) 0;
+    text-align: center;
+    & .footer-brand-headline {
+      font-size: calc(2rem + 1vw);
+      font-style: italic;
+      font-weight: 900;
+    }
+    & .footer-brand-headline-sub {
+      font-size: calc(1.5rem + 1vw);
+      font-style: italic;
+      font-weight: 700;
+    }
+    & .footer-brand-text {
+      font-size: calc(1rem + 0.5vw);
+      padding: 0 calc(1rem + 1vw);
+      & .footer-brand-text-strong {
+        font-weight: 800;
+        font-style: italic;
+      }
+    }
+  }
+
+  // Phone
+  .footer-phone {
+    color: $primary-color;
+    margin: calc(1rem + 1vw) 0;
+    text-align: center;
+    & .footer-phone-headline {
+      font-size: calc(1rem + 1vw);
+      font-style: italic;
+      font-weight: 700;
+    }
+    & .footer-phone-text {
+      font-size: calc(1.5rem + 1vw);
+      font-style: italic;
+      font-weight: 800;
+    }
+    & .icon-phone {
+      height: calc(2rem + 1vw);
+      & circle {
+        fill: $primary-color;
+      }
+      & path {
+        fill: $secondary-color-rgba;
+      }
+    }
+    & .footer-hours-of-operation-text {
+      font-size: calc(1rem + 0.5vw);
+      font-weight: 500;
+    }
+  }
+
+  // Flair
+  .footer-flair {
+    margin: calc(1rem + 1vw) 0;
+    & img {
+      margin: calc(0.1rem + 0.1vw);
+    }
+    & .footer-icon-flair-google {
+      height: calc(3.5rem + 2.5vw);
+    }
+    & .footer-icon-flair-facebook {
+      height: calc(3rem + 2.5vw);
+    }
+    & .footer-icon-flair-yelp {
+      height: calc(4rem + 3.5vw);
+    }
+    & .footer-icon-flair-bbb {
+      height: calc(2.7rem + 2vw);
+    }
+  }
+
+  // Back-To-Top Link & Copyright
+  .footer-back-to-top-and-copyright {
+    color: $primary-color;
+    font-size: calc(1rem + 0.5vw);
+    padding: 0 calc(2rem + 2vw) calc(2rem + 2vw) calc(2rem + 2vw);
+    & .footer-copyright {
+      font-size: calc(0.75rem + 0.5vw);
+      text-align: center;
+    }
+    & .back-to-top-arrow-up-wrapper {
+      margin: auto;
+      width: max-content;
+      & button {
+        background-color: rgba(0, 0, 0, 0);
+        border: 2px solid white;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        height: 4rem;
+        width: 4rem;
+
+        // https://css-tricks.com/snippets/css/css-triangle/
+        & .arrow-up {
+          width: 0; 
+          height: 0; 
+          border-left: 1rem solid transparent;
+          border-right: 1rem solid transparent;
+          border-bottom: 1rem solid $primary-color;
+        }
+        &:hover {
+          background-color: $primary-color;
+          & .arrow-up {
+            border-bottom-color: $secondary-color;
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+  }
+}

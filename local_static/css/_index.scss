@@ -1,0 +1,351 @@
+%background-fixed {
+  background-color: $quarternary-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+%card-background {
+  border-radius: calc(0.5rem + 0.5vw) calc(0.5rem + 0.5vw) 0 0;
+  height: calc(10rem + 0.5vw);
+}
+
+// Index Page
+.index-page {
+
+  // Landing Page
+  & .landing-page-row {
+    position: relative;
+    & .landing-page-background {
+      background-image: 
+        linear-gradient(
+          rgba(0, 42, 29, 0.5),
+          rgba(0, 42, 29, 0.5),
+        ),
+        url('/static/img/house2.jpg');
+      height: 100vh;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+      @extend %background-fixed;
+    }
+    & .landing-page-h1 {
+      color: $primary-color;
+      font-size: calc(1rem + 0.5vw);
+      font-style: italic;
+      font-weight: 500;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 25vh;
+    }
+    & .landing-page-headline {
+      color: $primary-color;
+      font-size: calc(1rem + 3vw);
+      left: 5vw;
+      position: absolute;
+      top: 75vh;
+      white-space: nowrap;  // prevent line breaks in text w/position: absolute
+      & .lph-line-1 {
+        font-weight: 100;
+        position: absolute;
+      }
+      & .lph-line-2 {
+        left: calc(4rem + 11.5vw);
+        position: absolute;
+      }
+      & .lph-line-3 {
+        left: calc(10rem + 30vw);
+        position: absolute;
+      }
+      & .lph-line-4 {
+        left: calc(10rem + 30vw);
+        position: absolute;
+        top: calc(2rem + 1.25vw);
+      }
+      & .lph-bold {
+        font-weight: 600;
+      }
+      & .lph-alpha-bold {
+        color: $secondary-color;
+        font-weight: 900;
+        font-style: italic;
+      }
+      & .lph-alpha-dash {
+        position: relative;
+        top: calc(-0.5rem - 1.5vw);
+      }
+      & .lph-omega-bold {
+        font-weight: 900;
+        font-style: italic;
+      }
+      & .lph-omega-dash {
+        color: $secondary-color;
+        position: relative;
+        top: calc(-0.5rem - 1.5vw);
+      }
+      @media (max-width: 769px) {
+        top: 70vh;
+        & .lph-line-2 {
+          left: 0;
+          top: calc(1.5rem + 1vw);
+        }
+        & .lph-line-3 {
+          left: calc(6rem + 0.75vw);
+          top: calc(3rem + 2vw);
+        }
+        & .lph-line-4 {
+          left: calc(6rem + 0.75vw);
+          top: calc(4.5rem + 3vw);
+        }
+      }
+    }
+    & .landing-page-placeholder {
+      height: 100vh;
+      width: 100%;
+    }
+  }
+
+  & .landing-page-bottom-border {
+    background-color: $secondary-color-rgba;
+    height: calc(1rem + 1vw);
+  }
+
+  // Section 1
+  & .section-1-row {
+    background-color: $primary-color;
+    color: $quarternary-color;
+    height: 100%;
+    overflow: hidden;
+    padding: calc(0.5rem + 3.5vw);
+    & .section-1-image-background {
+      background-image: url('/static/img/pressure-washer-1.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    & .section-1-headline {
+      font-size: calc(1rem + 1.5vw);
+      font-weight: 700;
+      margin: calc(1rem + 0.5vw) 0;
+      text-align: center;
+      width: 100%;
+      & .section-1-headline-bold {
+        color: $secondary-color;
+        font-style: italic;
+        font-weight: 900;
+      }
+    }
+    & .section-1-paragraph {
+      font-size: calc(1rem + 0.5vw);
+      margin-bottom: calc(1rem + 0.5vw);
+      & .section-1-paragraph-bold {
+        color: $secondary-color;
+        font-style: italic;
+        font-weight: 700;
+      }
+    }
+  }
+
+  // Section 2
+  $section-2-hover-transition-time: 0.25s;
+
+  & .section-2-row {
+    background-color: $secondary-color-rgba;
+    height: max-content;
+    padding: 0 calc(1rem + 6vw);
+    & .card {
+      border: 0;
+      border-radius: calc(0.5rem + 0.5vw) calc(0.5rem + 0.5vw);
+      margin: calc(2rem + 0.5vw) auto;
+      &:hover {
+        cursor: pointer;
+        & .card-body {
+          color: $tertiary-color;
+          transition: $section-2-hover-transition-time;
+        }
+        & .card-link-text {
+          color: $tertiary-color;
+          transition: $section-2-hover-transition-time;
+        }
+        & .icon-arrow-right {
+          fill: $tertiary-color;
+          transition: $section-2-hover-transition-time;
+        }
+      }
+    }
+    & .card-background-house-washing {
+      background-image: url('/static/img/house1.jpg');
+      @extend %card-background;
+      @extend %background-fixed;
+    }
+    & .card-background-patio-and-deck {
+      background-image: url('/static/img/patio.jpg');
+      @extend %card-background;
+      @extend %background-fixed;
+    }
+    & .card-background-graffiti-removal {
+      background-image: url('/static/img/graffiti-removal.jpg');
+      @extend %card-background;
+      @extend %background-fixed;
+    }
+    & .card-body {
+      color: $quarternary-color;
+      font-size: calc(1rem + 0.25vw);
+      font-style: italic;
+      font-weight: 700;
+      padding: calc(0.25rem + 0.25vw) 0 0 0;  // padding: 20px by default
+      text-align: center;
+    }
+    & .card-link {
+      height: max-content;
+      padding-bottom: calc(0.5rem + 0.25vw);
+      width: max-content;
+      & .card-link-text {
+        color: $quarternary-color;
+        font-size: calc(1rem + 0.25vw);
+        margin-right: calc(0.5rem + 0.5vw);
+        position: relative;
+      }
+      & .icon-arrow-right {
+        fill: $quarternary-color;
+        height: calc(1rem + 0.25vw);
+        stroke: $primary-color;
+      }
+    }
+    & .section-2-flair {
+      margin-bottom: calc(2rem + 1vw);
+      & img {
+        margin: calc(1rem + 0.5vw);
+      }
+      & .section-2-icon-flair-google {
+        height: calc(3.5rem + 2.5vw);
+      }
+      & .section-2-icon-flair-facebook {
+        height: calc(3rem + 2.5vw);
+      }
+      & .section-2-icon-flair-yelp {
+        height: calc(4rem + 3.5vw);
+      }
+      & .section-2-icon-flair-bbb {
+        height: calc(2.7rem + 2vw);
+      }
+    }
+  }
+
+  // Section 3
+  & .section-3-row {
+    background-color: $primary-color;
+    color: $quarternary-color;
+    height: max-content;
+    padding: calc(0.25rem + 3.75vw);
+    text-align: center;
+    & .section-3-text {
+      & .section-3-text-headline {
+        font-size: calc(1rem + 1.5vw);
+        font-weight: 700;
+        margin-bottom: calc(2rem + 0.5vw);
+        & .section-3-text-headline-bold {
+          color: $secondary-color;
+          font-style: italic;
+          font-weight: 800;
+        }
+      }
+      & .section-3-text-paragraph {
+        font-size: calc(1rem + 0.5vw);
+        & .section-3-text-paragraph-bold {
+          color: $secondary-color;
+          font-style: italic;
+          font-weight: 700;
+        }
+      }
+      & .section-3-text-paragraph-urgent {
+        font-size: calc(1rem + 1vw);
+        font-style: italic;
+        font-weight: 700;
+      }
+      & .section-3-text-paragraph-email {
+        font-size: calc(1rem + 1vw);
+        font-style: italic;
+        font-weight: 700;
+        & .icon-email {
+          height: calc(1.5rem + 1vw);
+          & circle {
+            fill: $quarternary-color;
+          }
+          & path {
+            fill: $primary-color;
+          }
+        }
+      }
+      & .section-3-text-paragraph-phone {
+        font-size: calc(1rem + 1vw);
+        font-style: italic;
+        font-weight: 700;
+        margin-bottom: calc(1rem + 1vw);
+        & .icon-phone {
+          height: calc(1.5rem + 1vw);
+          & circle {
+            fill: $quarternary-color;
+          }
+          & path {
+            fill: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  // Index Page Modals
+  .modal {
+    & .btn-free-quote {
+      border: none;
+      background-color: $primary-color;
+      border-radius: calc(0.5rem + 0.1vw);
+      color: $quarternary-color;
+      font-size: calc(1rem + 0.25vw);
+      & .btn-free-quote-highlight {
+        font-style: italic;
+        font-weight: 700;
+      }
+      &:hover {
+        background-color: $quarternary-color;
+        color: $primary-color;
+        transition: 0.15s ease-in;
+      }
+    }
+    & .modal-body {
+      color: $quarternary-color;
+      font-size: calc(1rem + 0.5vw);
+    }
+    & .modal-content {
+      border: 0;
+    }
+    & .modal-header {
+      background-color: $secondary-color;
+    }
+    & .modal-footer {
+      background-color: $secondary-color;
+    }
+    & .modal-title {
+      color: $primary-color;
+      font-size: calc(1rem + 0.5vw);
+      font-style: italic;
+      font-weight: 600;
+      & .modal-title-highlight{
+        font-weight: 800;
+      }
+    }
+    & .close {
+      color: $primary-color;
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
