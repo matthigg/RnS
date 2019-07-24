@@ -1,35 +1,48 @@
 $navbar-transition: 0.2s ease-in;
-$navbar-stripe-transition: 0.2s ease-in;
+$navbar-brand-hide-transition: 0.35s ease-out;
 $navbar-free-quote-minimize-transition: 0.2s ease-in;
 $navbar-free-quote-hover-transition: 0.15s ease-in;
 $navbar-call-phone-hover-transition: 0.15s ease-in;
 
 .navbar {
   background-color: $secondary-color;
-  padding: calc(0.5rem + 0.25vw);
+  // padding: calc(0.5rem + 0.25vw);
   position: fixed;
   width: 100%;
   z-index: 10;
   & .navbar-brand {
     color: $primary-color;
-    display: flex;
-    font-size: calc(1.5rem + 2vw);
+    font-size: calc(1.25rem + 1.5vw);
     font-style: italic;
     font-weight: 900;
-    line-height: 0;
+    height: auto !important;
+    line-height: 1;
     transition: $navbar-transition;
-    & .navbar-brand-phone {
-      display: block;
-      font-size: calc(1.25rem + 0.5vw);
-      left: calc(1.5rem + 1vw);
-      opacity: 1;
-      position: relative;
+    & .navbar-brand-hide {
+      font-size: 0;
+      opacity: 0;
+      transition: $navbar-brand-hide-transition;
     }
-    @media (max-width: 1260px) {
-      & .navbar-brand-phone {
-        opacity: 0;
-        position: absolute; // this is here to remove it from the DOM
-      }
+    & .navbar-brand-show {
+      font-size: calc(1.25rem + 1.5vw);
+      transition: $navbar-brand-hide-transition;
+    }
+    & .navbar-brand-subheading {
+      font-size: calc(1rem + 0.5vw);
+    }
+  }
+  & .navbar-brand-phone {
+    color: $primary-color;
+    display: block;
+    font-size: calc(1.25rem + 0.5vw);
+    font-style: italic;
+    font-weight: 900;
+    left: 35vw;
+    opacity: 1;
+    position: absolute;
+    @media (max-width: 1160px) {
+      opacity: 0;
+      position: absolute; // this is here to remove it from the DOM
     }
   }
   & .navbar-toggler {
@@ -98,49 +111,10 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
     }
     &.navbar-minimized-true {
       background-color: $secondary-color;
-      padding: 0 calc(1rem + 1vw);
+      padding: 0 calc(1.25rem + 1vw);
       position: fixed;
       top: 0;
       z-index: 10;
-    }
-  }
-}
-
-.navbar-stripe-wrapper {
-  background: blue;
-  opacity: 0;
-  position: absoute;  // remove nav stripe from DOM on small screens
-  @media (min-width: 768px) {
-    position: absolute;
-    transition: $navbar-stripe-transition;
-    width: 100%;
-    &.navbar-stripe-minimized-false {
-      opacity: 1;
-      top: calc(4rem + 2.5vw);
-    }
-    &.navbar-stripe-minimized-true {
-      top: 0;
-    }
-    & .navbar-stripe {
-      background-color: $secondary-color-rgba;
-      height: calc(0.5rem + 0.5vw);
-      position: absolute;
-      width: 100%;
-      &.navbar-stripe-minimized-true {
-        height: 0;
-      }
-    }
-    & .navbar-stripe-text {
-      color: $primary-color;
-      font-size: calc(1rem + 1.25vw);
-      font-style: italic;
-      font-weight: 500;
-      left: calc(1.5rem + 1.25vw);
-      position: absolute;
-      top: calc(-0.5rem - 0.75vw);
-      &.navbar-stripe-minimized-true {
-        font-size: 0;
-      }
     }
   }
 }
@@ -209,7 +183,7 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
   }
   @media (min-width: 768px) {
     &.navbar-free-quote-minimized-false {
-      top: calc(5rem + 3vw);
+      top: calc(6rem + 3vw);
     }
     &.navbar-free-quote-minimized-true {
       top: calc(4rem + 2vw);

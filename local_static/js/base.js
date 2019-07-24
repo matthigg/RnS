@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   
   const navbar = document.querySelector('.navbar');
+  const navbar_brand_non_initials = document.querySelectorAll('.navbar-brand-non-initials');
   const navbar_free_quote = document.querySelector('.navbar-free-quote');
 
   window.addEventListener('scroll', () => {
@@ -14,6 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.add('navbar-minimized-true');
       navbar.classList.remove('navbar-minimized-false');
 
+      // Hide the navbar brand non-initials
+      navbar_brand_non_initials.forEach((non_initial) => {
+        non_initial.classList.add('navbar-brand-hide');
+        non_initial.classList.remove('navbar-brand-show');
+      });
+
       // "Minimize" the 'free quote' button
       navbar_free_quote.classList.add('navbar-free-quote-minimized-true');
       navbar_free_quote.classList.remove('navbar-free-quote-minimized-false');
@@ -22,6 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // "Maximize" the navbar
       navbar.classList.add('navbar-minimized-false');
       navbar.classList.remove('navbar-minimized-true');
+
+      // Show the navbar brand non-initials
+      navbar_brand_non_initials.forEach((non_initial) => {
+        non_initial.classList.add('navbar-brand-show');
+        non_initial.classList.remove('navbar-brand-hide');
+      });
 
       // "Maximize" the 'free quote' button
       navbar_free_quote.classList.add('navbar-free-quote-minimized-false');
