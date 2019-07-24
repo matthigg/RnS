@@ -1,34 +1,37 @@
 $navbar-transition: 0.2s ease-in;
-$navbar-brand-hide-transition: 0.35s ease-out;
+$navbar-brand-transition: 0.35s ease-out;
 $navbar-free-quote-minimize-transition: 0.2s ease-in;
 $navbar-free-quote-hover-transition: 0.15s ease-in;
 $navbar-call-phone-hover-transition: 0.15s ease-in;
 
 .navbar {
-  background-color: $secondary-color;
-  // padding: calc(0.5rem + 0.25vw);
+  background-color: $senary-color;
   position: fixed;
   width: 100%;
   z-index: 10;
   & .navbar-brand {
-    color: $primary-color;
-    font-size: calc(1.25rem + 1.5vw);
-    font-style: italic;
+    color: $secondary-color;
+    font-family: "Stencil", "Segoe UI", sans-serif;
+    font-size: calc(1.25rem + 1vw);
     font-weight: 900;
-    height: auto !important;
     line-height: 1;
-    transition: $navbar-transition;
-    & .navbar-brand-hide {
+    & .nbni-hide {
       font-size: 0;
       opacity: 0;
-      transition: $navbar-brand-hide-transition;
+      transition: $navbar-brand-transition;
     }
-    & .navbar-brand-show {
-      font-size: calc(1.25rem + 1.5vw);
-      transition: $navbar-brand-hide-transition;
+    & .nbni-show {
+      font-size: calc(1.25rem + 1vw);
+      transition: $navbar-brand-transition;
     }
-    & .navbar-brand-subheading {
-      font-size: calc(1rem + 0.5vw);
+    & .nbsh {
+      transition: $navbar-brand-transition;
+      &.nbsh-large {
+        font-size: calc(1rem + 1vw);
+      }
+      &.nbsh-small {
+        font-size: calc(0.5rem + 0.5vw);
+      }
     }
   }
   & .navbar-brand-phone {
@@ -103,14 +106,14 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
     }
   }
   @media (min-width: 768px) {
-    background-color: $secondary-color-rgba;
+    background-color: $senary-color-rgba;
     margin: 0;
     transition: $navbar-transition;
     &.navbar-minimized-false {
       padding: calc(0.5rem + 1vw);
     }
     &.navbar-minimized-true {
-      background-color: $secondary-color;
+      background-color: $senary-color;
       padding: 0 calc(1.25rem + 1vw);
       position: fixed;
       top: 0;
