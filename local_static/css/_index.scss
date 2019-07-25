@@ -52,25 +52,40 @@
       display: inline-flex;
       margin: calc(2rem + 0.5vw) auto;
       transition: $section-1-hover-transition;
-      & .card-background-house-washing {
-        background-image: url('/static/img/house-01.jpg');
+      & .card-background-fence-cleaning {
+        background-image: url('/static/img/fence-01.jpg');
+        margin: auto;
         @extend %card-background;
         @extend %background-fixed;
       }
-      & .card-background-patio-and-deck {
-        background-image: url('/static/img/house-02.jpg');
+      & .card-background-surface-cleaning {
+        background-image: url('/static/img/walkway-01.jpg');
+        margin: auto;
         @extend %card-background;
         @extend %background-fixed;
       }
-      & .card-background-graffiti-removal {
-        background-image: url('/static/img/house-03.jpg');
+      & .card-background-soft-wash {
+        background-image: url('/static/img/house-04.jpg');
+        margin: auto;
+        @extend %card-background;
+        @extend %background-fixed;
+      }
+      & .card-background-outdoor-stain-removal {
+        background-image: url('/static/img/rusty-wall-01.jpg');
+        margin: auto;
+        @extend %card-background;
+        @extend %background-fixed;
+      }
+      & .card-background-deck-cleaning-and-restoration {
+        background-image: url('/static/img/deck-01.jpg');
+        margin: auto;
         @extend %card-background;
         @extend %background-fixed;
       }
       & .card-body {
         color: $quarternary-color;
         font-size: calc(1rem + 0.25vw);
-        font-style: italic;
+        // font-style: italic;
         font-weight: 700;
         padding: calc(0.25rem + 0.25vw) 0 0 0;  // padding: 20px by default
         text-align: center;
@@ -79,7 +94,6 @@
       & .card-link {
         height: max-content;
         padding-bottom: calc(0.5rem + 0.25vw);
-        // width: max-content;
         & .card-link-text {
           color: $quarternary-color;
           font-size: calc(1rem + 0.25vw);
