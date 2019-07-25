@@ -52,45 +52,9 @@
   }
 
   // Section 1
+  $section-1-hover-transition: 0.2s ease-in;
+
   & .section-1-row {
-    background-color: $primary-color;
-    color: $quarternary-color;
-    height: 100%;
-    overflow: hidden;
-    padding: calc(0.5rem + 3.5vw);
-    & .section-1-image-background {
-      background-image: url('/static/img/pressure-washer-1.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
-    & .section-1-headline {
-      font-size: calc(1rem + 1.5vw);
-      font-weight: 700;
-      margin: calc(1rem + 0.5vw) 0;
-      text-align: center;
-      width: 100%;
-      & .section-1-headline-bold {
-        color: $secondary-color;
-        font-style: italic;
-        font-weight: 900;
-      }
-    }
-    & .section-1-paragraph {
-      font-size: calc(1rem + 0.5vw);
-      margin-bottom: calc(1rem + 0.5vw);
-      & .section-1-paragraph-bold {
-        color: $secondary-color;
-        font-style: italic;
-        font-weight: 700;
-      }
-    }
-  }
-
-  // Section 2
-  $section-2-hover-transition-time: 0.25s;
-
-  & .section-2-row {
     background-color: $secondary-color-rgba;
     height: max-content;
     padding: 0 calc(1rem + 6vw);
@@ -102,30 +66,30 @@
         cursor: pointer;
         & .card-body {
           color: $tertiary-color;
-          transition: $section-2-hover-transition-time;
+          transition: $section-1-hover-transition;
         }
         & .card-link-text {
           color: $tertiary-color;
-          transition: $section-2-hover-transition-time;
+          transition: $section-1-hover-transition;
         }
         & .icon-arrow-right {
           fill: $tertiary-color;
-          transition: $section-2-hover-transition-time;
+          // transition: $section-1-hover-transition;
         }
       }
     }
     & .card-background-house-washing {
-      background-image: url('/static/img/house1.jpg');
+      background-image: url('/static/img/house-01.jpg');
       @extend %card-background;
       @extend %background-fixed;
     }
     & .card-background-patio-and-deck {
-      background-image: url('/static/img/patio.jpg');
+      background-image: url('/static/img/house-02.jpg');
       @extend %card-background;
       @extend %background-fixed;
     }
     & .card-background-graffiti-removal {
-      background-image: url('/static/img/graffiti-removal.jpg');
+      background-image: url('/static/img/house-03.jpg');
       @extend %card-background;
       @extend %background-fixed;
     }
@@ -151,24 +115,6 @@
         fill: $quarternary-color;
         height: calc(1rem + 0.25vw);
         stroke: $primary-color;
-      }
-    }
-    & .section-2-flair {
-      margin-bottom: calc(2rem + 1vw);
-      & img {
-        margin: calc(1rem + 0.5vw);
-      }
-      & .section-2-icon-flair-google {
-        height: calc(3.5rem + 2.5vw);
-      }
-      & .section-2-icon-flair-facebook {
-        height: calc(3rem + 2.5vw);
-      }
-      & .section-2-icon-flair-yelp {
-        height: calc(4rem + 3.5vw);
-      }
-      & .section-2-icon-flair-bbb {
-        height: calc(2.7rem + 2vw);
       }
     }
   }
