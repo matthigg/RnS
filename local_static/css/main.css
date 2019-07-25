@@ -367,7 +367,7 @@
 }
 
 .index-page .section-1-row .card .card-body {
-  color: #4D3F22;
+  color: #182013;
   font-size: calc(1rem + 0.25vw);
   font-weight: 700;
   padding: calc(0.25rem + 0.25vw) 0 0 0;
@@ -384,7 +384,7 @@
 }
 
 .index-page .section-1-row .card .card-link .card-link-text {
-  color: #4D3F22;
+  color: #182013;
   font-size: calc(1rem + 0.25vw);
   margin-right: calc(0.5rem + 0.5vw);
   position: relative;
@@ -393,7 +393,7 @@
 }
 
 .index-page .section-1-row .card .card-link .icon-arrow-right {
-  fill: #4D3F22;
+  fill: #182013;
   height: calc(1rem + 0.25vw);
   stroke: white;
   -webkit-transition: 0.2s ease-in;
@@ -422,9 +422,9 @@
   transition: 0.2s ease-in;
 }
 
-.index-page .section-3-row {
+.index-page .section-2-row {
   background-color: white;
-  color: #4D3F22;
+  color: #182013;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -432,68 +432,68 @@
   text-align: center;
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-headline {
+.index-page .section-2-row .section-2-text .section-2-text-headline {
   font-size: calc(1rem + 1.5vw);
   font-weight: 700;
   margin-bottom: calc(2rem + 0.5vw);
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-headline .section-3-text-headline-bold {
+.index-page .section-2-row .section-2-text .section-2-text-headline .section-2-text-headline-bold {
   color: #F3D333;
   font-style: italic;
   font-weight: 800;
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-paragraph {
+.index-page .section-2-row .section-2-text .section-2-text-paragraph {
   font-size: calc(1rem + 0.5vw);
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-paragraph .section-3-text-paragraph-bold {
+.index-page .section-2-row .section-2-text .section-2-text-paragraph .section-2-text-paragraph-bold {
   color: #F3D333;
   font-style: italic;
   font-weight: 700;
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-paragraph-urgent {
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-urgent {
   font-size: calc(1rem + 1vw);
   font-style: italic;
   font-weight: 700;
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-paragraph-email {
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-email {
   font-size: calc(1rem + 1vw);
   font-style: italic;
   font-weight: 700;
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-paragraph-email .icon-email {
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-email .icon-email {
   height: calc(1.5rem + 1vw);
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-paragraph-email .icon-email circle {
-  fill: #4D3F22;
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-email .icon-email circle {
+  fill: #182013;
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-paragraph-email .icon-email path {
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-email .icon-email path {
   fill: white;
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-paragraph-phone {
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-phone {
   font-size: calc(1rem + 1vw);
   font-style: italic;
   font-weight: 700;
   margin-bottom: calc(1rem + 1vw);
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-paragraph-phone .icon-phone {
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-phone .icon-phone {
   height: calc(1.5rem + 1vw);
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-paragraph-phone .icon-phone circle {
-  fill: #4D3F22;
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-phone .icon-phone circle {
+  fill: #182013;
 }
 
-.index-page .section-3-row .section-3-text .section-3-text-paragraph-phone .icon-phone path {
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-phone .icon-phone path {
   fill: white;
 }
 
@@ -501,7 +501,7 @@
   border: none;
   background-color: white;
   border-radius: calc(0.5rem + 0.1vw);
-  color: #4D3F22;
+  color: #182013;
   font-size: calc(1rem + 0.25vw);
 }
 
@@ -511,14 +511,14 @@
 }
 
 .index-page .modal .btn-free-quote:hover {
-  background-color: #4D3F22;
+  background-color: #182013;
   color: white;
   -webkit-transition: 0.15s ease-in;
   transition: 0.15s ease-in;
 }
 
 .index-page .modal .modal-body {
-  color: #4D3F22;
+  color: #182013;
   font-size: calc(1rem + 0.5vw);
 }
 

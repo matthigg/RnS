@@ -141,7 +141,39 @@
 
     <!-- Section 2 -->
     <section class="row section-2-row">
-      {% include 'contact_form/contact-form.html' %}
+
+      <!-- Contact Form Text -->
+      <!-- Section 3 Text -->
+      <div class="col-md-6 section-2-text">
+        <h2 class="section-2-text-headline">
+          Get a <span class="section-2-text-headline-bold">Free Estimate</span> for 
+          Pressure Washing Services in Sneads Ferry, NC!
+        </h2>
+        <p class="section-2-text-paragraph">
+          It's quick & easy to request a Free Estimate. Send us a message using the
+          online form, send us an email, or call us at <br>
+          <span class="section-2-text-paragraph-bold">(123) 456-7809</span>.
+        </p>
+        <p class="section-2-text-paragraph-urgent">
+          See what we can do for you today!
+        </p>
+        <p class="section-2-text-paragraph">
+          {% include 'business_information/hours-of-operation.html' %}
+        </p>
+        <p class="section-2-text-paragraph-email">
+          {% include 'svg/email.svg' %}
+          {% include 'business_information/email.html' %}
+        </p>
+        <p class="section-2-text-paragraph-phone">
+          {% include 'svg/phone.svg' %}
+          {% include 'business_information/phone-number.html' %}
+        </p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        {% include 'contact_form/contact-form.html' %}
+      </div>
     </section>
   </div>
 {% endblock %}

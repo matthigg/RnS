@@ -6,8 +6,11 @@
 }
 
 .contact-form-heading {
-  background-color: #17685E;
+  background-color: #020305;
+  border-left: 2px solid #F3D333;
   border-radius: calc(1rem + 0.1vw) calc(1rem + 0.1vw) 0 0;
+  border-right: 2px solid #F3D333;
+  border-top: 2px solid #F3D333;
   padding: calc(0.5rem + 0.25vw);
 }
 
@@ -20,8 +23,11 @@
 }
 
 .contact-form {
-  background-color: #14D3C9;
+  background-color: #020305;
+  border-bottom: 2px solid #F3D333;
+  border-left: 2px solid #F3D333;
   border-radius: 0 0 calc(1rem + 0.1vw) calc(1rem + 0.1vw);
+  border-right: 2px solid #F3D333;
   margin: auto;
   padding: calc(1rem + 1vw);
   width: 100%;
@@ -31,7 +37,7 @@
   background-color: white;
   border: none;
   border-radius: calc(0.5rem + 0.1vw);
-  color: #17685E;
+  color: #4D3F22;
   display: block;
   font-weight: 700;
   font-size: calc(1rem + 0.25vw);
@@ -40,7 +46,7 @@
 }
 
 .contact-form button:hover {
-  background-color: #17685E;
+  background-color: #F3D333;
   color: white;
   -webkit-transition: 0.15s ease-in;
   transition: 0.15s ease-in;
@@ -53,11 +59,11 @@
 }
 
 .contact-form input {
-  border: 2px solid #14D3C9;
+  border: 2px solid #F3D333;
   border-radius: calc(0.5rem + 0.1vw);
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #17685E;
+  color: #4D3F22;
   display: block;
   height: calc(2.5rem + 1vw);
   outline: none;
@@ -82,11 +88,11 @@
 }
 
 .contact-form input:focus {
-  border: 2px solid #17685E;
+  border: 2px solid #4D3F22;
 }
 
 .contact-form label {
-  color: #17685E;
+  color: #4D3F22;
   font-size: calc(1rem + 0.25vw);
   font-style: italic;
   left: calc(0.5rem + 0.1vw);
@@ -95,11 +101,11 @@
 }
 
 .contact-form textarea {
-  border: 2px solid #14D3C9;
+  border: 2px solid #F3D333;
   border-radius: calc(0.5rem + 0.1vw);
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #17685E;
+  color: #4D3F22;
   display: block;
   outline: none;
   padding: calc(1rem + 0.1vw) 0 0 calc(0.5rem + 0.1vw);
@@ -123,14 +129,14 @@
 }
 
 .contact-form textarea:focus {
-  border: 2px solid #17685E;
+  border: 2px solid #4D3F22;
 }
 
 .contact-form input:focus ~ label,
 .contact-form input:not(:placeholder-shown) ~ label,
 .contact-form textarea:focus ~ label,
 .contact-form textarea:not(:placeholder-shown) ~ label {
-  color: #17685E;
+  color: #4D3F22;
   font-size: calc(0.75rem + 0.1vw);
   top: calc(0.05rem + 0.05vw);
   -webkit-transition: 0.1s;
@@ -143,7 +149,7 @@
 }
 
 .contact-form .required-field-asterisk {
-  color: #17685E;
+  color: #4D3F22;
 }
 
 .contact-form .required-field-text {

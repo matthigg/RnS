@@ -58,4 +58,20 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (document.querySelector('.container-fluid').classList.contains('contact-page')) {
     document.querySelector('.nav-link-contact').classList.add('active');
   }
+
+  // Contact Form 
+  //
+  // Add an asterisk * next to each contact form field that is a required field
+  if (document.querySelector('.contact-form') !== null) {
+    const labels = document.querySelectorAll('label')
+    labels.forEach((label) => {
+      if (
+        label.innerHTML === 'Name' ||
+        label.innerHTML === 'Email' ||
+        label.innerHTML === 'Message'
+      ) {
+        label.innerHTML += ' <span class="required-field-asterisk">*</span>';
+      }
+    })
+  }
 })
