@@ -1,5 +1,17 @@
-<form class="contact-form" action="{% url 'contact-form:submit' %}" method="post">
-  {% csrf_token %}
-  {{ form }}
-  <input type="submit" value="Submit">
-</form>
+<!-- Contact Form -->
+<div class="contact-form-heading">
+    <h2>QUOTE REQUEST FORM</h2>
+  </div>
+  <form class="contact-form" action="{% url 'contact-form:submit' %}" method="post">
+    <fieldset>
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="contact-form-input">
+          {{ field }}
+          {{ field.label_tag }}
+        </div>
+      {% endfor %}
+      <p class="required-field-text">* indicates a required field</p>
+      <button type="submit" value="Submit">Get Your FREE Quote!</button>
+    </fieldset>
+  </form>
