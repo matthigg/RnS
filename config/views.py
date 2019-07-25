@@ -27,3 +27,8 @@ def contact(request):
   form = CreateContactForm
   context = { 'form': form, }
   return render(request, 'contact.html', context)
+
+# Thanks Page
+def thanks(request):
+  context = {}
+  return render(request, 'thanks.html', context)

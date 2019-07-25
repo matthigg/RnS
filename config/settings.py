@@ -68,6 +68,11 @@ TEMPLATES = [
     },
 ]
 
+# Used to send success messages on successful contact form submision, but these 
+# messages are only seen if the user is re-routed to a template that has been
+# configured to display them
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 WSGI_APPLICATION = 'config.wsgi.application'
 
 

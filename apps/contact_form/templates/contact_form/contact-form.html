@@ -1,5 +1,3 @@
-
-<h1>Contact</h1>
 <form class="contact-form" action="{% url 'contact-form:submit' %}" method="post">
   {% csrf_token %}
   {{ form }}
