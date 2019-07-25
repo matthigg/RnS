@@ -1,5 +1,5 @@
 .footer {
-  background-color: $secondary-color-rgba;
+  background-color: $senary-color-rgba;
 
   // Brand
   .footer-brand {
@@ -7,21 +7,21 @@
     margin: calc(1rem + 1vw) 0;
     text-align: center;
     & .footer-brand-headline {
-      font-size: calc(2rem + 1vw);
-      font-style: italic;
-      font-weight: 900;
+      color: $secondary-color;
+      font-family: "Stencil", "Segoe UI", sans-serif;
+      font-size: calc(1.5rem + 1vw);
     }
     & .footer-brand-headline-sub {
-      font-size: calc(1.5rem + 1vw);
-      font-style: italic;
-      font-weight: 700;
+      color: $secondary-color;
+      font-family: "Stencil", "Segoe UI", sans-serif;
+      font-size: calc(1rem + 1vw);
     }
     & .footer-brand-text {
       font-size: calc(1rem + 0.5vw);
       padding: 0 calc(1rem + 1vw);
       & .footer-brand-text-strong {
-        font-weight: 800;
-        font-style: italic;
+        color: $secondary-color;
+        font-family: "Stencil", "Segoe UI", sans-serif;
       }
     }
   }
@@ -47,7 +47,7 @@
         fill: $primary-color;
       }
       & path {
-        fill: $secondary-color-rgba;
+        fill: $senary-color-rgba;
       }
     }
     & .footer-hours-of-operation-text {
@@ -78,7 +78,7 @@
 
   // Back-To-Top Link & Copyright
   .footer-back-to-top-and-copyright {
-    color: $primary-color;
+    color: $secondary-color;
     font-size: calc(1rem + 0.5vw);
     padding: 0 calc(2rem + 2vw) calc(2rem + 2vw) calc(2rem + 2vw);
     & .footer-copyright {
@@ -90,7 +90,7 @@
       width: max-content;
       & button {
         background-color: rgba(0, 0, 0, 0);
-        border: 2px solid white;
+        border: 2px solid $secondary-color;
         border-radius: 50%;
         display: inline-flex;
         align-items: center;
@@ -105,12 +105,12 @@
           height: 0; 
           border-left: 1rem solid transparent;
           border-right: 1rem solid transparent;
-          border-bottom: 1rem solid $primary-color;
+          border-bottom: 1rem solid $secondary-color;
         }
         &:hover {
-          background-color: $primary-color;
+          background-color: $secondary-color;
           & .arrow-up {
-            border-bottom-color: $secondary-color;
+            border-bottom-color: $senary-color-rgba;
             transition: 0.2s;
           }
         }

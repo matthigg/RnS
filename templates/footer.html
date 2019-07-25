@@ -1,1 +1,66 @@
-<h1>Footer</h1>
+{% load static %}
+
+<div class="container-fluid footer">
+  <div class="row">
+
+    <!-- Brand -->
+    <div class="col-md-4">
+      <div class="footer-brand">
+        <h1 class="footer-brand-headline">RESTORE & SHINE</h1>
+        <h2 class="footer-brand-headline-sub">PRESSURE WASHING</h2>
+        <p class="footer-brand-text">
+          Home Improvement and Pressure Washing Services in Sneads Ferry, NC
+        </p>
+        <p class="footer-brand-text">
+          See what
+          <span class="footer-brand-text-strong">RESTORE & SHINE</span>
+          can do for your home and property!
+        </p>
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="col-md-4">
+      <div class="footer-phone">
+        <h1 class="footer-phone-headline">Call us today for a Free Estimate!</h1>
+        <p class="footer-phone-text">
+          {% include 'svg/phone.svg' %} (123) 456-7890
+        </p>
+        <p class="footer-hours-of-operation-text">
+          {% include 'business_information/hours-of-operation.html' %}
+        </p>
+      </div>
+    </div>
+
+    <!-- Flair -->
+    <div class="col-md-4 footer-flair d-flex justify-content-around align-items-center flex-wrap">
+      <img class="footer-icon-flair-google" src="{% static 'img/google.svg' %}" alt="Simple Clean Google Reviews">
+      <img class="footer-icon-flair-facebook" src="{% static 'img/facebook.svg' %}" alt="Simple Clean Facebook Reviews">
+      <img class="footer-icon-flair-yelp" src="{% static 'img/yelp.svg' %}" alt="Simple Clean Yelp Reviews">
+      <img class="footer-icon-flair-bbb" src="{% static 'img/bbb.svg' %}" alt="Simple Clean Better Business Bureau Reviews">
+    </div>
+  </div>
+
+  <!-- Back To Top & Copyright -->
+  <div class="row footer-back-to-top-and-copyright">
+    <div class="col-md-4">
+      <p class="footer-copyright">© 2019 Restore & Shine Pressure Washing</p>
+    </div>
+    <div class="col-md-4">
+      <a href="#">
+        <div class="back-to-top-arrow-up-wrapper">
+          <button>
+            <div class="arrow-up"></div>
+          </button>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4">
+      <p class="footer-recaptcha">
+        This site is protected by reCAPTCHA and the Google
+        <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+        <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+      </p>
+    </div>
+  </div>
+</div>

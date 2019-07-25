@@ -138,7 +138,7 @@
 }
 
 .footer {
-  background-color: rgba(243, 211, 51, 0.8);
+  background-color: rgba(2, 3, 5, 0.8);
 }
 
 .footer .footer-brand {
@@ -148,15 +148,15 @@
 }
 
 .footer .footer-brand .footer-brand-headline {
-  font-size: calc(2rem + 1vw);
-  font-style: italic;
-  font-weight: 900;
+  color: #F3D333;
+  font-family: "Stencil", "Segoe UI", sans-serif;
+  font-size: calc(1.5rem + 1vw);
 }
 
 .footer .footer-brand .footer-brand-headline-sub {
-  font-size: calc(1.5rem + 1vw);
-  font-style: italic;
-  font-weight: 700;
+  color: #F3D333;
+  font-family: "Stencil", "Segoe UI", sans-serif;
+  font-size: calc(1rem + 1vw);
 }
 
 .footer .footer-brand .footer-brand-text {
@@ -165,8 +165,8 @@
 }
 
 .footer .footer-brand .footer-brand-text .footer-brand-text-strong {
-  font-weight: 800;
-  font-style: italic;
+  color: #F3D333;
+  font-family: "Stencil", "Segoe UI", sans-serif;
 }
 
 .footer .footer-phone {
@@ -196,7 +196,7 @@
 }
 
 .footer .footer-phone .icon-phone path {
-  fill: rgba(243, 211, 51, 0.8);
+  fill: rgba(2, 3, 5, 0.8);
 }
 
 .footer .footer-phone .footer-hours-of-operation-text {
@@ -229,7 +229,7 @@
 }
 
 .footer .footer-back-to-top-and-copyright {
-  color: white;
+  color: #F3D333;
   font-size: calc(1rem + 0.5vw);
   padding: 0 calc(2rem + 2vw) calc(2rem + 2vw) calc(2rem + 2vw);
 }
@@ -248,7 +248,7 @@
 
 .footer .footer-back-to-top-and-copyright .back-to-top-arrow-up-wrapper button {
   background-color: rgba(0, 0, 0, 0);
-  border: 2px solid white;
+  border: 2px solid #F3D333;
   border-radius: 50%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -269,15 +269,15 @@
   height: 0;
   border-left: 1rem solid transparent;
   border-right: 1rem solid transparent;
-  border-bottom: 1rem solid white;
+  border-bottom: 1rem solid #F3D333;
 }
 
 .footer .footer-back-to-top-and-copyright .back-to-top-arrow-up-wrapper button:hover {
-  background-color: white;
+  background-color: #F3D333;
 }
 
 .footer .footer-back-to-top-and-copyright .back-to-top-arrow-up-wrapper button:hover .arrow-up {
-  border-bottom-color: #F3D333;
+  border-bottom-color: rgba(2, 3, 5, 0.8);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -1152,7 +1152,7 @@
 }
 
 .footer-recaptcha a {
-  color: #4D3F22;
+  color: #F3D333;
   font-weight: 700;
 }
 
