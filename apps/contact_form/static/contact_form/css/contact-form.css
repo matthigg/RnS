@@ -37,7 +37,7 @@
   background-color: white;
   border: none;
   border-radius: calc(0.5rem + 0.1vw);
-  color: #4D3F22;
+  color: #182013;
   display: block;
   font-weight: 700;
   font-size: calc(1rem + 0.25vw);
@@ -63,7 +63,7 @@
   border-radius: calc(0.5rem + 0.1vw);
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #4D3F22;
+  color: #182013;
   display: block;
   height: calc(2.5rem + 1vw);
   outline: none;
@@ -88,11 +88,11 @@
 }
 
 .contact-form input:focus {
-  border: 2px solid #4D3F22;
+  border: 2px solid #182013;
 }
 
 .contact-form label {
-  color: #4D3F22;
+  color: #182013;
   font-size: calc(1rem + 0.25vw);
   font-style: italic;
   left: calc(0.5rem + 0.1vw);
@@ -105,7 +105,7 @@
   border-radius: calc(0.5rem + 0.1vw);
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #4D3F22;
+  color: #182013;
   display: block;
   outline: none;
   padding: calc(1rem + 0.1vw) 0 0 calc(0.5rem + 0.1vw);
@@ -129,14 +129,14 @@
 }
 
 .contact-form textarea:focus {
-  border: 2px solid #4D3F22;
+  border: 2px solid #182013;
 }
 
 .contact-form input:focus ~ label,
 .contact-form input:not(:placeholder-shown) ~ label,
 .contact-form textarea:focus ~ label,
 .contact-form textarea:not(:placeholder-shown) ~ label {
-  color: #4D3F22;
+  color: #182013;
   font-size: calc(0.75rem + 0.1vw);
   top: calc(0.05rem + 0.05vw);
   -webkit-transition: 0.1s;
@@ -149,7 +149,7 @@
 }
 
 .contact-form .required-field-asterisk {
-  color: #4D3F22;
+  color: #182013;
 }
 
 .contact-form .required-field-text {

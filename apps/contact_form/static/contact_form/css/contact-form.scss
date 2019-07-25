@@ -2,7 +2,7 @@
 $primary-color: white;
 $secondary-color: #F3D333;
 $tertiary-color: #6D6951;
-$quarternary-color: #4D3F22;
+$quinary-color: #4D3F22;
 $quinary-color: #182013;
 $senary-color:#020305;
 
@@ -44,7 +44,7 @@ $contact-form-border: 2px solid $secondary-color;
     background-color: $primary-color;
     border: none;
     border-radius: calc(0.5rem + 0.1vw);
-    color: $quarternary-color;
+    color: $quinary-color;
     display: block;
     font-weight: 700;
     font-size: calc(1rem + 0.25vw);
@@ -64,7 +64,7 @@ $contact-form-border: 2px solid $secondary-color;
     border: 2px solid $secondary-color;
     border-radius: calc(0.5rem + 0.1vw);
     box-shadow: none;
-    color: $quarternary-color;
+    color: $quinary-color;
     display: block;
     height: calc(2.5rem + 1vw);
     outline: none;
@@ -74,11 +74,11 @@ $contact-form-border: 2px solid $secondary-color;
       opacity: 0;
     }
     &:focus {
-      border: 2px solid $quarternary-color;
+      border: 2px solid $quinary-color;
     }
   }
   & label {
-    color: $quarternary-color;
+    color: $quinary-color;
     font-size: calc(1rem + 0.25vw);
     font-style: italic;
     left: calc(0.5rem + 0.1vw);
@@ -89,7 +89,7 @@ $contact-form-border: 2px solid $secondary-color;
     border: 2px solid $secondary-color;
     border-radius: calc(0.5rem + 0.1vw);
     box-shadow: none;
-    color: $quarternary-color;
+    color: $quinary-color;
     display: block;
     outline: none;
     padding: calc(1rem + 0.1vw) 0 0 calc(0.5rem + 0.1vw);
@@ -98,14 +98,14 @@ $contact-form-border: 2px solid $secondary-color;
       opacity: 0;
     }
     &:focus {
-      border: 2px solid $quarternary-color;
+      border: 2px solid $quinary-color;
     }
   }
   & input:focus ~ label,
   & input:not(:placeholder-shown) ~ label,
   & textarea:focus ~ label,
   & textarea:not(:placeholder-shown) ~ label {
-    color: $quarternary-color;
+    color: $quinary-color;
     font-size: calc(0.75rem + 0.1vw);
     top: calc(0.05rem + 0.05vw);
     transition: 0.1s;
@@ -115,7 +115,7 @@ $contact-form-border: 2px solid $secondary-color;
     position: relative;
   }
   & .required-field-asterisk {
-    color: $quarternary-color;
+    color: $quinary-color;
   }
   & .required-field-text {
     color: $primary-color;
