@@ -19,9 +19,9 @@
 
 .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-2-row .card-background-house-washing, .services-page .section-2-row .card-background-patio-and-deck, .services-page .section-2-row .card-background-graffiti-removal {
   border: 4px solid #F3D333;
-  border-radius: calc(0.5rem + 10vw);
-  height: calc(1rem + 20vw);
-  width: calc(1rem + 20vw);
+  border-radius: calc(0.5rem + 8vw);
+  height: calc(1rem + 16vw);
+  width: calc(1rem + 16vw);
 }
 
 @media (max-width: 768px) {
