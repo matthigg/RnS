@@ -1,15 +1,3 @@
-%background-fixed {
-  background-color: $quarternary-color;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-%card-background {
-  border-radius: calc(0.5rem + 0.5vw) calc(0.5rem + 0.5vw) 0 0;
-  height: calc(10rem + 0.5vw);
-}
-
 // Index Page
 .index-page {
 
@@ -55,66 +43,71 @@
   $section-1-hover-transition: 0.2s ease-in;
 
   & .section-1-row {
-    background-color: $secondary-color-rgba;
+    background-color: $primary-color;
     height: max-content;
     padding: 0 calc(1rem + 6vw);
     & .card {
       border: 0;
       border-radius: calc(0.5rem + 0.5vw) calc(0.5rem + 0.5vw);
+      display: inline-flex;
       margin: calc(2rem + 0.5vw) auto;
-      &:hover {
-        cursor: pointer;
-        & .card-body {
-          color: $tertiary-color;
-          transition: $section-1-hover-transition;
-        }
+      transition: $section-1-hover-transition;
+      & .card-background-house-washing {
+        background-image: url('/static/img/house-01.jpg');
+        @extend %card-background;
+        @extend %background-fixed;
+      }
+      & .card-background-patio-and-deck {
+        background-image: url('/static/img/house-02.jpg');
+        @extend %card-background;
+        @extend %background-fixed;
+      }
+      & .card-background-graffiti-removal {
+        background-image: url('/static/img/house-03.jpg');
+        @extend %card-background;
+        @extend %background-fixed;
+      }
+      & .card-body {
+        color: $quarternary-color;
+        font-size: calc(1rem + 0.25vw);
+        font-style: italic;
+        font-weight: 700;
+        padding: calc(0.25rem + 0.25vw) 0 0 0;  // padding: 20px by default
+        text-align: center;
+        transition: $section-1-hover-transition;
+      }
+      & .card-link {
+        height: max-content;
+        padding-bottom: calc(0.5rem + 0.25vw);
+        // width: max-content;
         & .card-link-text {
-          color: $tertiary-color;
+          color: $quarternary-color;
+          font-size: calc(1rem + 0.25vw);
+          margin-right: calc(0.5rem + 0.5vw);
+          position: relative;
           transition: $section-1-hover-transition;
         }
         & .icon-arrow-right {
-          fill: $tertiary-color;
-          // transition: $section-1-hover-transition;
+          fill: $quarternary-color;
+          height: calc(1rem + 0.25vw);
+          stroke: $primary-color;
+          transition: $section-1-hover-transition;
         }
       }
-    }
-    & .card-background-house-washing {
-      background-image: url('/static/img/house-01.jpg');
-      @extend %card-background;
-      @extend %background-fixed;
-    }
-    & .card-background-patio-and-deck {
-      background-image: url('/static/img/house-02.jpg');
-      @extend %card-background;
-      @extend %background-fixed;
-    }
-    & .card-background-graffiti-removal {
-      background-image: url('/static/img/house-03.jpg');
-      @extend %card-background;
-      @extend %background-fixed;
-    }
-    & .card-body {
-      color: $quarternary-color;
-      font-size: calc(1rem + 0.25vw);
-      font-style: italic;
-      font-weight: 700;
-      padding: calc(0.25rem + 0.25vw) 0 0 0;  // padding: 20px by default
-      text-align: center;
-    }
-    & .card-link {
-      height: max-content;
-      padding-bottom: calc(0.5rem + 0.25vw);
-      width: max-content;
-      & .card-link-text {
-        color: $quarternary-color;
-        font-size: calc(1rem + 0.25vw);
-        margin-right: calc(0.5rem + 0.5vw);
-        position: relative;
-      }
-      & .icon-arrow-right {
-        fill: $quarternary-color;
-        height: calc(1rem + 0.25vw);
-        stroke: $primary-color;
+      &:hover {
+        cursor: pointer;
+        & .card-body {
+          color: $secondary-color;
+          transition: $section-1-hover-transition;
+        }
+        & .card-link-text {
+          color: $secondary-color;
+          transition: $section-1-hover-transition;
+        }
+        & .icon-arrow-right {
+          fill: $secondary-color;
+          transition: $section-1-hover-transition;
+        }
       }
     }
   }
