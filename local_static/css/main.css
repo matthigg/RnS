@@ -52,7 +52,7 @@
 
 .about-page .navbar-spacer {
   background-color: white;
-  height: 25vh;
+  height: calc(10rem + 6vw);
 }
 
 @media (max-width: 767.98px) {
@@ -63,7 +63,7 @@
 
 .about-page .about-headline {
   background-color: white;
-  padding: 0 calc(1rem + 0.5vw);
+  padding: 0 calc(1rem + 0.5vw) calc(1rem + 0.5vw) calc(1rem + 0.5vw);
 }
 
 .about-page .about-headline h1 {
@@ -76,7 +76,7 @@
 .about-page .section-1-row {
   background-color: white;
   color: #182013;
-  padding: calc(1rem + 6vw);
+  padding: 0 calc(1rem + 6vw) calc(1rem + 6vw) calc(1rem + 6vw);
 }
 
 .about-page .section-1-row .section-1-header {
@@ -1242,7 +1242,7 @@
 
 .services-page .navbar-spacer {
   background-color: white;
-  height: 15vh;
+  height: calc(10rem + 6vw);
 }
 
 @media (max-width: 767.98px) {
@@ -1253,12 +1253,14 @@
 
 .services-page .services-headline {
   background-color: white;
+  padding: 0 calc(1rem + 0.5vw) calc(1rem + 0.5vw) calc(1rem + 0.5vw);
 }
 
 .services-page .services-headline h1 {
   color: #182013;
   font-size: calc(1.5rem + 1vw);
   margin: auto;
+  text-align: center;
 }
 
 .services-page .section-1-row {
@@ -1266,7 +1268,7 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding: 0 calc(1rem + 6vw);
+  padding: 0 calc(1rem + 6vw) calc(1rem + 6vw) calc(1rem + 6vw);
 }
 
 .services-page .section-1-row .card {

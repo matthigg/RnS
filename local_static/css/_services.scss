@@ -26,7 +26,7 @@
   // Navbar Spacer
   & .navbar-spacer {
     background-color: $primary-color;
-    height: 15vh;
+    height: calc(10rem + 6vw);
     @media (max-width: 767.98px) {
       height: 20vh;
     }
@@ -35,10 +35,12 @@
   // Services Headline
   & .services-headline {
     background-color: $primary-color;
+    padding: 0 calc(1rem + 0.5vw) calc(1rem + 0.5vw) calc(1rem + 0.5vw);
     & h1 {
       color: $quinary-color;
       font-size: calc(1.5rem + 1vw);
       margin: auto;
+      text-align: center;
     }
   }
 
@@ -48,7 +50,7 @@
   & .section-1-row {
     background-color: $primary-color;
     height: max-content;
-    padding: 0 calc(1rem + 6vw);
+    padding: 0 calc(1rem + 6vw) calc(1rem + 6vw) calc(1rem + 6vw);
     & .card {
       border: 0;
       border-radius: calc(0.5rem + 0.5vw) calc(0.5rem + 0.5vw);
