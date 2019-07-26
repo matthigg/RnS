@@ -10,7 +10,7 @@
   background-color: blue;
 }
 
-.about-page .about-page-background, .contact-page .contact-page-row .contact-page-background, .index-page .landing-page-row .landing-page-background, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .our-work-page .our-work-page-background, .services-page .services-page-background, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .thanks-page .thanks-page-row .thanks-page-background {
+.about-page .about-page-background, .contact-page .contact-page-background, .index-page .landing-page-row .landing-page-background, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .our-work-page .our-work-page-background, .services-page .services-page-background, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .thanks-page .thanks-page-row .thanks-page-background {
   background-color: #4D3F22;
   background-repeat: no-repeat;
   background-position: center;
@@ -111,9 +111,17 @@
   }
 }
 
-.contact-page .contact-page-row .contact-page-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(23, 104, 94, 0.5)), to(rgba(23, 104, 94, 0.5))), url("/static/img/house4.jpg");
-  background-image: linear-gradient(rgba(23, 104, 94, 0.5), rgba(23, 104, 94, 0.5)), url("/static/img/house4.jpg");
+.contact-page {
+  padding: 0;
+}
+
+.contact-page .row {
+  margin: 0;
+}
+
+.contact-page .contact-page-background {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
+  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
   height: 100vh;
   left: 0;
   position: fixed;
@@ -122,93 +130,107 @@
   z-index: -1;
 }
 
-.contact-page .contact-page-row .contact-page-placeholder {
-  height: 30vh;
-  width: 100%;
+.contact-page .navbar-spacer {
+  background-color: white;
+  height: calc(10rem + 6vw);
 }
 
-.contact-page .contact-page-bottom-border {
-  background-color: rgba(243, 211, 51, 0.8);
-  height: 3vw;
-}
-
-@media (max-width: 769px) {
-  .contact-page .contact-page-bottom-border {
-    height: 2rem;
+@media (max-width: 767.98px) {
+  .contact-page .navbar-spacer {
+    height: 20vh;
   }
+}
+
+.contact-page .contact-headline {
+  background-color: white;
+  padding: 0 calc(1rem + 0.5vw) calc(1rem + 0.5vw) calc(1rem + 0.5vw);
+}
+
+.contact-page .contact-headline h1 {
+  color: #182013;
+  font-size: calc(1.5rem + 1vw);
+  margin: auto;
+  text-align: center;
+}
+
+.contact-page .contact-headline h1 .h1-brand-font {
+  color: #F3D333;
+  font-family: "Stencil", "Segoe UI", sans-serif;
 }
 
 .contact-page .section-1-row {
   background-color: white;
-  color: #4D3F22;
+  color: #182013;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   padding: calc(0.25rem + 3.75vw);
   text-align: center;
 }
 
-.contact-page .section-1-row .section-1-text-headline {
+.contact-page .section-1-row .section-1-text .section-1-text-headline {
   font-size: calc(1rem + 1.5vw);
-  font-weight: 600;
-  margin: calc(1rem + 1vw) 0;
+  font-weight: 700;
+  margin-bottom: calc(2rem + 0.5vw);
 }
 
-.contact-page .section-1-row .section-1-text-headline .section-1-text-headline-bold {
+.contact-page .section-1-row .section-1-text .section-1-text-headline .section-1-text-headline-bold {
+  color: #F3D333;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph {
+  font-size: calc(1rem + 0.5vw);
+}
+
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph .section-1-text-paragraph-bold {
   color: #F3D333;
   font-style: italic;
   font-weight: 700;
 }
 
-.contact-page .section-1-row .section-1-text-paragraph {
-  font-size: calc(1rem + 0.5vw);
-  margin-bottom: calc(1rem + 1vw);
-}
-
-.contact-page .section-1-row .section-1-text-paragraph .section-1-text-paragraph-bold {
-  color: #F3D333;
-  font-style: italic;
-  font-weight: 700;
-}
-
-.contact-page .section-1-row .section-1-text-paragraph-email {
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-urgent {
   font-size: calc(1rem + 1vw);
   font-style: italic;
   font-weight: 700;
 }
 
-.contact-page .section-1-row .section-1-text-paragraph-email .icon-email {
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-email {
+  font-size: calc(1rem + 1vw);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-email .icon-email {
   height: calc(1.5rem + 1vw);
 }
 
-.contact-page .section-1-row .section-1-text-paragraph-email .icon-email circle {
-  fill: #4D3F22;
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-email .icon-email circle {
+  fill: #182013;
 }
 
-.contact-page .section-1-row .section-1-text-paragraph-email .icon-email path {
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-email .icon-email path {
   fill: white;
 }
 
-.contact-page .section-1-row .section-1-text-paragraph-phone {
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-phone {
   font-size: calc(1rem + 1vw);
   font-style: italic;
   font-weight: 700;
   margin-bottom: calc(1rem + 1vw);
 }
 
-.contact-page .section-1-row .section-1-text-paragraph-phone .icon-phone {
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-phone .icon-phone {
   height: calc(1.5rem + 1vw);
 }
 
-.contact-page .section-1-row .section-1-text-paragraph-phone .icon-phone circle {
-  fill: #4D3F22;
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-phone .icon-phone circle {
+  fill: #182013;
 }
 
-.contact-page .section-1-row .section-1-text-paragraph-phone .icon-phone path {
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-phone .icon-phone path {
   fill: white;
-}
-
-.contact-page .section-1-row .section-1-text-paragraph-urgent {
-  font-size: calc(1rem + 0.5vw);
-  font-style: italic;
-  font-weight: 700;
 }
 
 @font-face {

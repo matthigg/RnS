@@ -1,95 +1,112 @@
 // Contact Page
 .contact-page {
-
-  // Contact Splash Page
-  .contact-page-row {
-    & .contact-page-background {
-      background-image: 
-        linear-gradient(
-          rgba(23, 104, 94, 0.5),
-          rgba(23, 104, 94, 0.5)
-        ),
-        url('/static/img/house4.jpg');
-      height: 100vh;
-      left: 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: -1;
-      @extend %background-fixed;
-    }
-    & .contact-page-placeholder {
-      height: 30vh;
-      width: 100%;
-    }
+  padding: 0;
+  & .row {
+    margin: 0;
   }
 
-  .contact-page-bottom-border {
-    background-color: $secondary-color-rgba;
-    height: 3vw;
-    @media (max-width: 769px) {
-      height: 2rem;
-    }
+  // Contact Page Background Image
+  & .contact-page-background {
+    background-image: 
+      linear-gradient(
+        rgba(2, 3, 5, 0.25),
+        rgba(2, 3, 5, 0.25),
+      ),
+      url('/static/img/house-01.jpg');
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    @extend %background-fixed;
   }
 
-  // Section 1
-  .section-1-row {
+  // Navbar Spacer
+  & .navbar-spacer {
     background-color: $primary-color;
-    color: $quarternary-color;
+    height: calc(10rem + 6vw);
+    @media (max-width: 767.98px) {
+      height: 20vh;
+    }
+  }
+
+  // Contact Headline
+  & .contact-headline {
+    background-color: $primary-color;
+    padding: 0 calc(1rem + 0.5vw) calc(1rem + 0.5vw) calc(1rem + 0.5vw);
+    & h1 {
+      color: $quinary-color;
+      font-size: calc(1.5rem + 1vw);
+      margin: auto;
+      text-align: center;
+      & .h1-brand-font {
+        color: $secondary-color;
+        font-family: "Stencil", "Segoe UI", sans-serif;
+      }
+    }
+  }
+
+  // Section 1, Contact Form
+  & .section-1-row {
+    background-color: $primary-color;
+    color: $quinary-color;
+    height: max-content;
     padding: calc(0.25rem + 3.75vw);
     text-align: center;
-    & .section-1-text-headline {
-      font-size: calc(1rem + 1.5vw);
-      font-weight: 600;
-      margin: calc(1rem + 1vw) 0;
-      & .section-1-text-headline-bold {
-        color: $secondary-color;
+    & .section-1-text {
+      & .section-1-text-headline {
+        font-size: calc(1rem + 1.5vw);
+        font-weight: 700;
+        margin-bottom: calc(2rem + 0.5vw);
+        & .section-1-text-headline-bold {
+          color: $secondary-color;
+          font-style: italic;
+          font-weight: 800;
+        }
+      }
+      & .section-1-text-paragraph {
+        font-size: calc(1rem + 0.5vw);
+        & .section-1-text-paragraph-bold {
+          color: $secondary-color;
+          font-style: italic;
+          font-weight: 700;
+        }
+      }
+      & .section-1-text-paragraph-urgent {
+        font-size: calc(1rem + 1vw);
         font-style: italic;
         font-weight: 700;
       }
-    }
-    & .section-1-text-paragraph {
-      font-size: calc(1rem + 0.5vw);
-      margin-bottom: calc(1rem + 1vw);
-      & .section-1-text-paragraph-bold {
-        color: $secondary-color;
+      & .section-1-text-paragraph-email {
+        font-size: calc(1rem + 1vw);
         font-style: italic;
         font-weight: 700;
-      }
-    }
-    & .section-1-text-paragraph-email {
-      font-size: calc(1rem + 1vw);
-      font-style: italic;
-      font-weight: 700;
-      & .icon-email {
-        height: calc(1.5rem + 1vw);
-        & circle {
-          fill: $quarternary-color;
-        }
-        & path {
-          fill: $primary-color;
+        & .icon-email {
+          height: calc(1.5rem + 1vw);
+          & circle {
+            fill: $quinary-color;
+          }
+          & path {
+            fill: $primary-color;
+          }
         }
       }
-    }
-    & .section-1-text-paragraph-phone {
-      font-size: calc(1rem + 1vw);
-      font-style: italic;
-      font-weight: 700;
-      margin-bottom: calc(1rem + 1vw);
-      & .icon-phone {
-        height: calc(1.5rem + 1vw);
-        & circle {
-          fill: $quarternary-color;
-        }
-        & path {
-          fill: $primary-color;
+      & .section-1-text-paragraph-phone {
+        font-size: calc(1rem + 1vw);
+        font-style: italic;
+        font-weight: 700;
+        margin-bottom: calc(1rem + 1vw);
+        & .icon-phone {
+          height: calc(1.5rem + 1vw);
+          & circle {
+            fill: $quinary-color;
+          }
+          & path {
+            fill: $primary-color;
+          }
         }
       }
-    }
-    & .section-1-text-paragraph-urgent {
-      font-size: calc(1rem + 0.5vw);
-      font-style: italic;
-      font-weight: 700;
     }
   }
 }

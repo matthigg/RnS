@@ -1,1 +1,66 @@
-<h1>Contact</h1>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Pressure Washing Services in Snead's Ferry, NC | Restore & Shine</title>
+{% endblock %}
+
+{% block metatag %}
+  <meta name="description" content="Restore & Shine offers fast & affordable pressure washing services in Snead's Ferry, NC - increase your home's curb appeal and request a free quote today!">
+{% endblock%}
+
+{% block main %}
+  <div class="container-fluid contact-page">
+
+    <!-- Contact Page Background Image -->
+    <div class="contact-page-background"></div>
+
+    <!-- Navbar Spacer -->
+    <div class="navbar-spacer"></div>
+
+    <!-- Contact Headline -->
+    <section class="row contact-headline">
+      <h1>
+        Contact
+        <span class="h1-brand-font">RESTORE & SHINE</span>
+        For Pressure Washing Services Today!
+      </h1>
+    </section>
+
+    <!-- Section 1, Contact Form -->
+    <section class="row section-1-row">
+
+      <!-- Contact Form Text -->
+      <div class="col-md-6 section-1-text">
+        <h2 class="section-1-text-headline">
+          Get a <span class="section-1-text-headline-bold">Free Estimate</span> for 
+          Pressure Washing Services in Sneads Ferry, NC!
+        </h2>
+        <p class="section-1-text-paragraph">
+          It's quick & easy to request a Free Estimate. Send us a message using the
+          online form, send us an email, or call us at <br>
+          <span class="section-1-text-paragraph-bold">(123) 456-7809</span>.
+        </p>
+        <p class="section-1-text-paragraph-urgent">
+          See what we can do for you today!
+        </p>
+        <p class="section-1-text-paragraph">
+          {% include 'business_information/hours-of-operation.html' %}
+        </p>
+        <p class="section-1-text-paragraph-email">
+          {% include 'svg/email.svg' %}
+          {% include 'business_information/email.html' %}
+        </p>
+        <p class="section-1-text-paragraph-phone">
+          {% include 'svg/phone.svg' %}
+          {% include 'business_information/phone-number.html' %}
+        </p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        {% include 'contact_form/contact-form.html' %}
+      </div>
+    </section>
+  </div>
+{% endblock %}
