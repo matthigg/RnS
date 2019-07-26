@@ -950,7 +950,7 @@
 }
 
 .our-work-page .section-1-row .section-1-baap-group .section-1-baap-group-before::before {
-  background-color: #F3D333;
+  background-color: #020305;
   color: white;
   content: "BEFORE";
   font-size: calc(0.5rem + 0.25vw);
@@ -968,7 +968,7 @@
 }
 
 .our-work-page .section-1-row .section-1-baap-group .section-1-baap-group-after::before {
-  background-color: #F3D333;
+  background-color: #020305;
   color: white;
   content: "AFTER";
   font-size: calc(0.5rem + 0.25vw);

@@ -58,7 +58,7 @@
         margin-right: calc(0.25rem + 0.25vw);
         position: relative;
         &::before {
-          background-color: $secondary-color;
+          background-color: $senary-color;
           color: $primary-color;
           content: "BEFORE";
           font-size: calc(0.5rem + 0.25vw);
@@ -74,7 +74,7 @@
         border: calc(0.15rem + 0.15vw) solid $secondary-color;
         position: relative;
         &::before {
-          background-color: $secondary-color;
+          background-color: $senary-color;
           color: $primary-color;
           content: "AFTER";
           font-size: calc(0.5rem + 0.25vw);
