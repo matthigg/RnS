@@ -33,7 +33,7 @@
 }
 
 .about-page .navbar-spacer {
-  height: 10vh;
+  height: 15vh;
 }
 
 @media (max-width: 767.98px) {
@@ -65,7 +65,7 @@
 .about-page .rns-logo {
   display: block;
   margin: auto;
-  width: 35vw;
+  width: 20vw;
 }
 
 @media (max-width: 767.98px) {
@@ -75,10 +75,10 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media (min-width: 768px) {
   .about-page .row {
     margin: 0;
-    padding: 0 !important;
+    padding: calc(2rem + 4vw);
   }
 }
 

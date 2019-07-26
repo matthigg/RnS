@@ -3,7 +3,7 @@
 
   // Navbar Spacer
   & .navbar-spacer {
-    height: 10vh;
+    height: 15vh;
     @media (max-width: 767.98px) {
       height: 20vh;
     }
@@ -29,16 +29,16 @@
   & .rns-logo {
     display: block;
     margin: auto;
-    width: 35vw;
+    width: 20vw;
     @media (max-width: 767.98px) {
       width: 80vw;
       margin-bottom: calc(2rem + 1vw);
     }
   }
-  @media (max-width: 767.98px) {
+  @media (min-width: 768px) {
     & .row {
       margin: 0;
-      padding: 0 !important;
+      padding: calc(2rem + 4vw);
     }
   }
 }
