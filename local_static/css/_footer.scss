@@ -1,11 +1,15 @@
 .footer {
   background-color: $senary-color-rgba;
 
+  // Google Maps
   .footer-google-maps {
     border: 0;
     height: 100%;
     padding: calc(1rem + 1vw);
     width: 100%;
+    @media (max-width: 768px) {
+      height: 50vh;
+    }
   }
 
   // Brand
