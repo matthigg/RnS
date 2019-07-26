@@ -18,9 +18,9 @@ def services(request):
   return render(request, 'services.html', context)
 
 # Our Work Page
-def ourwork(request):
+def our_work(request):
   context = {}
-  return render(request, 'ourwork.html', context)
+  return render(request, 'our-work.html', context)
 
 # Contact Page
 def contact(request):

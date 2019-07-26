@@ -1,1 +1,90 @@
-<h1>Our Work</h1>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Restore Your Property To New Condition| Restore & Shine</title>
+{% endblock %}
+
+{% block metatag %}
+  <meta name="description" content="Let us restore your property to new condition! Pressure Washing Services in Sneads Ferry, NC.">
+{% endblock%}
+
+{% block main %}
+  <div class="container-fluid our-work-page">
+
+    <!-- Our Work Page Background Image -->
+    <div class="our-work-page-background"></div>
+
+    <!-- Navbar Spacer -->
+    <div class="navbar-spacer"></div>
+
+    <!-- Our Work Headline -->
+    <section class="row our-work-headline">
+      <h1>Restore Your Property To New Condition</h1>
+    </section>
+
+    <!-- Section 1, Before & After Pictures (BAAP) -->
+    <section class="row section-1-row">
+
+      <!-- Section 1, BAAP, House 1 -->
+      <div class="section-1-baap-group" 
+        data-id="ba-house-01" 
+        data-src="{% static 'img' %}"
+        data-toggle="modal" 
+        data-target="#modal-baap-template"
+      >
+        <div class="section-1-baap-group-before">
+          <img src="{% static 'img/ba-house-01-before.jpg' %}">
+        </div>
+        <div class="section-1-baap-group-after">
+          <img src="{% static 'img/ba-house-01-after.jpg' %}">
+        </div>
+      </div>
+
+      <!-- Section 1, BAAP, House 2 -->
+      <div class="section-1-baap-group"
+        data-id="ba-house-02" 
+        data-src="{% static 'img' %}"
+        data-toggle="modal" 
+        data-target="#modal-baap-template"
+      >
+        <div class="section-1-baap-group-before">
+          <img src="{% static 'img/ba-house-02-before.jpg' %}">
+        </div>
+        <div class="section-1-baap-group-after">
+          <img src="{% static 'img/ba-house-02-after.jpg' %}">
+        </div>
+      </div>
+
+      <!-- Section 1, BAAP, House 3 -->
+      <div class="section-1-baap-group"
+        data-id="ba-house-03" 
+        data-src="{% static 'img' %}"
+        data-toggle="modal" 
+        data-target="#modal-baap-template"
+      >
+        <div class="section-1-baap-group-before">
+          <img src="{% static 'img/ba-house-03-before.jpg' %}">
+        </div>
+        <div class="section-1-baap-group-after">
+          <img src="{% static 'img/ba-house-03-after.jpg' %}">
+        </div>
+      </div>
+
+      <!-- Section 1, BAAP, Sidewalk 1 -->
+      <div class="section-1-baap-group"
+        data-id="ba-sidewalk-01"
+        data-src="{% static 'img' %}"
+        data-toggle="modal" 
+        data-target="#modal-baap-template"
+      >
+        <div class="section-1-baap-group-before">
+          <img src="{% static 'img/ba-sidewalk-01-before.jpg' %}">
+        </div>
+        <div class="section-1-baap-group-after">
+          <img src="{% static 'img/ba-sidewalk-01-after.jpg' %}">
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock %}

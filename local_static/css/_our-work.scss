@@ -1,0 +1,103 @@
+// Our Work Page
+.our-work-page {
+  padding: 0;
+
+  .row {
+    margin: 0;
+  }
+
+  // Our Work Background Image
+  & .our-work-page-background {
+    background-image: 
+      linear-gradient(
+        rgba(2, 3, 5, 0.25),
+        rgba(2, 3, 5, 0.25),
+      ),
+      url('/static/img/house-01.jpg');
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    @extend %background-fixed;
+  }
+
+  // Navbar Spacer
+  & .navbar-spacer {
+    background-color: $primary-color;
+    height: calc(10rem + 6vw);
+    @media (max-width: 767.98px) {
+      height: 20vh;
+    }
+  }
+
+  // Our Work Headline
+  & .our-work-headline {
+    background-color: $primary-color;
+    padding: 0 calc(1rem + 0.5vw) calc(1rem + 0.5vw) calc(1rem + 0.5vw);
+    & h1 {
+      color: $quinary-color;
+      font-size: calc(1.5rem + 1vw);
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  // Section 1, Before & After Pictures
+  & .section-1-row {
+    background-color: $primary-color;
+    justify-content: space-around;
+    padding: 0 calc(1rem + 3vw) calc(1rem + 3vw) calc(1rem + 3vw);
+    & .section-1-baap-group {
+      display: flex;
+      justify-content: space-around;
+      margin: calc(1rem + 1vw) 0;
+      & .section-1-baap-group-before {
+        border: calc(0.15rem + 0.15vw) solid $secondary-color;
+        margin-right: calc(0.25rem + 0.25vw);
+        position: relative;
+        &::before {
+          background-color: $secondary-color;
+          color: $primary-color;
+          content: "BEFORE";
+          font-size: calc(0.5rem + 0.25vw);
+          font-style: italic;
+          font-weight: 600;
+          left: calc(0.25rem + 0.25vw);
+          padding: 0 calc(0.1rem + 0.1vw);
+          position: absolute;
+          top: calc(0.25rem + 0.25vw);
+        }
+      }
+      & .section-1-baap-group-after {
+        border: calc(0.15rem + 0.15vw) solid $secondary-color;
+        position: relative;
+        &::before {
+          background-color: $secondary-color;
+          color: $primary-color;
+          content: "AFTER";
+          font-size: calc(0.5rem + 0.25vw);
+          font-style: italic;
+          font-weight: 600;
+          left: calc(0.25rem + 0.25vw);
+          padding: 0 calc(0.1rem + 0.1vw);
+          position: absolute;
+          top: calc(0.25rem + 0.25vw);
+        }
+      }
+      & img {
+        height: 15vw;
+        object-fit: cover;
+        width: 20vw;
+        @media (max-width: 767.98px) {
+          height: auto;
+          width: 40vw;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

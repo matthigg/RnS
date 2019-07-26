@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (document.querySelector('.container-fluid').classList.contains('services-page')) {
     document.querySelector('.nav-link-services').classList.add('active');
     document.querySelector('.navbar-free-quote').style.display = 'block';
-  } else if (document.querySelector('.container-fluid').classList.contains('ourwork-page')) {
-    document.querySelector('.nav-link-ourwork').classList.add('active');
+  } else if (document.querySelector('.container-fluid').classList.contains('our-work-page')) {
+    document.querySelector('.nav-link-our-work').classList.add('active');
     document.querySelector('.navbar-free-quote').style.display = 'block';
   } else if (document.querySelector('.container-fluid').classList.contains('about-page')) {
     document.querySelector('.nav-link-about').classList.add('active');
