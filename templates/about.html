@@ -1,1 +1,62 @@
-<h1>Reviews</h1>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Learn About Our Pressure Washing Company | Restore & Shine</title>
+{% endblock %}
+
+{% block metatag %}
+  <meta name="description" content="Restore & Shine is a pressure washing company located in Sneads Ferry, NC, and we love what we do!">
+{% endblock%}
+
+{% block main %}
+  <div class="container-fluid about-page">
+
+    <!-- Section 1 -->
+    <section class="row section-1-spacer"></section>
+
+    <section class="row section-1-row">
+      <div class="col-md-6">
+        <h1 class="section-1-header">Done right, the first time</h1>
+        <p class="section-1-paragraph">
+          R & S Pressure Washing came to be while I searched for a new pressure 
+          washer for home. The more I read about the different types of pumps and 
+          cleaning methods, the more fascinating it became. One day I will retire 
+          from active duty and will need a new job. But rather than work for 
+          someone else I decided small business ownership is the way to go.
+        </p>
+        <p class="section-1-paragraph">
+          In my studying and practical applications I found that the pressure is 
+          not really what cleans houses and wood. It just gets the water to where 
+          it needs to be more efficiently, whether that be 40’ above ground or 10’ 
+          away. I began to learn the chemistry behind cleaning and how acids and 
+          bases react with different stains, organic matter, and surfaces. This is 
+          when I realized that cleaning residential and commercial building 
+          exteriors and flat surfaces is fun and engaging. It is only when using 
+          science to properly formulate solutions (diluted chemical compounds) for 
+          the different problems (rust, oil stains, mold, UV damage) that said 
+          problems can be appropriately addressed, and removed. Surface cleaning 
+          compounds the problems because it does require pressure to be cleaned.
+        </p>
+        <p class="section-1-paragraph">
+          So what is the correct amount of pressure the surface can take without 
+          being damaged? That depends on what the surface is comprised of. 
+          Because it varies we have several options to increase and decrease 
+          pressure as needed.  And at times the safe pressure limit for that 
+          surface is not able to remove the harsh stains. So rather than turn 
+          up the pressure and potentially damage the surface, we introduce 
+          cleaning agents.
+        </p>
+        <p class="section-1-paragraph">
+          All that is a longer way to say- I enjoy the chemistry and problem 
+          solving required to effectively clean the job site, and when complete 
+          the owners are all smiles. I get to deliver good news all day! It’s a 
+          great job.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img class="rns-logo" src="{% static 'img/R&S-logo.jpg' %}" alt="R & S Logo">
+      </div>
+    </section>
+  </div>
+{% endblock %}
