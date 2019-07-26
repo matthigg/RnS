@@ -10,21 +10,21 @@
   background-color: blue;
 }
 
-.about-page .about-page-background, .contact-page .contact-page-row .contact-page-background, .index-page .landing-page-row .landing-page-background, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .ourwork-page .ourwork-splash-page-row .ourwork-splash-page-background, .services-page .services-splash-page-row .services-splash-page-background, .services-page .section-2-row .card-background-house-washing, .services-page .section-2-row .card-background-patio-and-deck, .services-page .section-2-row .card-background-graffiti-removal, .thanks-page .thanks-page-row .thanks-page-background {
+.about-page .about-page-background, .contact-page .contact-page-row .contact-page-background, .index-page .landing-page-row .landing-page-background, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .ourwork-page .ourwork-splash-page-row .ourwork-splash-page-background, .services-page .services-page-background, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .thanks-page .thanks-page-row .thanks-page-background {
   background-color: #4D3F22;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.index-page .section-1-row .card .card-image::before, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-2-row .card-background-house-washing, .services-page .section-2-row .card-background-patio-and-deck, .services-page .section-2-row .card-background-graffiti-removal {
+.index-page .section-1-row .card .card-image::before, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-1-row .card .card-image::before, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration {
   border-radius: calc(0.5rem + 8vw);
   height: calc(1rem + 16vw);
   width: calc(1rem + 16vw);
 }
 
 @media (max-width: 767.98px) {
-  .index-page .section-1-row .card .card-image::before, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-2-row .card-background-house-washing, .services-page .section-2-row .card-background-patio-and-deck, .services-page .section-2-row .card-background-graffiti-removal {
+  .index-page .section-1-row .card .card-image::before, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-1-row .card .card-image::before, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration {
     border-radius: calc(0.5rem + 25vw);
     height: calc(1rem + 50vw);
     width: calc(1rem + 50vw);
@@ -52,13 +52,25 @@
 
 .about-page .navbar-spacer {
   background-color: white;
-  height: 15vh;
+  height: 25vh;
 }
 
 @media (max-width: 767.98px) {
   .about-page .navbar-spacer {
     height: 20vh;
   }
+}
+
+.about-page .about-headline {
+  background-color: white;
+  padding: 0 calc(1rem + 0.5vw);
+}
+
+.about-page .about-headline h1 {
+  color: #182013;
+  font-size: calc(1.5rem + 1vw);
+  margin: auto;
+  text-align: center;
 }
 
 .about-page .section-1-row {
@@ -68,7 +80,7 @@
 }
 
 .about-page .section-1-row .section-1-header {
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(1rem + 1vw);
   margin-bottom: calc(1rem + 0.25vw);
   text-align: center;
 }
@@ -1209,13 +1221,17 @@
   visibility: hidden;
 }
 
-.services-page .services-splash-page-row {
-  position: relative;
+.services-page {
+  padding: 0;
 }
 
-.services-page .services-splash-page-row .services-splash-page-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 42, 29, 0.5)), to(rgba(0, 42, 29, 0.5))), url("/static/img/house3.jpg");
-  background-image: linear-gradient(rgba(0, 42, 29, 0.5), rgba(0, 42, 29, 0.5)), url("/static/img/house3.jpg");
+.services-page .row {
+  margin: 0;
+}
+
+.services-page .services-page-background {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
+  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
   height: 100vh;
   left: 0;
   position: fixed;
@@ -1224,361 +1240,140 @@
   z-index: -1;
 }
 
-.services-page .services-splash-page-row .services-splash-page-headline {
-  color: white;
-  font-size: calc(1rem + 3vw);
-  left: 5vw;
-  position: absolute;
-  top: 55vh;
-  white-space: nowrap;
+.services-page .navbar-spacer {
+  background-color: white;
+  height: 15vh;
 }
 
-.services-page .services-splash-page-row .services-splash-page-headline .ssph-line-1 {
-  font-weight: 100;
-  position: absolute;
-}
-
-.services-page .services-splash-page-row .services-splash-page-headline .ssph-line-2 {
-  left: calc(2rem + 8vw);
-  position: absolute;
-  top: calc(2.5rem + 1vw);
-}
-
-.services-page .services-splash-page-row .services-splash-page-headline .ssph-line-3 {
-  left: calc(2rem + 8vw);
-  position: absolute;
-  top: calc(5rem + 2vw);
-}
-
-.services-page .services-splash-page-row .services-splash-page-headline .ssph-line-4 {
-  font-weight: 100;
-  left: calc(2rem + 20vw);
-  position: absolute;
-  top: calc(7.5rem + 3vw);
-}
-
-.services-page .services-splash-page-row .services-splash-page-headline .ssph-bold {
-  font-weight: 600;
-}
-
-.services-page .services-splash-page-row .services-splash-page-headline .ssph-alpha-bold {
-  color: #F3D333;
-  font-weight: 900;
-  font-style: italic;
-}
-
-.services-page .services-splash-page-row .services-splash-page-headline .ssph-alpha-dash {
-  position: relative;
-  top: calc(-0.5rem - 1.5vw);
-}
-
-.services-page .services-splash-page-row .services-splash-page-headline .ssph-omega-bold {
-  font-weight: 900;
-  font-style: italic;
-}
-
-.services-page .services-splash-page-row .services-splash-page-headline .ssph-omega-dash {
-  color: #F3D333;
-  position: relative;
-  top: calc(-0.5rem - 1.5vw);
-}
-
-@media (max-width: 769px) {
-  .services-page .services-splash-page-row .services-splash-page-headline {
-    top: 70vh;
-  }
-  .services-page .services-splash-page-row .services-splash-page-headline .ssph-line-2 {
-    left: calc(4.5rem + 1vw);
-    top: calc(1.75rem + 1vw);
-  }
-  .services-page .services-splash-page-row .services-splash-page-headline .ssph-line-3 {
-    left: calc(4.25rem + 1vw);
-    top: calc(3.25rem + 2vw);
-  }
-  .services-page .services-splash-page-row .services-splash-page-headline .ssph-line-4 {
-    left: 0;
-    top: calc(5rem + 3vw);
+@media (max-width: 767.98px) {
+  .services-page .navbar-spacer {
+    height: 20vh;
   }
 }
 
-.services-page .services-splash-page-row .services-splash-page-placeholder {
-  height: 100vh;
-  width: 100%;
+.services-page .services-headline {
+  background-color: white;
 }
 
-.services-page .services-splash-page-bottom-border {
-  background-color: rgba(243, 211, 51, 0.8);
-  height: calc(1rem + 1vw);
+.services-page .services-headline h1 {
+  color: #182013;
+  font-size: calc(1.5rem + 1vw);
+  margin: auto;
 }
 
 .services-page .section-1-row {
   background-color: white;
-  color: #4D3F22;
-  height: 100%;
-  overflow: hidden;
-  padding: calc(0.5rem + 3.5vw);
-}
-
-.services-page .section-1-row .section-1-image-background {
-  background-image: url("/static/img/pressure-washer-2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.services-page .section-1-row .section-1-headline {
-  font-size: calc(1rem + 1.5vw);
-  font-weight: 700;
-  margin: calc(1rem + 0.5vw) 0;
-  text-align: center;
-  width: 100%;
-}
-
-.services-page .section-1-row .section-1-headline .section-1-headline-bold {
-  color: #F3D333;
-  font-style: italic;
-  font-weight: 900;
-}
-
-.services-page .section-1-row .section-1-paragraph {
-  font-size: calc(1rem + 0.5vw);
-  margin-bottom: calc(1rem + 0.5vw);
-}
-
-.services-page .section-1-row .section-1-paragraph .section-1-paragraph-bold {
-  color: #F3D333;
-  font-style: italic;
-  font-weight: 700;
-}
-
-.services-page .section-2-row {
-  background-color: rgba(243, 211, 51, 0.8);
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   padding: 0 calc(1rem + 6vw);
 }
 
-.services-page .section-2-row .card {
+.services-page .section-1-row .card {
   border: 0;
   border-radius: calc(0.5rem + 0.5vw) calc(0.5rem + 0.5vw);
-  margin-top: calc(1rem + 1vw);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: calc(2rem + 0.5vw) auto;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
-.services-page .section-2-row .card:hover {
-  cursor: pointer;
+.services-page .section-1-row .card .card-image::before {
+  border: 4px solid #F3D333;
+  content: '';
+  position: absolute;
+  top: 0;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
-.services-page .section-2-row .card:hover .card-body {
-  color: #6D6951;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+.services-page .section-1-row .card .card-background-fence-cleaning {
+  background-image: url("/static/img/fence-01.jpg");
+  margin: auto;
 }
 
-.services-page .section-2-row .card:hover .card-link-text {
-  color: #6D6951;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+.services-page .section-1-row .card .card-background-surface-cleaning {
+  background-image: url("/static/img/walkway-01.jpg");
+  margin: auto;
 }
 
-.services-page .section-2-row .card:hover .icon-arrow-right {
-  fill: #6D6951;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+.services-page .section-1-row .card .card-background-soft-wash {
+  background-image: url("/static/img/house-04.jpg");
+  margin: auto;
 }
 
-.services-page .section-2-row .card-background-house-washing {
-  background-image: url("/static/img/house1.jpg");
+.services-page .section-1-row .card .card-background-outdoor-stain-removal {
+  background-image: url("/static/img/rusty-wall-01.jpg");
+  margin: auto;
 }
 
-.services-page .section-2-row .card-background-patio-and-deck {
-  background-image: url("/static/img/patio.jpg");
+.services-page .section-1-row .card .card-background-deck-cleaning-and-restoration {
+  background-image: url("/static/img/deck-01.jpg");
+  margin: auto;
 }
 
-.services-page .section-2-row .card-background-graffiti-removal {
-  background-image: url("/static/img/graffiti-removal.jpg");
-}
-
-.services-page .section-2-row .card-body {
-  color: #4D3F22;
+.services-page .section-1-row .card .card-body {
+  color: #182013;
   font-size: calc(1rem + 0.25vw);
-  font-style: italic;
   font-weight: 700;
   padding: calc(0.25rem + 0.25vw) 0 0 0;
   text-align: center;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
-.services-page .section-2-row .card-link {
+.services-page .section-1-row .card .card-link {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   padding-bottom: calc(0.5rem + 0.25vw);
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 
-.services-page .section-2-row .card-link .card-link-text {
-  color: #4D3F22;
+.services-page .section-1-row .card .card-link .card-link-text {
+  color: #182013;
   font-size: calc(1rem + 0.25vw);
   margin-right: calc(0.5rem + 0.5vw);
   position: relative;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
-.services-page .section-2-row .card-link .icon-arrow-right {
-  fill: #4D3F22;
+.services-page .section-1-row .card .card-link .icon-arrow-right {
+  fill: #182013;
   height: calc(1rem + 0.25vw);
   stroke: white;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
-.services-page .section-2-row .section-2-billboards-headline {
-  color: white;
-  display: inline-block;
-  font-size: calc(1rem + 1.5vw);
-  font-weight: 700;
-  margin: auto;
-  padding: calc(1rem + 1vw);
+.services-page .section-1-row .card:hover {
+  cursor: pointer;
 }
 
-.services-page .section-2-row .section-2-billboards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  font-size: calc(1rem + 1vw);
-  margin-bottom: calc(1rem + 1vw);
-  text-align: center;
+.services-page .section-1-row .card:hover .card-image::before {
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  background-color: rgba(243, 211, 51, 0.5);
 }
 
-.services-page .section-2-row .section-2-billboards .billboard-1 {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #4D3F22;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: calc(1rem + 1vw);
-}
-
-.services-page .section-2-row .section-2-billboards .billboard-2 {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: white;
+.services-page .section-1-row .card:hover .card-body {
   color: #F3D333;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: calc(1rem + 1vw);
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
-.services-page .section-2-row .section-2-billboards .billboard-3 {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #4D3F22;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: calc(1rem + 1vw);
+.services-page .section-1-row .card:hover .card-link-text {
+  color: #F3D333;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
-.services-page .section-3-row {
-  padding: calc(1rem + 1vw);
-  background-color: white;
-}
-
-.services-page .section-3-row .section-3-headline {
-  color: #4D3F22;
-  font-size: calc(1rem + 1vw);
-  padding: calc(1rem + 0.5vw);
-  text-align: center;
-}
-
-.services-page .section-3-row .section-3-service-locations {
-  color: #4D3F22;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.services-page .section-3-row .section-3-service-locations h3 {
-  font-size: calc(0.75rem + 0.75vw);
-}
-
-.services-page .section-3-row .section-3-map-image {
-  width: 100%;
-}
-
-.services-page .section-3-row .section-3-bottom-border {
-  background-color: white;
-  height: 10vh;
-}
-
-.services-page .modal .btn-free-quote {
-  border: none;
-  background-color: white;
-  border-radius: calc(0.5rem + 0.1vw);
-  color: #4D3F22;
-  font-size: calc(1rem + 0.25vw);
-}
-
-.services-page .modal .btn-free-quote .btn-free-quote-highlight {
-  font-style: italic;
-  font-weight: 700;
-}
-
-.services-page .modal .btn-free-quote:hover {
-  background-color: #4D3F22;
-  color: white;
-  -webkit-transition: 0.15s ease-in;
-  transition: 0.15s ease-in;
-}
-
-.services-page .modal .modal-body {
-  color: #4D3F22;
-  font-size: calc(1rem + 0.5vw);
-}
-
-.services-page .modal .modal-content {
-  border: 0;
-}
-
-.services-page .modal .modal-header {
-  background-color: #F3D333;
-}
-
-.services-page .modal .modal-footer {
-  background-color: #F3D333;
-}
-
-.services-page .modal .modal-title {
-  color: white;
-  font-size: calc(1rem + 0.5vw);
-  font-style: italic;
-  font-weight: 600;
-}
-
-.services-page .modal .modal-title .modal-title-highlight {
-  font-weight: 800;
-}
-
-.services-page .modal .close {
-  color: white;
-}
-
-.services-page .modal .close:focus {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.services-page .section-1-row .card:hover .icon-arrow-right {
+  fill: #F3D333;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .thanks-page .thanks-page-row .thanks-page-background {
