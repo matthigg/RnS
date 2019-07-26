@@ -73,6 +73,11 @@
   text-align: center;
 }
 
+.about-page .about-headline h1 .h1-brand-font {
+  color: #F3D333;
+  font-family: "Stencil", "Segoe UI", sans-serif;
+}
+
 .about-page .section-1-row {
   background-color: white;
   color: #182013;
@@ -925,6 +930,11 @@
   font-size: calc(1.5rem + 1vw);
   margin: auto;
   text-align: center;
+}
+
+.our-work-page .our-work-headline h1 .h1-brand-font {
+  color: #F3D333;
+  font-family: "Stencil", "Segoe UI", sans-serif;
 }
 
 .our-work-page .section-1-row {

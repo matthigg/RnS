@@ -41,6 +41,10 @@
       font-size: calc(1.5rem + 1vw);
       margin: auto;
       text-align: center;
+      & .h1-brand-font {
+        color: $secondary-color;
+        font-family: "Stencil", "Segoe UI", sans-serif;
+      }
     }
   }
 
