@@ -1,8 +1,31 @@
 // About Page
 .about-page {
+  padding: 0;
+
+  .row {
+    margin: 0;
+  }
+
+  // Background Image
+  & .about-page-background {
+    background-image: 
+      linear-gradient(
+        rgba(2, 3, 5, 0.25),
+        rgba(2, 3, 5, 0.25),
+      ),
+      url('/static/img/house-01.jpg');
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    @extend %background-fixed;
+  }
 
   // Navbar Spacer
   & .navbar-spacer {
+    background-color: $primary-color;
     height: 15vh;
     @media (max-width: 767.98px) {
       height: 20vh;
@@ -31,14 +54,8 @@
     margin: auto;
     width: 20vw;
     @media (max-width: 767.98px) {
-      width: 80vw;
+      width: 70vw;
       margin-bottom: calc(2rem + 1vw);
-    }
-  }
-  @media (min-width: 768px) {
-    & .row {
-      margin: 0;
-      padding: calc(2rem + 4vw);
     }
   }
 }
