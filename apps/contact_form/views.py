@@ -29,7 +29,9 @@ def submit(request):
       messages.add_message(request, messages.INFO, 'Your Message Has Been Sent!')
       return redirect('thanks')
 
-    # Django stores errors in form.error
+    # Django stores errors in form.errors
     else:
-      form = CreateContactForm()
-    return render(request, 'contact.html', { 'form': form })
+      context = {
+        'form': form,
+      }
+      return render(request, 'contact.html', context)

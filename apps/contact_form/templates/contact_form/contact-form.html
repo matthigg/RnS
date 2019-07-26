@@ -1,21 +1,21 @@
 
 <!-- Show any messages/errors after a form submission (if any exist) -->
 {% if messages %}
-{% for message in messages %}
-  <div class="d-flex justify-content-center alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
-    {{ message }}
-  </div>
-{% endfor %}
+  {% for message in messages %}
+    <div class="d-flex justify-content-center alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
+      {{ message }}
+    </div>
+  {% endfor %}
 {% endif %}
 
 {% if form.errors %}
-{% for field in form %}
-  {% for error in field.errors %}
-    <div class="d-flex justify-content-center alert alert-danger" role="alert">
-      {{ error }}
-    </div>
+  {% for field in form %}
+    {% for error in field.errors %}
+      <div class="d-flex justify-content-center alert alert-danger" role="alert">
+        {{ error }}
+      </div>
+    {% endfor %}
   {% endfor %}
-{% endfor %}
 {% endif %}
 
 <!-- Contact Form -->
