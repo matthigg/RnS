@@ -1,11 +1,15 @@
 // About Page
 .about-page {
 
-  // Section 1
-  & .section-1-spacer {
-    height: 30vh;
+  // Navbar Spacer
+  & .navbar-spacer {
+    height: 10vh;
+    @media (max-width: 768px) {
+      height: 20vh;
+    }
   }
 
+  // Section 1
   & .section-1-row {
     background-color: $primary-color;
     color: $quinary-color;
@@ -19,14 +23,21 @@
       font-size: calc(1rem + 0.1vw);
     }
   }
-
+  & .img-col {
+    padding: 0;
+  }
   & .rns-logo {
-    width: 100%;
-    @media (max-width) {
-      width: auto;
+    display: block;
+    margin: auto;
+    width: 35vw;
+    @media (max-width: 768px) {
+      width: 80vw;
     }
   }
   @media (max-width: 768px) {
-    padding: 0;
+    & .row {
+      margin: 0;
+      padding: 0 !important;
+    }
   }
 }

@@ -32,8 +32,14 @@
   }
 }
 
-.about-page .section-1-spacer {
-  height: 30vh;
+.about-page .navbar-spacer {
+  height: 10vh;
+}
+
+@media (max-width: 768px) {
+  .about-page .navbar-spacer {
+    height: 20vh;
+  }
 }
 
 .about-page .section-1-row {
@@ -52,19 +58,26 @@
   font-size: calc(1rem + 0.1vw);
 }
 
-.about-page .rns-logo {
-  width: 100%;
+.about-page .img-col {
+  padding: 0;
 }
 
-@media (max-width) {
+.about-page .rns-logo {
+  display: block;
+  margin: auto;
+  width: 35vw;
+}
+
+@media (max-width: 768px) {
   .about-page .rns-logo {
-    width: auto;
+    width: 80vw;
   }
 }
 
 @media (max-width: 768px) {
-  .about-page {
-    padding: 0;
+  .about-page .row {
+    margin: 0;
+    padding: 0 !important;
   }
 }
 
@@ -170,7 +183,7 @@
 
 @font-face {
   font-family: "Stencil";
-  src: url("fonts/STENCIL.ttf") format("truetype"), url("fonts/STENCIL.woff") format("woff");
+  src: url("fonts/STENCIL.woff") format("woff");
 }
 
 .footer {
