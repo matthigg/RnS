@@ -1,0 +1,32 @@
+// About Page
+.about-page {
+
+  // Section 1
+  & .section-1-spacer {
+    height: 30vh;
+  }
+
+  & .section-1-row {
+    background-color: $primary-color;
+    color: $quinary-color;
+    padding: calc(1rem + 6vw);
+    & .section-1-header {
+      font-size: calc(1.5rem + 1vw);
+      margin-bottom: calc(1rem + 0.25vw);
+      text-align: center;
+    }
+    & .section-1-paragraph {
+      font-size: calc(1rem + 0.1vw);
+    }
+  }
+
+  & .rns-logo {
+    width: 100%;
+    @media (max-width) {
+      width: auto;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
