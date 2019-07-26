@@ -4,7 +4,7 @@
   // Navbar Spacer
   & .navbar-spacer {
     height: 10vh;
-    @media (max-width: 768px) {
+    @media (max-width: 767.98px) {
       height: 20vh;
     }
   }
@@ -30,11 +30,12 @@
     display: block;
     margin: auto;
     width: 35vw;
-    @media (max-width: 768px) {
+    @media (max-width: 767.98px) {
       width: 80vw;
+      margin-bottom: calc(2rem + 1vw);
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767.98px) {
     & .row {
       margin: 0;
       padding: 0 !important;

@@ -24,7 +24,7 @@
   width: calc(1rem + 16vw);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-2-row .card-background-house-washing, .services-page .section-2-row .card-background-patio-and-deck, .services-page .section-2-row .card-background-graffiti-removal {
     border-radius: calc(0.5rem + 25vw);
     height: calc(1rem + 50vw);
@@ -36,7 +36,7 @@
   height: 10vh;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .about-page .navbar-spacer {
     height: 20vh;
   }
@@ -68,13 +68,14 @@
   width: 35vw;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .about-page .rns-logo {
     width: 80vw;
+    margin-bottom: calc(2rem + 1vw);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .about-page .row {
     margin: 0;
     padding: 0 !important;
@@ -565,64 +566,6 @@
   fill: white;
 }
 
-.index-page .modal .btn-free-quote {
-  border: none;
-  background-color: white;
-  border-radius: calc(0.5rem + 0.1vw);
-  color: #182013;
-  font-size: calc(1rem + 0.25vw);
-}
-
-.index-page .modal .btn-free-quote .btn-free-quote-highlight {
-  font-style: italic;
-  font-weight: 700;
-}
-
-.index-page .modal .btn-free-quote:hover {
-  background-color: #182013;
-  color: white;
-  -webkit-transition: 0.15s ease-in;
-  transition: 0.15s ease-in;
-}
-
-.index-page .modal .modal-body {
-  color: #182013;
-  font-size: calc(1rem + 0.5vw);
-}
-
-.index-page .modal .modal-content {
-  border: 0;
-}
-
-.index-page .modal .modal-header {
-  background-color: #F3D333;
-}
-
-.index-page .modal .modal-footer {
-  background-color: #F3D333;
-}
-
-.index-page .modal .modal-title {
-  color: white;
-  font-size: calc(1rem + 0.5vw);
-  font-style: italic;
-  font-weight: 600;
-}
-
-.index-page .modal .modal-title .modal-title-highlight {
-  font-weight: 800;
-}
-
-.index-page .modal .close {
-  color: white;
-}
-
-.index-page .modal .close:focus {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
 .navbar {
   background-color: #020305;
   border-bottom: 2px solid #F3D333;
@@ -641,7 +584,7 @@
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .navbar .navbar-brand .nbni-dash {
     display: none;
   }
@@ -650,7 +593,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .navbar .navbar-brand.expand .nbni {
     -webkit-transition: 0.35s ease-out;
     transition: 0.35s ease-out;
@@ -769,7 +712,7 @@
   width: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar .nav-link {
     font-size: calc(1rem + 0.25vw);
   }
@@ -848,7 +791,7 @@
           box-shadow: none;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .navbar-call-now {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -894,7 +837,7 @@
     top: calc(6rem + 3vw);
   }
   .navbar-free-quote.navbar-free-quote-minimized-true {
-    top: calc(3rem + 3vw);
+    top: calc(4rem + 3vw);
   }
 }
 

@@ -19,7 +19,7 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
     padding: 0;
     margin: 0;
     text-align: center;
-    @media (max-width: 768px) {
+    @media (max-width: 767.98px) {
       & .nbni-dash {
         display: none;
       }
@@ -27,7 +27,7 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
         display: none;
       }
     }
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
       &.expand {
         & .nbni {
           transition: $navbar-brand-transition;
@@ -130,7 +130,7 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
         width: 50%;
       }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       font-size: calc(1rem + 0.25vw);
     }
   }
@@ -193,7 +193,7 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
     outline: none;
     box-shadow: none;
   }
-  @media (max-width: 769px) {
+  @media (max-width: 767px) {
     display: flex;
   }
 }
@@ -228,7 +228,7 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
       top: calc(6rem + 3vw);
     }
     &.navbar-free-quote-minimized-true {
-      top: calc(3rem + 3vw);
+      top: calc(4rem + 3vw);
     }
   }
 }
