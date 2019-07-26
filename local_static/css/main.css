@@ -17,15 +17,14 @@
   background-size: cover;
 }
 
-.index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-2-row .card-background-house-washing, .services-page .section-2-row .card-background-patio-and-deck, .services-page .section-2-row .card-background-graffiti-removal {
-  border: 4px solid #F3D333;
+.index-page .section-1-row .card .card-image::before, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-2-row .card-background-house-washing, .services-page .section-2-row .card-background-patio-and-deck, .services-page .section-2-row .card-background-graffiti-removal {
   border-radius: calc(0.5rem + 8vw);
   height: calc(1rem + 16vw);
   width: calc(1rem + 16vw);
 }
 
 @media (max-width: 767.98px) {
-  .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-2-row .card-background-house-washing, .services-page .section-2-row .card-background-patio-and-deck, .services-page .section-2-row .card-background-graffiti-removal {
+  .index-page .section-1-row .card .card-image::before, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-2-row .card-background-house-washing, .services-page .section-2-row .card-background-patio-and-deck, .services-page .section-2-row .card-background-graffiti-removal {
     border-radius: calc(0.5rem + 25vw);
     height: calc(1rem + 50vw);
     width: calc(1rem + 50vw);
@@ -410,6 +409,15 @@
   transition: 0.2s ease-in;
 }
 
+.index-page .section-1-row .card .card-image::before {
+  border: 4px solid #F3D333;
+  content: '';
+  position: absolute;
+  top: 0;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
 .index-page .section-1-row .card .card-background-fence-cleaning {
   background-image: url("/static/img/fence-01.jpg");
   margin: auto;
@@ -471,6 +479,12 @@
 
 .index-page .section-1-row .card:hover {
   cursor: pointer;
+}
+
+.index-page .section-1-row .card:hover .card-image::before {
+  background: rgba(243, 211, 51, 0.8);
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .index-page .section-1-row .card:hover .card-body {
