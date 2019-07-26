@@ -7,10 +7,29 @@ $senary-color:#020305;
 
 $primary-color-rgba: rgba(255, 255, 255, 0.8);
 $secondary-color-rgba: rgba(243, 211, 51, 0.8);
-$tertiary-color-rgba: rgba(109,105,81, 0.8);
-$quarternary-color-rgba: rgba(77,63,34, 0.8);
-$quinary-color-rgba: rgba(24,32,19, 0.8);
+$tertiary-color-rgba: rgba(109, 105, 81, 0.8);
+$quarternary-color-rgba: rgba(77, 63, 34, 0.8);
+$quinary-color-rgba: rgba(24, 32, 19, 0.8);
 $senary-color-rgba: rgba(2, 3, 5, 0.8);
+
+@mixin primary-color-rgba-background($opacity) {
+  background-color: rgba(255, 255, 255, $opacity);
+}
+@mixin secondary-color-rgba-background($opacity) {
+  background-color: rgba(243, 211, 51, $opacity);
+}
+@mixin tertiary-color-rgba-background($opacity) {
+  background-color: rgba(109, 105, 81, $opacity);
+}
+@mixin quarternary-color-rgba-background($opacity) {
+  background-color: rgba(77, 63, 34, $opacity);
+}
+@mixin quinary-color-rgba-background($opacity) {
+  background-color: rgba(24, 32, 19, $opacity);
+}
+@mixin senary-color-rgba-background($opacity) {
+  background-color: rgba(2, 3, 5, $opacity);
+}
 
 .red {
   background-color: red;

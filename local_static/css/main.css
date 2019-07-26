@@ -309,7 +309,6 @@
 }
 
 .footer .footer-back-to-top-and-copyright .back-to-top-arrow-up-wrapper button {
-  background-color: rgba(0, 0, 0, 0);
   border: 2px solid #F3D333;
   border-radius: 50%;
   display: -webkit-inline-box;
@@ -324,6 +323,7 @@
   margin: auto;
   height: 4rem;
   width: 4rem;
+  background-color: rgba(2, 3, 5, 0);
 }
 
 .footer .footer-back-to-top-and-copyright .back-to-top-arrow-up-wrapper button .arrow-up {
@@ -355,8 +355,8 @@
 }
 
 .index-page .landing-page-row .landing-page-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.5)), to(rgba(2, 3, 5, 0.5))), url("/static/img/house-01.jpg");
-  background-image: linear-gradient(rgba(2, 3, 5, 0.5), rgba(2, 3, 5, 0.5)), url("/static/img/house-01.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
+  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
   height: 100vh;
   left: 0;
   position: fixed;
@@ -374,7 +374,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(2, 3, 5, 0.8);
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,6 +387,7 @@
   margin: 0;
   text-align: center;
   width: 100%;
+  background-color: rgba(2, 3, 5, 0.8);
 }
 
 .index-page .section-1-row {
@@ -482,9 +482,9 @@
 }
 
 .index-page .section-1-row .card:hover .card-image::before {
-  background: rgba(243, 211, 51, 0.8);
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
+  background-color: rgba(243, 211, 51, 0.5);
 }
 
 .index-page .section-1-row .card:hover .card-body {
@@ -734,10 +734,10 @@
 
 @media (min-width: 768px) {
   .navbar {
-    background-color: rgba(2, 3, 5, 0.8);
     margin: 0;
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
+    background-color: rgba(2, 3, 5, 0.8);
   }
   .navbar.navbar-minimized-false {
     padding: calc(0.5rem + 1vw);

@@ -1,5 +1,5 @@
 .footer {
-  background-color: $senary-color-rgba;
+  @include senary-color-rgba-background(0.8);
 
   // Google Maps
   .footer-google-maps {
@@ -100,7 +100,6 @@
       margin: auto;
       width: max-content;
       & button {
-        background-color: rgba(0, 0, 0, 0);
         border: 2px solid $secondary-color;
         border-radius: 50%;
         display: inline-flex;
@@ -109,6 +108,7 @@
         margin: auto;
         height: 4rem;
         width: 4rem;
+        @include senary-color-rgba-background(0);
 
         // https://css-tricks.com/snippets/css/css-triangle/
         & .arrow-up {

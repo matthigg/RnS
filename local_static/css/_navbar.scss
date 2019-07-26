@@ -135,9 +135,10 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
     }
   }
   @media (min-width: 768px) {
-    background-color: $senary-color-rgba;
+    // background-color: $senary-color-rgba;
     margin: 0;
     transition: $navbar-transition;
+    @include senary-color-rgba-background(0.8);
     &.navbar-minimized-false {
       padding: calc(0.5rem + 1vw);
     }
