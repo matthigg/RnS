@@ -1,6 +1,13 @@
 .footer {
   background-color: $senary-color-rgba;
 
+  .footer-google-maps {
+    border: 0;
+    height: 100%;
+    padding: calc(1rem + 1vw);
+    width: 100%;
+  }
+
   // Brand
   .footer-brand {
     color: $primary-color;
@@ -78,15 +85,14 @@
 
   // Back-To-Top Link & Copyright
   .footer-back-to-top-and-copyright {
-    color: $secondary-color;
     font-size: calc(1rem + 0.5vw);
-    padding: 0 calc(2rem + 2vw) calc(2rem + 2vw) calc(2rem + 2vw);
+    padding-bottom: calc(2rem + 2vw);
     & .footer-copyright {
+      color: $primary-color;
       font-size: calc(0.75rem + 0.5vw);
       text-align: center;
     }
     & .back-to-top-arrow-up-wrapper {
-      // display: inline-block;
       margin: auto;
       width: max-content;
       & button {
@@ -114,6 +120,10 @@
             border-bottom-color: $senary-color-rgba;
             transition: 0.2s;
           }
+        }
+        &:focus {
+          outline: none;
+          box-shadow: none;
         }
       }
     }
