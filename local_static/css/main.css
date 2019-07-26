@@ -1002,7 +1002,7 @@
   padding: 0 calc(0.1rem + 0.1vw);
   position: absolute;
   top: calc(0.25rem + 0.25vw);
-  z-index: 100;
+  z-index: 1;
 }
 
 .our-work-page .section-1-row .section-1-baap-group .section-1-baap-group-after {
@@ -1031,7 +1031,7 @@
   padding: 0 calc(0.1rem + 0.1vw);
   position: absolute;
   top: calc(0.25rem + 0.25vw);
-  z-index: 100;
+  z-index: 1;
 }
 
 .our-work-page .section-1-row .section-1-baap-group img {
