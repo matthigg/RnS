@@ -1025,7 +1025,7 @@
 }
 
 .our-work-page .modal .modal-baap-group-before::before {
-  background-color: #F3D333;
+  background-color: #182013;
   color: white;
   content: "BEFORE";
   font-size: calc(1rem + 0.25vw);
@@ -1056,7 +1056,7 @@
 }
 
 .our-work-page .modal .modal-baap-group-after::before {
-  background-color: #F3D333;
+  background-color: #182013;
   color: white;
   content: "AFTER";
   font-size: calc(1rem + 0.25vw);
@@ -1084,13 +1084,8 @@
 
 .our-work-page .modal .modal-title {
   color: white;
+  font-family: 'Stencil', 'Segoe UI', sans-serif;
   font-size: calc(1rem + 0.5vw);
-  font-style: italic;
-  font-weight: 600;
-}
-
-.our-work-page .modal .modal-title .modal-title-highlight {
-  font-weight: 800;
 }
 
 .our-work-page .modal img {
