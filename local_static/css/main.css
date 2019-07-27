@@ -450,6 +450,10 @@
   padding: 0 calc(1rem + 6vw);
 }
 
+.index-page .section-1-row .card-link {
+  text-decoration: none;
+}
+
 .index-page .section-1-row .card {
   border: 0;
   border-radius: calc(0.5rem + 0.5vw) calc(0.5rem + 0.5vw);
