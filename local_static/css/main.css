@@ -10,7 +10,7 @@
   background-color: blue;
 }
 
-.about-page .about-page-background, .contact-page .contact-page-background, .index-page .landing-page-row .landing-page-background, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .our-work-page .our-work-page-background, .services-page .services-page-background, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .thanks-page .thanks-page-row .thanks-page-background {
+.about-page .about-page-background, .contact-page .contact-page-background, .index-page .landing-page-row .landing-page-background, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .our-work-page .our-work-page-background, .services-page .services-page-background, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .thanks-page .thanks-background {
   background-color: #4D3F22;
   background-repeat: no-repeat;
   background-position: center;
@@ -1351,9 +1351,17 @@
   transition: 0.2s ease-in;
 }
 
-.thanks-page .thanks-page-row .thanks-page-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(23, 104, 94, 0.5)), to(rgba(23, 104, 94, 0.5))), url("/static/img/house4.jpg");
-  background-image: linear-gradient(rgba(23, 104, 94, 0.5), rgba(23, 104, 94, 0.5)), url("/static/img/house4.jpg");
+.thanks-page {
+  padding: 0;
+}
+
+.thanks-page .row {
+  margin: 0;
+}
+
+.thanks-page .thanks-background {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
+  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
   height: 100vh;
   left: 0;
   position: fixed;
@@ -1362,26 +1370,38 @@
   z-index: -1;
 }
 
-.thanks-page .thanks-page-row .thanks-page-placeholder {
-  height: 30vh;
-  width: 100%;
+.thanks-page .navbar-spacer {
+  background-color: white;
+  height: calc(10rem + 6vw);
 }
 
-.thanks-page .thanks-page-bottom-border {
-  background-color: rgba(243, 211, 51, 0.8);
-  height: 3vw;
-}
-
-@media (max-width: 769px) {
-  .thanks-page .thanks-page-bottom-border {
-    height: 2rem;
+@media (max-width: 767.98px) {
+  .thanks-page .navbar-spacer {
+    height: 20vh;
   }
+}
+
+.thanks-page .thanks-headline {
+  background-color: white;
+  padding: 0 calc(1rem + 0.5vw) calc(1rem + 0.5vw) calc(1rem + 0.5vw);
+}
+
+.thanks-page .thanks-headline h1 {
+  color: #182013;
+  font-size: calc(1.5rem + 1vw);
+  margin: auto;
+  text-align: center;
+}
+
+.thanks-page .thanks-headline h1 .h1-brand-font {
+  color: #F3D333;
+  font-family: "Stencil", "Segoe UI", sans-serif;
 }
 
 .thanks-page .section-1-row {
   background-color: white;
-  color: #4D3F22;
-  padding: calc(0.25rem + 3.75vw);
+  color: #182013;
+  padding: 0 calc(0.25rem + 3.75vw) calc(0.25rem + 3.75vw) calc(0.25rem + 3.75vw);
   text-align: center;
 }
 
@@ -1419,7 +1439,7 @@
 }
 
 .thanks-page .section-1-row .section-1-text-paragraph-email .icon-email circle {
-  fill: #4D3F22;
+  fill: #182013;
 }
 
 .thanks-page .section-1-row .section-1-text-paragraph-email .icon-email path {
@@ -1438,7 +1458,7 @@
 }
 
 .thanks-page .section-1-row .section-1-text-paragraph-phone .icon-phone circle {
-  fill: #4D3F22;
+  fill: #182013;
 }
 
 .thanks-page .section-1-row .section-1-text-paragraph-phone .icon-phone path {

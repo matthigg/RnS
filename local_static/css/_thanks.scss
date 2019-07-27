@@ -1,42 +1,57 @@
 // Thanks Page
 .thanks-page {
+  padding: 0;
+  & .row {
+    margin: 0;
+  }
 
-  // Thanks Splash Page
-  .thanks-page-row {
-    & .thanks-page-background {
-      background-image: 
-        linear-gradient(
-          rgba(23, 104, 94, 0.5),
-          rgba(23, 104, 94, 0.5)
-        ),
-        url('/static/img/house4.jpg');
-      height: 100vh;
-      left: 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: -1;
-      @extend %background-fixed;
-    }
-    & .thanks-page-placeholder {
-      height: 30vh;
-      width: 100%;
+  // Thanks Background Image
+  & .thanks-background {
+    background-image: 
+      linear-gradient(
+        rgba(2, 3, 5, 0.25),
+        rgba(2, 3, 5, 0.25),
+      ),
+      url('/static/img/house-01.jpg');
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    @extend %background-fixed;
+  }
+
+  // Navbar Spacer
+  & .navbar-spacer {
+    background-color: $primary-color;
+    height: calc(10rem + 6vw);
+    @media (max-width: 767.98px) {
+      height: 20vh;
     }
   }
 
-  .thanks-page-bottom-border {
-    background-color: $secondary-color-rgba;
-    height: 3vw;
-    @media (max-width: 769px) {
-      height: 2rem;
+  // Thanks Headline
+  & .thanks-headline {
+    background-color: $primary-color;
+    padding: 0 calc(1rem + 0.5vw) calc(1rem + 0.5vw) calc(1rem + 0.5vw);
+    & h1 {
+      color: $quinary-color;
+      font-size: calc(1.5rem + 1vw);
+      margin: auto;
+      text-align: center;
+      & .h1-brand-font {
+        color: $secondary-color;
+        font-family: "Stencil", "Segoe UI", sans-serif;
+      }
     }
   }
 
   // Section 1
-  .section-1-row {
+  & .section-1-row {
     background-color: $primary-color;
-    color: $quarternary-color;
-    padding: calc(0.25rem + 3.75vw);
+    color: $quinary-color;
+    padding: 0 calc(0.25rem + 3.75vw) calc(0.25rem + 3.75vw) calc(0.25rem + 3.75vw);
     text-align: center;
 
     & .section-1-text-headline {
@@ -65,7 +80,7 @@
       & .icon-email {
         height: calc(1.5rem + 1vw);
         & circle {
-          fill: $quarternary-color;
+          fill: $quinary-color;
         }
         & path {
           fill: $primary-color;
@@ -80,7 +95,7 @@
       & .icon-phone {
         height: calc(1.5rem + 1vw);
         & circle {
-          fill: $quarternary-color;
+          fill: $quinary-color;
         }
         & path {
           fill: $primary-color;

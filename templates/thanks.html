@@ -1,7 +1,68 @@
-<h1>Thanks</h1>
+{% extends 'base.html' %}
 
-{% if messages %}
-  {% for message in messages %}
-    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">{{ message }}</div>
-  {% endfor %}
-{% endif %}
+{% block main %}
+
+  <div class="container-fluid thanks-page">
+
+    <!-- Thanks Background Image -->
+    <div class="thanks-background"></div>
+
+    <!-- Navbar Spacer -->
+    <div class="navbar-spacer"></div>
+
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+
+    <!-- Thanks Headline -->
+    <section class="row thanks-headline">
+        <h1>Thanks For Contacting
+        <span class="h1-brand-font">RESTORE & SHINE</span>
+        Pressure Washing!
+      </h1>
+    </section>
+
+    <!-- Section 1 -->
+    <section class="row section-1-row">
+
+      <!-- Section 1 Column Spacer -->
+      <div class="col-md-2"></div>
+
+      <!-- Section 1 Text -->
+      <div class="col-md-8">
+        <h2 class="section-1-text-headline">
+
+        </h2>
+        <p class="section-1-text-paragraph">
+          A member of our staff will get back to you as 
+          <span class="section-1-text-paragraph-bold">soon</span>
+          as possible!
+        </p>
+        <p class="section-1-text-paragraph">
+          If you'd like to get in touch with us right away or send a follow-up
+          email, please don't hesitate to use our contact information:
+        </p>
+        <p class="section-1-text-paragraph-email">
+          {% include 'svg/email.svg' %}
+          {% include 'business_information/email.html' %}
+        </p>
+        <p class="section-1-text-paragraph-phone">
+          {% include 'svg/phone.svg' %}
+          {% include 'business_information/phone-number.html' %}
+        </p>
+        <p class="section-1-text-paragraph">
+          {% include 'business_information/hours-of-operation.html' %}
+        </p>
+        <p class="section-1-text-paragraph-urgent">
+          We look forward to speaking with you soon!
+        </p>
+      </div>
+
+      <!-- Section 1 Column Spacer -->
+      <div class="col-md-2"></div>
+    </section>
+  </div>
+
+{% endblock %}
