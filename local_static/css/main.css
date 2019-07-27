@@ -10,7 +10,7 @@
   background-color: blue;
 }
 
-.about-page .about-page-background, .contact-page .contact-page-background, .index-page .landing-page-row .landing-page-background, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .our-work-page .our-work-page-background, .services-page .services-page-background, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .thanks-page .thanks-background {
+.about-page .about-page-background, .contact-page .contact-page-background, .index-page .landing-page-row .landing-page-background, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .our-work-page .our-work-page-background, .services-page .services-page-background, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .thanks-page .thanks-background, .individual-service-page .individual-service-background {
   background-color: #4D3F22;
   background-repeat: no-repeat;
   background-position: center;
@@ -1469,6 +1469,127 @@
   font-size: calc(1rem + 0.5vw);
   font-style: italic;
   font-weight: 700;
+}
+
+.individual-service-page {
+  padding: 0;
+}
+
+.individual-service-page .row {
+  margin: 0;
+}
+
+.individual-service-page .individual-service-background {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
+  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.individual-service-page .navbar-spacer {
+  background-color: white;
+  height: calc(10rem + 6vw);
+}
+
+@media (max-width: 767.98px) {
+  .individual-service-page .navbar-spacer {
+    height: 20vh;
+  }
+}
+
+.individual-service-page .individual-service-headline {
+  background-color: white;
+  padding: 0 calc(1rem + 0.5vw) calc(1rem + 0.5vw) calc(1rem + 0.5vw);
+}
+
+.individual-service-page .individual-service-headline h1 {
+  color: #182013;
+  font-size: calc(1.5rem + 1vw);
+  margin: auto;
+  text-align: center;
+}
+
+.individual-service-page .individual-service-headline h1 .h1-brand-font {
+  color: #F3D333;
+  font-family: "Stencil", "Segoe UI", sans-serif;
+}
+
+.individual-service-page .section-1-row {
+  background-color: white;
+  color: #182013;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: calc(0.25rem + 3.75vw);
+  text-align: center;
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-headline {
+  font-size: calc(1rem + 1vw);
+  font-weight: 600;
+  margin-bottom: calc(2rem + 0.5vw);
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-headline .section-1-text-headline-bold {
+  color: #F3D333;
+  font-weight: 600;
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph {
+  font-size: calc(1rem + 0.5vw);
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph .section-1-text-paragraph-bold {
+  color: #F3D333;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-urgent {
+  font-size: calc(1rem + 0.75vw);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-email {
+  font-size: calc(1rem + 1vw);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-email .icon-email {
+  height: calc(1.5rem + 1vw);
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-email .icon-email circle {
+  fill: #182013;
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-email .icon-email path {
+  fill: white;
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-phone {
+  font-size: calc(1rem + 1vw);
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: calc(1rem + 1vw);
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-phone .icon-phone {
+  height: calc(1.5rem + 1vw);
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-phone .icon-phone circle {
+  fill: #182013;
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-phone .icon-phone path {
+  fill: white;
 }
 
 * {

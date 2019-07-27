@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Deck Cleaning & Restoration in Snead's Ferry, NC | Restore & Shine</title>
+{% endblock %}
+
+{% block metatag %}
+  <meta name="description" content="Restore & Shine offers deck cleaning & restoration in Snead's Ferry, NC - increase your home's curb appeal and request a free quote today!">
+{% endblock%}
+
+{% block main %}
+  <div class="container-fluid individual-service-page">
+
+    <!-- Individual Service Background Image -->
+    <div class="individual-service-background"></div>
+
+    <!-- Navbar Spacer -->
+    <div class="navbar-spacer"></div>
+
+    <!-- Individual Service Headline -->
+    <section class="row individual-service-headline">
+      <h1>
+        Deck Cleaning & Restoration in Sneads Ferry, NC
+      </h1>
+    </section>
+
+    <!-- Section 1 -->
+    <section class="row section-1-row">
+
+      <!-- Individual Service Text -->
+      <div class="col-md-6 section-1-text">
+        <h2 class="section-1-text-headline">
+          If you're 
+          <span class="span section-1-text-headline-bold">looking for fast and affordable deck cleaning & restoration</span>, 
+          look no further!
+        </h2>
+        <p class="section-1-text-paragraph">
+          We can wash off mold, mildew, dirt, and everything else that your deck has endured over time.
+          <!-- <span class="section-1-text-paragraph-bold">Bold</span>. -->
+        </p>
+        <p class="section-1-text-paragraph-urgent">
+          Ask us about cleaning and restoring your deck today!
+        </p>
+        <p class="section-1-text-paragraph">
+          {% include 'business_information/hours-of-operation.html' %}
+        </p>
+        <p class="section-1-text-paragraph-email">
+          {% include 'svg/email.svg' %}
+          {% include 'business_information/email.html' %}
+        </p>
+        <p class="section-1-text-paragraph-phone">
+          {% include 'svg/phone.svg' %}
+          {% include 'business_information/phone-number.html' %}
+        </p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        {% include 'contact_form/contact-form.html' %}
+      </div>
+    </section>
+  </div>
+{% endblock %}

@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from .views import about, contact, index, our_work, services, thanks
+from .views import deck_cleaning_restoration, fence_cleaning, outdoor_stain_removal, soft_wash, surface_cleaning
 
 
 urlpatterns = [
@@ -27,4 +28,9 @@ urlpatterns = [
   path('our-work/', our_work,  name='our-work'),
   path('services/', services, name='services'),
   path('thanks/',   thanks,   name='thanks'),
+  path('services/fence-cleaning/',             fence_cleaning,             name='fence-cleaning'),
+  path('services/surface-cleaning/',           surface_cleaning,           name='surface-cleaning'),
+  path('services/soft-wash/',                  soft_wash,                  name='soft-wash'),
+  path('services/outdoor-stain-removal/',      outdoor_stain_removal,      name='outdoor-stain-removal'),
+  path('services/deck-cleaning-restoration/',  deck_cleaning_restoration,  name='deck-cleaning-restoration'),
 ]
