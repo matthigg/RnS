@@ -6,13 +6,13 @@
     <!-- Brand & Phone -->
     <div class="col-md-4">
       <div class="footer-brand">
-        <h1 class="footer-brand-headline">RESTORE & SHINE</h1>
+        <h1 class="footer-brand-headline">{% include 'business_information/name.html' %}</h1>
         <h2 class="footer-brand-headline-sub">PRESSURE WASHING</h2>
       </div>
       <div class="footer-phone">
         <h1 class="footer-phone-headline">Call us today for a Free Estimate!</h1>
         <p class="footer-phone-text">
-          {% include 'svg/phone.svg' %} (123) 456-7890
+          {% include 'svg/phone.svg' %} {% include 'business_information/phone-number.html' %}
         </p>
         <p class="footer-hours-of-operation-text">
           {% include 'business_information/hours-of-operation.html' %}
@@ -37,7 +37,7 @@
   <!-- Back To Top & Copyright -->
   <div class="row footer-back-to-top-and-copyright">
     <div class="col-md-4">
-      <p class="footer-copyright">© 2019 Restore & Shine Pressure Washing</p>
+      <p class="footer-copyright">© 2019 {% include 'business_information/name.html' %} Pressure Washing</p>
     </div>
     <div class="col-md-4">
       <div class="back-to-top-arrow-up-wrapper">

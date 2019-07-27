@@ -2,47 +2,44 @@
 {% load static %}
 
 {% block title %}
-  <title>Pressure Washing Services in Snead's Ferry, NC | Restore & Shine</title>
+  <title>Fence Cleaning in Snead's Ferry, NC | Restore & Shine</title>
 {% endblock %}
 
 {% block metatag %}
-  <meta name="description" content="Restore & Shine offers fast & affordable pressure washing services in Snead's Ferry, NC - increase your home's curb appeal and request a free quote today!">
+  <meta name="description" content="Restore & Shine offers fence cleaning in Snead's Ferry, NC - increase your home's curb appeal and request a free quote today!">
 {% endblock%}
 
 {% block main %}
-  <div class="container-fluid contact-page">
+  <div class="container-fluid individual-service-page">
 
-    <!-- Contact Page Background Image -->
-    <div class="contact-page-background"></div>
+    <!-- Individual Service Background Image -->
+    <div class="individual-service-background"></div>
 
     <!-- Navbar Spacer -->
     <div class="navbar-spacer"></div>
 
-    <!-- Contact Headline -->
-    <section class="row contact-headline">
+    <!-- Individual Service Headline -->
+    <section class="row individual-service-headline">
       <h1>
-        Let Us
-        <span class="h1-brand-font">RESTORE & SHINE</span>
-        Your Property Today!
+        Fence Cleaning in {% include 'business_information/location.html' %}
       </h1>
     </section>
 
-    <!-- Section 1, Contact Form -->
+    <!-- Section 1 -->
     <section class="row section-1-row">
 
-      <!-- Contact Form Text -->
+      <!-- Individual Service Text -->
       <div class="col-md-6 section-1-text">
         <h2 class="section-1-text-headline">
-          Get a <span class="section-1-text-headline-bold">Free Estimate</span> for 
-          Pressure Washing Services in {% include 'business_information/location.html' %}!
+          Want your dingy grey or green fence to look almost
+          <span class="span section-1-text-headline-bold">brand new</span>
+          without painting or staining?
         </h2>
         <p class="section-1-text-paragraph">
-          It's quick & easy to request a Free Estimate. Send us a message using the
-          online form, send us an email, or call us at <br>
-          <span class="section-1-text-paragraph-bold">{% include 'business_information/phone-number.html' %}</span>.
+           We can have your fence looking brand new again in no time!
         </p>
         <p class="section-1-text-paragraph-urgent">
-          We look forward to speaking with you!
+          Ask us about cleaning your fence today!
         </p>
         <p class="section-1-text-paragraph">
           {% include 'business_information/hours-of-operation.html' %}
