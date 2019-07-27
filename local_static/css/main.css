@@ -11,7 +11,7 @@
 }
 
 .about-page .about-page-background, .contact-page .contact-page-background, .index-page .landing-page-row .landing-page-background, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .our-work-page .our-work-page-background, .services-page .services-page-background, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .thanks-page .thanks-background, .individual-service-page .individual-service-background {
-  background-color: #4D3F22;
+  background-color: #182013;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -453,9 +453,7 @@
 .index-page .section-1-row .card {
   border: 0;
   border-radius: calc(0.5rem + 0.5vw) calc(0.5rem + 0.5vw);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   margin: calc(2rem + 0.5vw) auto;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
@@ -1241,15 +1239,13 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding: 0 calc(1rem + 6vw) calc(1rem + 6vw) calc(1rem + 6vw);
+  padding: 0 calc(1rem + 6vw);
 }
 
 .services-page .section-1-row .card {
   border: 0;
   border-radius: calc(0.5rem + 0.5vw) calc(0.5rem + 0.5vw);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   margin: calc(2rem + 0.5vw) auto;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
