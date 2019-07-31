@@ -98,20 +98,42 @@ document.addEventListener('DOMContentLoaded', () => {
         while (element.parentNode) {
           element = element.parentNode;
           if (element.dataset.id) {
-            assignModalImage(element.dataset.src, element.dataset.id);
+            assignModalBAAPImage(element.dataset.src, element.dataset.id);
             return
           } 
         }
       } else {
-        assignModalImage(element.dataset.src, element.dataset.id);
+        assignModalBAAPImage(element.dataset.src, element.dataset.id);
       }
     })
   })
-
-  function assignModalImage(src, id) {
+  function assignModalBAAPImage(src, id) {
     const img_src_before = src + '/' + id + '-before.jpg';
     const img_src_after = src + '/' + id + '-after.jpg';            
     document.querySelector('.modal-baap-group-img-before').src = img_src_before;
     document.querySelector('.modal-baap-group-img-after').src = img_src_after;
+  }
+
+  // Modals, single images
+  const single_images = document.querySelectorAll('.section-1-single-image-group');
+  single_images.forEach((single_image) => {
+    single_image.addEventListener('click', (event) => {
+      let element = event.target;
+      if (element.dataset.id === undefined) {
+        while (element.parentNode) {
+          element = element.parentNode;
+          if (element.dataset.id) {
+            assignModalSingleImage(element.dataset.src, element.dataset.id);
+            return
+          } 
+        }
+      } else {
+        assignModalSingleImage(element.dataset.src, element.dataset.id);
+      }
+    })
+  })
+  function assignModalSingleImage(src, id) {
+    const img_src = src + '/' + id + '.jpg';
+    document.querySelector('.modal-single-image-element').src = img_src;
   }
 })

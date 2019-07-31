@@ -112,6 +112,10 @@
           z-index: 1;
         }
       }
+      & .section-1-single-image {
+        border: calc(0.15rem + 0.15vw) solid $secondary-color;
+        margin-right: calc(0.25rem + 0.25vw);
+        // position: relative;
       & img {
         height: 15vw;
         object-fit: cover;
@@ -192,6 +196,12 @@
           font-size: calc(0.5rem + 0.1vw);
         }
       }
+    }
+    & .modal-single-image {
+      border: calc(0.15rem + 0.15vw) solid $secondary-color;
+      margin-right: calc(0.25rem + 0.25vw);
+      // position: relative;
+      width: 100%;
     }
     & .modal-content {
       border: 0;
