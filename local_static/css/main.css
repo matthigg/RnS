@@ -1064,6 +1064,54 @@
   background-color: rgba(243, 211, 51, 0.5);
 }
 
+.our-work-page .section-1-row .section-1-single-image-wrapper {
+  border: calc(0.15rem + 0.15vw) solid #F3D333;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: calc(1rem + 1vw) 0;
+}
+
+.our-work-page .section-1-row .section-1-single-image-wrapper img {
+  height: 15vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 20vw;
+}
+
+@media (max-width: 767.98px) {
+  .our-work-page .section-1-row .section-1-single-image-wrapper img {
+    height: auto;
+    width: 40vw;
+  }
+}
+
+.our-work-page .section-1-row .section-1-single-image-wrapper::after {
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.our-work-page .section-1-row .section-1-single-image-wrapper:hover {
+  cursor: pointer;
+}
+
+.our-work-page .section-1-row .section-1-single-image-wrapper:hover::after {
+  height: 100%;
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  background-color: rgba(243, 211, 51, 0.5);
+}
+
 .our-work-page .modal .modal-dialog {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
@@ -1138,6 +1186,11 @@
   .our-work-page .modal .modal-baap-group-after::before {
     font-size: calc(0.5rem + 0.1vw);
   }
+}
+
+.our-work-page .modal .modal-single-image {
+  border: calc(0.15rem + 0.15vw) solid #F3D333;
+  width: 100%;
 }
 
 .our-work-page .modal .modal-content {
