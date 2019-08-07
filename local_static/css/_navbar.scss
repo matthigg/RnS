@@ -10,8 +10,12 @@ $navbar-transition: 0.2s ease-in;
   width: 100%;
   z-index: 10;
   & .rns-logo {
-    height: 20vh;
-    width: 20vh;
+    @media (max-width: 767.98px) {
+      height: 15vh;
+    }
+    @media (min-width: 768px) {
+      height: 20vh;
+    }
   }
   // & .navbar-brand {
   //   color: $secondary-color;
