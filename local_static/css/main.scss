@@ -10,6 +10,21 @@ $navbar-mobile-default-height: 35vh;
   background-size: cover;
 }
 
+%background-image {
+  background-image: 
+  linear-gradient(
+    rgba(2, 3, 5, 0.25),
+    rgba(2, 3, 5, 0.25),
+  ),
+  url('/static/img/house-02.jpg');
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
 %card-background {
   border-radius: calc(0.5rem + 8vw);
   height: calc(1rem + 16vw);
@@ -28,7 +43,6 @@ $navbar-mobile-default-height: 35vh;
     height: calc(#{$navbar-mobile-default-height});
   }
 }
-
 
 @import 'about';
 @import 'contact';

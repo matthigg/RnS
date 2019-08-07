@@ -17,6 +17,17 @@
   background-size: cover;
 }
 
+.about-page .about-page-background, .contact-page .contact-page-background, .index-page .landing-page-row .landing-page-background, .our-work-page .our-work-page-background, .services-page .services-page-background, .thanks-page .thanks-background, .individual-service-page .individual-service-background {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-02.jpg");
+  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-02.jpg");
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
 .index-page .section-1-row .card .card-image::before, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-1-row .card .card-image::before, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration {
   border-radius: calc(0.5rem + 8vw);
   height: calc(1rem + 16vw);
@@ -48,17 +59,6 @@
 
 .about-page .row {
   margin: 0;
-}
-
-.about-page .about-page-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
-  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
 }
 
 .about-page .about-headline {
@@ -117,17 +117,6 @@
 
 .contact-page .row {
   margin: 0;
-}
-
-.contact-page .contact-page-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
-  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
 }
 
 .contact-page .contact-headline {
@@ -381,21 +370,6 @@
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-
-.index-page .landing-page-row {
-  position: relative;
-}
-
-.index-page .landing-page-row .landing-page-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
-  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
 }
 
 .index-page .landing-page-row .landing-page-placeholder {
@@ -858,17 +832,6 @@
   margin: 0;
 }
 
-.our-work-page .our-work-page-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
-  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
 .our-work-page .our-work-headline {
   background-color: white;
   padding: calc(1rem + 0.5vw);
@@ -1182,17 +1145,6 @@
   margin: 0;
 }
 
-.services-page .services-page-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
-  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
 .services-page .services-headline {
   background-color: white;
   padding: calc(1rem + 0.5vw);
@@ -1326,17 +1278,6 @@
   margin: 0;
 }
 
-.thanks-page .thanks-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
-  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
 .thanks-page .thanks-headline {
   background-color: white;
   padding: calc(1rem + 0.5vw);
@@ -1433,17 +1374,6 @@
 
 .individual-service-page .row {
   margin: 0;
-}
-
-.individual-service-page .individual-service-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-01.jpg");
-  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-01.jpg");
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
 }
 
 .individual-service-page .individual-service-headline {

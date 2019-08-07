@@ -8,18 +8,7 @@
 
   // Our Work Background Image
   & .our-work-page-background {
-    background-image: 
-      linear-gradient(
-        rgba(2, 3, 5, 0.25),
-        rgba(2, 3, 5, 0.25),
-      ),
-      url('/static/img/house-01.jpg');
-    height: 100vh;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: -1;
+    @extend %background-image;
     @extend %background-fixed;
   }
 
