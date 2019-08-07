@@ -49,7 +49,7 @@
 
 @media (max-width: 767.98px) {
   .about-page .navbar-spacer, .contact-page .navbar-spacer, .our-work-page .navbar-spacer, .services-page .navbar-spacer, .thanks-page .navbar-spacer, .individual-service-page .navbar-spacer {
-    height: calc(35vh);
+    height: calc(25vh);
   }
 }
 
@@ -592,6 +592,7 @@
 .navbar {
   background-color: #020305;
   border-bottom: 2px solid #F3D333;
+  margin: 0;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -708,7 +709,6 @@
 @media (min-width: 768px) {
   .navbar {
     height: 100vh;
-    margin: 0;
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
     background-color: rgba(2, 3, 5, 0.8);
@@ -716,15 +716,11 @@
   .navbar.navbar-minimized-false {
     height: calc(30vh);
     padding: calc(0.5rem + 1vw);
-    -webkit-transition: 0.2s ease-in;
-    transition: 0.2s ease-in;
   }
   .navbar.navbar-minimized-true {
     background-color: #020305;
     height: calc(30vh - 5vh);
     padding: calc(0.25rem + 0.5vw) calc(1.25rem + 1vw);
-    -webkit-transition: 0.2s ease-in;
-    transition: 0.2s ease-in;
   }
 }
 
@@ -749,7 +745,7 @@
     padding: calc(0.25rem + 0.25vw) calc(0.5rem + 0.25vw);
     position: fixed;
     left: calc(1rem + 0.5vw);
-    top: calc(10rem + 4vh);
+    top: calc(25vh - 5vh);
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
     width: -webkit-max-content;
@@ -818,7 +814,7 @@
 
 @media (max-width: 767.98px) {
   .navbar-free-quote {
-    top: calc(10rem + 4vh);
+    top: calc(25vh - 5vh);
   }
 }
 

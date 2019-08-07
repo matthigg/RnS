@@ -1,8 +1,5 @@
 @import 'colors';
 
-$navbar-desktop-default-height: 30vh;
-$navbar-mobile-default-height: 35vh;
-
 %background-fixed {
   background-color: $quinary-color;
   background-repeat: no-repeat;
@@ -36,11 +33,14 @@ $navbar-mobile-default-height: 35vh;
   }
 }
 
+$navbar-desktop-spacer-height: 30vh;
+$navbar-mobile-spacer-height: 25vh;
+
 %navbar-spacer {
   background-color: $primary-color;
-  height: calc(#{$navbar-desktop-default-height});
+  height: calc(#{$navbar-desktop-spacer-height});
   @media (max-width: 767.98px) {
-    height: calc(#{$navbar-mobile-default-height});
+    height: calc(#{$navbar-mobile-spacer-height});
   }
 }
 
