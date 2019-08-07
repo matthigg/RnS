@@ -5,64 +5,80 @@ $navbar-free-quote-hover-transition: 0.15s ease-in;
 $navbar-call-phone-hover-transition: 0.15s ease-in;
 
 // Navbar
+// nbni = navbar not initials
+// nbsh = navbar subheading
 .navbar {
   background-color: $senary-color;
   border-bottom: 2px solid $secondary-color;
   position: fixed;
   width: 100%;
   z-index: 10;
-  & .navbar-brand {
-    color: $secondary-color;
-    font-family: "Stencil", "Segoe UI", sans-serif;
-    font-size: calc(1.25rem + 1vw);
-    line-height: 1;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    @media (max-width: 767.98px) {
-      & .nbni-dash {
-        display: none;
-      }
-      & .nbsh {
-        display: none;
-      }
-    }
-    @media (min-width: 768px) {
-      &.expand {
-        & .nbni {
-          transition: $navbar-brand-transition;
-        }
-        & .nbni-dash {
-          opacity: 0;
-          transition: $navbar-brand-transition;
-        }
-        & .nbsh {
-          display: block;
-          font-size: calc(1rem + 1vw);
-          opacity: 1;
-          transition: $navbar-brand-transition;
-        }
-      }
-      &.shrink {
-        & .nbni {
-          font-size: 0;
-          opacity: 0;
-          transition: $navbar-brand-transition;
-        }
-        & .nbni-dash {
-          opacity: 1;
-          transition: $navbar-brand-transition;
-        }
-        & .nbsh {
-          display: block;
-          font-size: 0;
-          opacity: 0;
-          transition: $navbar-brand-transition;
-        }
-      }
-    }
+  // & .rns-logo-wrapper {
+  //   background-image: 
+  //     linear-gradient(
+  //       rgba(2, 3, 5, 0.25),
+  //       rgba(2, 3, 5, 0.25),
+  //     ),
+  //     url('/static/img/R&S-logo.jpg');
+  //   height: 10vh;
+  //   width: 10vh;
+  // }
+  & .rns-logo {
+    height: 20vh;
+    width: 20vh;
   }
-  & .navbar-brand-phone {
+  // & .navbar-brand {
+  //   color: $secondary-color;
+  //   font-family: "Stencil", "Segoe UI", sans-serif;
+  //   font-size: calc(1.25rem + 1vw);
+  //   line-height: 1;
+  //   padding: 0;
+  //   margin: 0;
+  //   text-align: center;
+    // @media (max-width: 767.98px) {
+    //   & .nbni-dash {
+    //     display: none;
+    //   }
+    //   & .nbsh {
+    //     display: none;
+    //   }
+    // }
+    // @media (min-width: 768px) {
+      // &.expand {
+        // & .nbni {
+        //   transition: $navbar-brand-transition;
+        // }
+        // & .nbni-dash {
+        //   opacity: 0;
+        //   transition: $navbar-brand-transition;
+        // }
+        // & .nbsh {
+        //   display: block;
+        //   font-size: calc(1rem + 1vw);
+        //   opacity: 1;
+        //   transition: $navbar-brand-transition;
+        // }
+      // }
+      // &.shrink {
+        // & .nbni {
+        //   font-size: 0;
+        //   opacity: 0;
+        //   transition: $navbar-brand-transition;
+        // }
+        // & .nbni-dash {
+        //   opacity: 1;
+        //   transition: $navbar-brand-transition;
+        // }
+        // & .nbsh {
+        //   display: block;
+        //   font-size: 0;
+        //   opacity: 0;
+        //   transition: $navbar-brand-transition;
+        // }
+      // }
+    // }
+  // }
+  & .navbar-phone {
     color: $primary-color;
     display: block;
     font-size: calc(1.25rem + 0.5vw);
@@ -142,13 +158,12 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
     transition: $navbar-transition;
     @include senary-color-rgba-background(0.8);
     &.navbar-minimized-false {
-      // height: 20vh;
       padding: calc(0.5rem + 1vw);
     }
     &.navbar-minimized-true {
       background-color: $senary-color;
       height: auto;
-      padding: 0 calc(1.25rem + 1vw);
+      padding: calc(0.25rem + 0.5vw) calc(1.25rem + 1vw);
       position: fixed;
       top: 0;
       z-index: 10;
@@ -158,48 +173,50 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
 
 // Navbar "Call Now" Button
 .navbar-call-now {
-  background-color: $senary-color;
-  border: 2px solid $secondary-color;
-  border-radius: calc(1rem + 0.1vw);
-  color: $primary-color;
-  display: none;
-  font-size: calc(1rem + 0.25vw);
-  font-style: italic;
-  font-weight: 600;
-  padding: calc(0.25rem + 0.25vw) calc(0.5rem + 0.25vw);
-  position: fixed;
-  left: calc(1rem + 0.5vw);
-  top: calc(4.5rem + 0.5vw);
-  transition: $navbar-call-phone-hover-transition;
-  width: max-content;
-  z-index: 1;
-  & .icon-phone {
-    height: calc(1.5rem + 0.25vw);
-    & circle {
-      fill: $primary-color;
-    }
-    & path {
-      fill: $senary-color;
-      transition: $navbar-call-phone-hover-transition;
-    }
+  @media (min-width: 768px) {
+    display: none;
   }
-  &:hover {
-    background-color: $secondary-color;
+  @media (max-width: 767.98px) {
+    background-color: $senary-color;
+    border: 2px solid $secondary-color;
+    border-radius: calc(1rem + 0.1vw);
     color: $primary-color;
+    display: flex;
+    font-size: calc(1rem + 0.25vw);
+    font-style: italic;
+    font-weight: 600;
+    padding: calc(0.25rem + 0.25vw) calc(0.5rem + 0.25vw);
+    position: fixed;
+    left: calc(1rem + 0.5vw);
+    top: calc(4.5rem + 0.5vw);
     transition: $navbar-call-phone-hover-transition;
-    & .icon-phone{
+    width: max-content;
+    z-index: 1;
+    & .icon-phone {
+      height: calc(1.5rem + 0.25vw);
+      & circle {
+        fill: $primary-color;
+      }
       & path {
-        fill: $secondary-color;
+        fill: $senary-color;
         transition: $navbar-call-phone-hover-transition;
       }
     }
-  }
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
-  @media (max-width: 767.98px) {
-    display: flex;
+    &:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+      transition: $navbar-call-phone-hover-transition;
+      & .icon-phone{
+        & path {
+          fill: $secondary-color;
+          transition: $navbar-call-phone-hover-transition;
+        }
+      }
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
   }
 }
 
@@ -230,10 +247,10 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
   }
   @media (min-width: 768px) {
     &.navbar-free-quote-minimized-false {
-      top: calc(6rem + 3vw);
+      top: calc(8rem + 3vw);
     }
     &.navbar-free-quote-minimized-true {
-      top: calc(4rem + 3vw);
+      top: calc(6rem + 3vw);
     }
   }
 }

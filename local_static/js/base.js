@@ -10,14 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
     //
     // Change the appearance of the navbar when the user scrolls down the page
     if (window.scrollY > 1) {
+      console.log('scroll')
 
       // Shrink the navbar
       navbar.classList.add('navbar-minimized-true');
       navbar.classList.remove('navbar-minimized-false');
 
       // Shrink the navbar brand/logo
-      navbar_brand.classList.add('shrink');
-      navbar_brand.classList.remove('expand');
+      // navbar_brand.classList.add('shrink');
+      // navbar_brand.classList.remove('expand');
 
       // Reposition/move up the 'free quote' button
       navbar_free_quote.classList.add('navbar-free-quote-minimized-true');
@@ -29,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.remove('navbar-minimized-true');
 
       // Shrink the navbar brand/logo
-      navbar_brand.classList.add('expand');
-      navbar_brand.classList.remove('shrink');
+      // navbar_brand.classList.add('expand');
+      // navbar_brand.classList.remove('shrink');
 
       // Reposition/move down the 'free quote' button
       navbar_free_quote.classList.add('navbar-free-quote-minimized-false');

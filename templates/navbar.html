@@ -1,19 +1,22 @@
 {% load static %}
 
 <nav class="navbar navbar-expand-md navbar-minimized-false">
-  <h1 class="navbar-brand expand">
+  <!-- <div class="rns-logo-wrapper"> -->
+    <img class="rns-logo" src="{% static 'img/R&S-logo.jpg' %}" alt="R & S Logo">
+  <!-- </div> -->
+  <!-- <h1 class="navbar-brand expand">
     <span class="nbni-dash">-</span>
     R<span class="nbni">ESTORE</span> &
     S<span class="nbni">HINE</span>
     <span class="nbni-dash">-</span>
     <span class="nbsh">PRESSURE WASHING</span>
-  </h1>
+  </h1> -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-rns" aria-controls="navbar-rns" aria-expanded="false" aria-label="Toggle navigation">
     <img class="icon-hamburger" src="{% static 'img/icon-hamburger.svg' %}">
   </button>
 
   <div class="collapse navbar-collapse" id="navbar-rns">
-    <span class="navbar-brand-phone">
+    <span class="navbar-phone">
       {% include 'svg/phone.svg' %}
       {% include 'business_information/phone-number.html' %}
     </span>
