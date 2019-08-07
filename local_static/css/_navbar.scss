@@ -1,8 +1,4 @@
 $navbar-transition: 0.2s ease-in;
-$navbar-brand-transition: 0.35s ease-out;
-$navbar-free-quote-minimize-transition: 0.2s ease-in;
-$navbar-free-quote-hover-transition: 0.15s ease-in;
-$navbar-call-phone-hover-transition: 0.15s ease-in;
 
 // Navbar
 // nbni = navbar not initials
@@ -69,24 +65,26 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
     // }
   // }
   & .navbar-phone {
-    color: $primary-color;
-    display: block;
-    font-size: calc(1.25rem + 0.5vw);
-    font-style: italic;
-    font-weight: 700;
-    left: 35vw;
-    position: absolute;
-    @media (max-width: 1060px) {
+    @media (max-width: 1059.96px) {
       display: none;
     }
-    & .icon-phone {
-      height: calc(1rem + 1vw);
-      width: calc(1rem + 1vw);
-      & circle {
-        fill: $primary-color;
-      }
-      & path {
-        fill: $senary-color-rgba;
+    @media (min-width: 1060px) {
+      color: $primary-color;
+      display: block;
+      font-size: calc(1.25rem + 0.5vw);
+      font-style: italic;
+      font-weight: 700;
+      left: 35vw;
+      position: absolute;
+      & .icon-phone {
+        height: calc(1rem + 1vw);
+        width: calc(1rem + 1vw);
+        & circle {
+          fill: $primary-color;
+        }
+        & path {
+          fill: $senary-color-rgba;
+        }
       }
     }
   }
@@ -102,7 +100,6 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
   }
   & .nav-link {
     color: $primary-color;
-    font-size: calc(0.75rem + 0.5vw);
     margin: calc(1rem + 0.5vw) auto;
     padding: 0;
     position: relative;
@@ -142,21 +139,25 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
     @media (max-width: 767.98px) {
       font-size: calc(1rem + 0.25vw);
     }
+    @media (min-width: 768px) {
+      font-size: calc(0.75rem + 0.5vw);
+    }
   }
   @media (min-width: 768px) {
+    height: 100vh;
     margin: 0;
     transition: $navbar-transition;
     @include senary-color-rgba-background(0.8);
     &.navbar-minimized-false {
+      height: calc(#{$navbar-desktop-default-height});
       padding: calc(0.5rem + 1vw);
+      transition: $navbar-transition;
     }
     &.navbar-minimized-true {
       background-color: $senary-color;
-      height: auto;
+      height: calc(#{$navbar-desktop-default-height} - 5vh);
       padding: calc(0.25rem + 0.5vw) calc(1.25rem + 1vw);
-      position: fixed;
-      top: 0;
-      z-index: 10;
+      transition: $navbar-transition;
     }
   }
 }
@@ -178,8 +179,8 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
     padding: calc(0.25rem + 0.25vw) calc(0.5rem + 0.25vw);
     position: fixed;
     left: calc(1rem + 0.5vw);
-    top: calc(4.5rem + 0.5vw);
-    transition: $navbar-call-phone-hover-transition;
+    top: calc(10rem + 4vh);
+    transition: $navbar-transition;
     width: max-content;
     z-index: 1;
     & .icon-phone {
@@ -189,17 +190,17 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
       }
       & path {
         fill: $senary-color;
-        transition: $navbar-call-phone-hover-transition;
+        transition: $navbar-transition;
       }
     }
     &:hover {
       background-color: $secondary-color;
       color: $primary-color;
-      transition: $navbar-call-phone-hover-transition;
+      transition: $navbar-transition;
       & .icon-phone{
         & path {
           fill: $secondary-color;
-          transition: $navbar-call-phone-hover-transition;
+          transition: $navbar-transition;
         }
       }
     }
@@ -222,25 +223,26 @@ $navbar-call-phone-hover-transition: 0.15s ease-in;
   padding: calc(0.25rem + 0.25vw) calc(0.5rem + 0.25vw);
   position: fixed;
   right: calc(1rem + 0.5vw);
-  top: calc(4.5rem + 0.5vw);
-  transition: $navbar-free-quote-minimize-transition;
+  transition: $navbar-transition;
   width: max-content;
   z-index: 1;
   &:hover {
     background-color: $secondary-color;
     color: $primary-color;
-    transition: $navbar-free-quote-hover-transition;
   }
   &:focus {
     outline: none;
     box-shadow: none;
   }
+  @media (max-width: 767.98px) {
+    top: calc(10rem + 4vh);
+  }
   @media (min-width: 768px) {
     &.navbar-free-quote-minimized-false {
-      top: calc(8rem + 3vw);
+      top: calc(#{$navbar-desktop-default-height} + 5vh);
     }
     &.navbar-free-quote-minimized-true {
-      top: calc(6rem + 3vw);
+      top: calc(#{$navbar-desktop-default-height});
     }
   }
 }

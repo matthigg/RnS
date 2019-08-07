@@ -25,17 +25,13 @@
 
   // Navbar Spacer
   & .navbar-spacer {
-    background-color: $primary-color;
-    height: calc(10rem + 6vw);
-    @media (max-width: 767.98px) {
-      height: 20vh;
-    }
+    @extend %navbar-spacer;
   }
 
   // Services Headline
   & .services-headline {
     background-color: $primary-color;
-    padding: 0 calc(1rem + 0.5vw) calc(1rem + 0.5vw) calc(1rem + 0.5vw);
+    padding: calc(1rem + 0.5vw);
     & h1 {
       color: $quinary-color;
       font-size: calc(1.5rem + 1vw);
