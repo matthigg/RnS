@@ -334,14 +334,6 @@
   height: calc(3rem + 2.5vw);
 }
 
-.footer .footer-flair .footer-icon-flair-yelp {
-  height: calc(4rem + 3.5vw);
-}
-
-.footer .footer-flair .footer-icon-flair-bbb {
-  height: calc(2.7rem + 2vw);
-}
-
 .footer .footer-back-to-top-and-copyright {
   font-size: calc(1rem + 0.5vw);
   padding-bottom: calc(2rem + 2vw);
