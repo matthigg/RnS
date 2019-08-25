@@ -20,7 +20,7 @@
   // Our Work Headline
   & .our-work-headline {
     background-color: $primary-color;
-    padding: calc(1rem + 0.5vw);
+    padding: calc(2rem + 0.5vw);
     & h1 {
       color: $quinary-color;
       font-size: calc(1.5rem + 1vw);
@@ -39,7 +39,13 @@
   & .section-1-row {
     background-color: $primary-color;
     justify-content: space-around;
-    padding: 0 calc(1rem + 3vw) calc(1rem + 3vw) calc(1rem + 3vw);
+    padding: 0 calc(1rem + 3vw);
+    & .section-1-subsection-heading {
+      color: $quinary-color;
+      font-size: calc(1.25rem + 0.5vw);
+      padding-top: calc(1rem + 1vw);
+      text-align: center;
+    }
     & .section-1-baap-group {
       display: flex;
       justify-content: space-around;

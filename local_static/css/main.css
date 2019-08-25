@@ -837,7 +837,7 @@
 
 .our-work-page .our-work-headline {
   background-color: white;
-  padding: calc(1rem + 0.5vw);
+  padding: calc(2rem + 0.5vw);
 }
 
 .our-work-page .our-work-headline h1 {
@@ -856,7 +856,14 @@
   background-color: white;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 0 calc(1rem + 3vw) calc(1rem + 3vw) calc(1rem + 3vw);
+  padding: 0 calc(1rem + 3vw);
+}
+
+.our-work-page .section-1-row .section-1-subsection-heading {
+  color: #182013;
+  font-size: calc(1.25rem + 0.5vw);
+  padding-top: calc(1rem + 1vw);
+  text-align: center;
 }
 
 .our-work-page .section-1-row .section-1-baap-group {
