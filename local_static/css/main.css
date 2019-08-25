@@ -943,7 +943,7 @@
 
 @media (max-width: 767.98px) {
   .our-work-page .section-1-row .section-1-baap-group img {
-    height: auto;
+    height: 20vh;
     width: 40vw;
   }
 }
@@ -982,7 +982,7 @@
 
 @media (max-width: 767.98px) {
   .our-work-page .section-1-row .section-1-single-image-wrapper img {
-    height: auto;
+    height: 20vh;
     width: 40vw;
   }
 }
@@ -1106,13 +1106,15 @@
 }
 
 .our-work-page .modal img {
-  height: auto;
+  height: 100%;
   width: 45vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 767.98px) {
   .our-work-page .modal img {
-    height: auto;
+    height: 100%;
     width: 75vw;
   }
 }

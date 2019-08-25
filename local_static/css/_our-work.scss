@@ -108,7 +108,7 @@
         object-fit: cover;
         width: 20vw;
         @media (max-width: 767.98px) {
-          height: auto;
+          height: 20vh;
           width: 40vw;
         }
       }
@@ -137,7 +137,7 @@
         object-fit: cover;
         width: 20vw;
         @media (max-width: 767.98px) {
-          height: auto;
+          height: 20vh;
           width: 40vw;
         }
       }
@@ -235,10 +235,11 @@
       font-size: calc(1rem + 0.5vw);
     }
     & img {
-      height: auto;
+      height: 100%;
       width: 45vw;
+      object-fit: cover;
       @media (max-width: 767.98px) {
-        height: auto;
+        height: 100%;
         width: 75vw;
       }
     }
