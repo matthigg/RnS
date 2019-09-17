@@ -41,7 +41,7 @@ if os.environ['RNS_LOCAL_HOST'] == 'None' or os.environ['RNS_LOCAL_HOST_IP'] == 
 DEBUG = os.environ['RNS_DEBUG'] == '1'
 
 ALLOWED_HOSTS = [
-
+  '*',
 ]
 
 if os.environ['RNS_LOCAL_HOST'] == 'localhost':
