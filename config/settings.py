@@ -36,7 +36,7 @@ SECRET_KEY = os.environ['RNS_SECRET_KEY']
 #   SECURE_SSL_REDIRECT             = True  # requires SLL certificate in AWS
 #   SECURE_HSTS_PRELOAD             = True  # can really screw up local development
 #   SECURE_HSTS_INCLUDE_SUBDOMAINS  = True  
-#   SECURE_HSTS_SECONDS             = 10    # keep this low until 100% certain
+#   SECURE_HSTS_SECONDS             = 0    # keep this low until 100% certain
 
 DEBUG = os.environ['RNS_DEBUG'] == '1'
 
