@@ -40,9 +40,7 @@ SECRET_KEY = os.environ['RNS_SECRET_KEY']
 
 DEBUG = os.environ['RNS_DEBUG'] == '1'
 
-ALLOWED_HOSTS = [
-  '*',
-]
+ALLOWED_HOSTS = ['*']
 
 if os.environ['RNS_LOCAL_HOST'] == 'localhost':
   ALLOWED_HOSTS.append(os.environ['RNS_LOCAL_HOST_IP'])
