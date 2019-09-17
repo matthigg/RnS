@@ -26,7 +26,7 @@ def send_email(request_POST):
               "Thank You for contacting R & S Pressure Washing! "
               "A member of our team will contact you as soon as possible. "
               "If you need to contact us immediately, don't hesitate to "
-              "call us at (804) 239-6085."
+              "call us at (123) 456-7890."
               "Original Message: "
               "Name: {} "
               "Email: {} "
@@ -42,7 +42,7 @@ def send_email(request_POST):
     <p>
       A member of our team will contact you as soon as possible.<br>
       If you need to contact us immediately, don't hesitate to
-      call us at (804) 239-6085.
+      call us at (123) 456-7890.
     </p>
     <hr>
     <p>
