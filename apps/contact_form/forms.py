@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput, Textarea
+from django.forms import CheckboxInput, ModelForm, TextInput, Textarea
 from . import models
 
 # This is a hack to get rid of the defalt label_suffix=":"
@@ -16,13 +16,23 @@ class CreateContactForm(ModelForm):
       'name',
       'email',
       'phone',
-      'stories',
+      'number_of_stories',
+      'type_of_exterior',
+      'fence_cleaning',
+      'surface_cleaning',
+      'soft_wash',
+      'outdoor_stain_removal',
+      'deck_cleaning',
       'message',
     ]
     widgets = {
       'name': TextInput(attrs={'placeholder': 'name'}),
       'email': TextInput(attrs={'placeholder': 'email'}),
       'phone': TextInput(attrs={'placeholder': 'phone'}),
-      'stories': TextInput(attrs={'placeholder': 'stories'}),
+      'fence_cleaning': CheckboxInput(attrs={'class': 'test'}),
+      'surface_cleaning': CheckboxInput(attrs={'class': 'test'}),
+      'soft_wash': CheckboxInput(attrs={'class': 'test'}),
+      'outdoor_stain_removal': CheckboxInput(attrs={'class': 'test'}),
+      'deck_cleaning': CheckboxInput(attrs={'class': 'test'}),
       'message': Textarea(attrs={'placeholder': 'message'}),
     }

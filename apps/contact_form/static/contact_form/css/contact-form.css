@@ -146,6 +146,28 @@
 .contact-form .contact-form-input {
   margin-bottom: calc(1rem + 0.5vw);
   position: relative;
+  text-align: left;
+}
+
+.contact-form .contact-form-input input[type='checkbox'] {
+  display: inline;
+  height: calc(1rem + 0.1vw);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.contact-form .contact-form-input label[for='id_number_of_stories'],
+.contact-form .contact-form-input label[for='id_type_of_exterior'],
+.contact-form .contact-form-input label[for='id_fence_cleaning'],
+.contact-form .contact-form-input label[for='id_surface_cleaning'],
+.contact-form .contact-form-input label[for='id_soft_wash'],
+.contact-form .contact-form-input label[for='id_outdoor_stain_removal'],
+.contact-form .contact-form-input label[for='id_deck_cleaning'] {
+  color: white;
+  font-size: calc(1rem + 0.1vw);
+  margin-bottom: 0;
+  position: static;
 }
 
 .contact-form .required-field-asterisk {
