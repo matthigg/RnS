@@ -27,7 +27,6 @@ DEBUG = os.environ['RNS_DEBUG'] == '1'
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
