@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //
     // Change the appearance of the navbar when the user scrolls down the page
     if (window.scrollY > 1) {
-      console.log('scroll')
 
       // Shrink the navbar
       navbar.classList.add('navbar-minimized-true');

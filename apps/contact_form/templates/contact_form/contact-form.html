@@ -47,11 +47,16 @@
     input_field.addEventListener('focus', getRecaptchaLibrary)
   })
 
+  // Add an event listener to the submit button that, when focused, will trigger 
+  // the download of the reCAPTCHA API library
+  document.querySelector('fieldset>button').addEventListener('focus', getRecaptchaLibrary)
+
   // Remove event listeners that trigger downloading the reCAPTCHA API library
   function removeRecaptchaEventListeners() {
     document.querySelectorAll('input').forEach(input_field => {
       input_field.removeEventListener('focus', getRecaptchaLibrary)
     })
+    document.querySelector('fieldset>button').removeEventListener('focus', getRecaptchaLibrary)
   }
 
   // Create a <script> tag used to download the reCAPTCHA API library, and then
