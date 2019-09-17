@@ -20,25 +20,6 @@
     gtag('config', 'UA-144036065-1');
   </script> -->
 
-  <!-- reCAPTCHA v3 -->
-  <script src="https://www.google.com/recaptcha/api.js?render=6Lfnk68UAAAAAEfWhU7T8utsv1d-gS5q292sXXI1"></script>
-  <script>
-    grecaptcha.ready(function() {
-        grecaptcha.execute('6Lfnk68UAAAAAEfWhU7T8utsv1d-gS5q292sXXI1', {action: 'homepage'}).then(function(token) {
-
-          // If '.contact-form' exists, the Google reCAPTCHA token will hitch a ride
-          // with it to the backend
-          if (document.querySelector('.contact-form')) {
-            const input_recaptcha = document.createElement('input')
-            input_recaptcha.style.display = 'none';
-            input_recaptcha.setAttribute('name', 'g-recaptcha-response');
-            input_recaptcha.value = token;
-            document.querySelector('.contact-form').appendChild(input_recaptcha);
-          };
-        });
-    });
-  </script>
-
   <!-- Bootstrap & Custom CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
