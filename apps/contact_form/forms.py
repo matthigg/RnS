@@ -16,11 +16,13 @@ class CreateContactForm(ModelForm):
       'name',
       'email',
       'phone',
+      'stories',
       'message',
     ]
     widgets = {
       'name': TextInput(attrs={'placeholder': 'name'}),
       'email': TextInput(attrs={'placeholder': 'email'}),
       'phone': TextInput(attrs={'placeholder': 'phone'}),
+      'stories': TextInput(attrs={'placeholder': 'stories'}),
       'message': Textarea(attrs={'placeholder': 'message'}),
     }
