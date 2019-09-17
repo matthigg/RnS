@@ -18,7 +18,7 @@ def submit(request):
 
   # Return 'error' message if reCAPTCHA fails
   if r.json()['success'] == False:
-    messages.add_message(request, messages.INFO, 'There was an error with your request. Please contact us at (123) 456-7890 or email us at email@email.com.')
+    messages.add_message(request, messages.INFO, 'There was an error with your request. We appologize for the inconvenience.')
     return redirect('contact')
 
   # Save message to database if valid
