@@ -1,0 +1,38 @@
+{% load static %}
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.card-background-surface-cleaning').classList.add('show-image')
+  })
+  
+</script>
+
+<style scoped>
+  @media (min-width: 0px) {
+    .card-background-surface-cleaning.show-image {
+      background-image:                   url({% static 'img/surface-cleaning-01/140kb/1x-surface-cleaning-01-320.jpg' %});
+      background-image: -webkit-image-set(url({% static 'img/surface-cleaning-01/140kb/1x-surface-cleaning-01-320.webp' %}) 1x, url({% static 'img/surface-cleaning-01/140kb/2x-surface-cleaning-01-320.webp' %}) 2x);  
+      background-image:         image-set(url({% static 'img/surface-cleaning-01/140kb/1x-surface-cleaning-01-320.jpg' %}) 1x, url({% static 'img/surface-cleaning-01/140kb/2x-surface-cleaning-01-320.jpg' %}) 2x);
+    }
+  }
+
+  @media (min-width: 576px) {
+    .card-background-surface-cleaning.show-image {
+      background-image:                   url({% static 'img/surface-cleaning-01/140kb/1x-surface-cleaning-01-576.jpg' %});
+      background-image: -webkit-image-set(url({% static 'img/surface-cleaning-01/140kb/1x-surface-cleaning-01-576.webp' %}) 1x, url({% static 'img/surface-cleaning-01/140kb/2x-surface-cleaning-01-576.webp' %}) 2x);  
+      background-image:         image-set(url({% static 'img/surface-cleaning-01/140kb/1x-surface-cleaning-01-576.jpg' %}) 1x, url({% static 'img/surface-cleaning-01/140kb/2x-surface-cleaning-01-576.jpg' %}) 2x);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .card-background-surface-cleaning.show-image {
+      background-image:                   url({% static 'img/surface-cleaning-01/140kb/1x-surface-cleaning-01-768.jpg' %});
+      background-image: -webkit-image-set(url({% static 'img/surface-cleaning-01/140kb/1x-surface-cleaning-01-768.webp' %}) 1x, url({% static 'img/surface-cleaning-01/140kb/2x-surface-cleaning-01-768.webp' %}) 2x);  
+      background-image:         image-set(url({% static 'img/surface-cleaning-01/140kb/1x-surface-cleaning-01-768.jpg' %}) 1x, url({% static 'img/surface-cleaning-01/140kb/2x-surface-cleaning-01-768.jpg' %}) 2x);
+    }
+  }
+
+</style>
+
+<div class="card-image card-background-surface-cleaning"></div>

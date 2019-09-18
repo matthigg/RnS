@@ -25,7 +25,7 @@
 from PIL import Image
 import os, sys
 
-size_target = 375000  # Ideal image size (in bytes)
+size_target = 140000  # Ideal image size (in bytes)
 i = 1                 # Starting iteration (1-indexed instead of 0-indexed)
 max_iterations = 7    # Number of iterations to find optimized quality value
 L = 1                 # Left pointer
@@ -35,17 +35,17 @@ quality = 50          # Starting quality value
 # The Pillow *.thumbnail() method takes a tuple as its first argument, and it
 # also maintains aspect ratio, so the resulting thumbnail's height, width, or 
 # both will not exceed their respective values within the tuple.
-dimensions_blur = [50]
-dimensions_blur_tuples = []
-dimensions_1x = [320, 576, 768, 992, 1200, 1440]
-# dimensions_1x = [320, 576, 768]
+# dimensions_blur = [50]
+# dimensions_blur_tuples = []
+# dimensions_1x = [320, 576, 768, 992, 1200, 1440]
+dimensions_1x = [320, 576, 768]
 dimensions_1x_tuples = []
 dimensions_2x = [320, 576, 768]
 dimensions_2x_tuples = []
 def create_dimensions_list_of_tuples(dimensions, dimensions_tuples):
   for value in dimensions:
     dimensions_tuples.append((value, value))
-create_dimensions_list_of_tuples(dimensions_blur, dimensions_blur_tuples)
+# create_dimensions_list_of_tuples(dimensions_blur, dimensions_blur_tuples)
 create_dimensions_list_of_tuples(dimensions_1x, dimensions_1x_tuples)
 create_dimensions_list_of_tuples(dimensions_2x, dimensions_2x_tuples)
 
@@ -148,23 +148,16 @@ for root, dirs, files in os.walk(file_input_path, topdown=False):
       # aren't set in stone, these parts of the script is mostly controlled by hand.
       # for dimension in dimensions_blur_tuples:
 
-      for dimension in dimensions_blur_tuples:
+      # Create a low-quality/blurred placeholder image
+      # for dimension in dimensions_blur_tuples:
+      #   create_resized_img(file, name, dimension, 1, '.jpg', 'JPEG', i, quality, L, R)
 
-        # Create blurred images
-        create_resized_img(file, name, dimension, 1, '.jpg', 'JPEG', i, quality, L, R)
-
+      # Create 1x JPEG and WEBP images
       for dimension in dimensions_1x_tuples:
-
-        # Create 1x JPEG images
         create_resized_img(file, name, dimension, 1, '.jpg', 'JPEG', i, quality, L, R)
-        
-        # Create 1x WEBP images
         create_resized_img(file, name, dimension, 1, '.webp', 'WEBP', i, quality, L, R)
 
+      # Create 2x JPEG and WEBP images
       for dimension in dimensions_2x_tuples:
-
-        # Create 2x JPEG images
-        create_resized_img(file, name, dimension, 2, '.webp', 'JPEG', i, quality, L, R)
-
-        # Create 2x WEBP images
+        create_resized_img(file, name, dimension, 2, '.jpg', 'JPEG', i, quality, L, R)
         create_resized_img(file, name, dimension, 2, '.webp', 'WEBP', i, quality, L, R)

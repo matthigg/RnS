@@ -10,22 +10,11 @@
   background-color: blue;
 }
 
-.about-page .about-page-background, .contact-page .contact-page-background, .index-page .landing-page-row .landing-page-background, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .our-work-page .our-work-page-background, .services-page .services-page-background, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .thanks-page .thanks-background, .individual-service-page .individual-service-background {
+.index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration {
   background-color: #182013;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.about-page .about-page-background, .contact-page .contact-page-background, .index-page .landing-page-row .landing-page-background, .our-work-page .our-work-page-background, .services-page .services-page-background, .thanks-page .thanks-background, .individual-service-page .individual-service-background {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 3, 5, 0.25)), to(rgba(2, 3, 5, 0.25))), url("/static/img/house-02.jpg");
-  background-image: linear-gradient(rgba(2, 3, 5, 0.25), rgba(2, 3, 5, 0.25)), url("/static/img/house-02.jpg");
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
 }
 
 .index-page .section-1-row .card .card-image::before, .index-page .section-1-row .card .card-background-fence-cleaning, .index-page .section-1-row .card .card-background-surface-cleaning, .index-page .section-1-row .card .card-background-soft-wash, .index-page .section-1-row .card .card-background-outdoor-stain-removal, .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration, .services-page .section-1-row .card .card-image::before, .services-page .section-1-row .card .card-background-fence-cleaning, .services-page .section-1-row .card .card-background-surface-cleaning, .services-page .section-1-row .card .card-background-soft-wash, .services-page .section-1-row .card .card-background-outdoor-stain-removal, .services-page .section-1-row .card .card-background-deck-cleaning-and-restoration {
@@ -615,27 +604,22 @@
 }
 
 .index-page .section-1-row .card .card-background-fence-cleaning {
-  background-image: url("/static/img/fence-01.jpg");
   margin: auto;
 }
 
 .index-page .section-1-row .card .card-background-surface-cleaning {
-  background-image: url("/static/img/walkway-01.jpg");
   margin: auto;
 }
 
 .index-page .section-1-row .card .card-background-soft-wash {
-  background-image: url("/static/img/house-04.jpg");
   margin: auto;
 }
 
 .index-page .section-1-row .card .card-background-outdoor-stain-removal {
-  background-image: url("/static/img/rusty-wall-01.jpg");
   margin: auto;
 }
 
 .index-page .section-1-row .card .card-background-deck-cleaning-and-restoration {
-  background-image: url("/static/img/deck-01.jpg");
   margin: auto;
 }
 

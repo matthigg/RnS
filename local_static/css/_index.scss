@@ -50,31 +50,26 @@
         }
       }
       & .card-background-fence-cleaning {
-        background-image: url('/static/img/fence-01.jpg');
         margin: auto;
         @extend %card-background;
         @extend %background-fixed;
       }
       & .card-background-surface-cleaning {
-        background-image: url('/static/img/walkway-01.jpg');
         margin: auto;
         @extend %card-background;
         @extend %background-fixed;
       }
       & .card-background-soft-wash {
-        background-image: url('/static/img/house-04.jpg');
         margin: auto;
         @extend %card-background;
         @extend %background-fixed;
       }
       & .card-background-outdoor-stain-removal {
-        background-image: url('/static/img/rusty-wall-01.jpg');
         margin: auto;
         @extend %card-background;
         @extend %background-fixed;
       }
       & .card-background-deck-cleaning-and-restoration {
-        background-image: url('/static/img/deck-01.jpg');
         margin: auto;
         @extend %card-background;
         @extend %background-fixed;
