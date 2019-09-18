@@ -84,7 +84,7 @@
     }
   }
 
-  // Back-To-Top Link & Copyright
+  // Back-To-Top Link, Copyright, & reCAPTCHA terms
   .footer-back-to-top-and-copyright {
     font-size: calc(1rem + 0.5vw);
     padding-bottom: calc(2rem + 2vw);
@@ -127,6 +127,10 @@
           box-shadow: none;
         }
       }
+    }
+    & .footer-recaptcha {
+      padding: calc(0.5rem + 0.5vw);
+      text-align: center;
     }
   }
 }

@@ -548,6 +548,11 @@
           box-shadow: none;
 }
 
+.footer .footer-back-to-top-and-copyright .footer-recaptcha {
+  padding: calc(0.5rem + 0.5vw);
+  text-align: center;
+}
+
 .index-page .landing-page-row .landing-page-placeholder {
   height: 90vh;
   width: 100%;
