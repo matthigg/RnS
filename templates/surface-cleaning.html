@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block title %}
-  <title>Surface Cleaning in Snead's Ferry, NC | Restore & Shine</title>
+  <title>Surface Cleaning in {% include 'business_information/location.html' %} | {% include 'business_information/name.html' %}</title>
 {% endblock %}
 
 {% block metatag %}
-  <meta name="description" content="Restore & Shine offers surface cleaning in Snead's Ferry, NC - increase your home's curb appeal and request a free quote today!">
+  <meta name="description" content="{% include 'business_information/name.html' %} offers surface cleaning in {% include 'business_information/location.html' %} - increase your home's curb appeal and request a free quote today!">
 {% endblock%}
 
 {% block main %}

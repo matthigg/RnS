@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block title %}
-  <title>Learn About Our Pressure Washing Company | Restore & Shine</title>
+  <title>Learn About Our Pressure Washing Company | {% include 'business_information/name.html' %}</title>
 {% endblock %}
 
 {% block metatag %}
-  <meta name="description" content="Restore & Shine is a pressure washing company located in Sneads Ferry, NC, and we love what we do!">
+  <meta name="description" content="{% include 'business_information/name.html' %} is a pressure washing company located in {% include 'business_information/location.html' %}. If your property needs cleaning, see what we can do for you!">
 {% endblock%}
 
 {% block main %}

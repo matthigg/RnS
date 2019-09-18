@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block title %}
-  <title>Fence Cleaning, Surface Cleaning, Soft Wash, Outdoor Stain Removal, Deck Cleaning & Restoration | Restore & Shine</title>
+  <title>Fence Cleaning, Surface Cleaning, Soft Wash, Outdoor Stain Removal, Deck Cleaning & Restoration | {% include 'business_information/name.html' %}</title>
 {% endblock %}
 
 {% block metatag %}
-  <meta name="description" content="Restore & Shine is a pressure washing company located in Sneads Ferry, NC that offers fence cleaning, surface cleaning, soft wash services, outdoor stain removal, and deck cleaning & restoration. Contact us today for a free estimate!">
+  <meta name="description" content="{% include 'business_information/name.html' %} is a pressure washing company located in {% include 'business_information/location.html' %} that offers fence cleaning, surface cleaning, soft wash services, outdoor stain removal, and deck cleaning & restoration. Contact us today for a free estimate!">
 {% endblock%}
 
 {% block main %}
