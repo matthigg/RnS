@@ -151,20 +151,20 @@ for root, dirs, files in os.walk(file_input_path, topdown=False):
       for dimension in dimensions_blur_tuples:
 
         # Create blurred images
-        create_resized_img(file, name, dimension, 1, '.jpg', 'JPEG', 1, quality, L, R)
+        create_resized_img(file, name, dimension, 1, '.jpg', 'JPEG', i, quality, L, R)
 
       for dimension in dimensions_1x_tuples:
 
         # Create 1x JPEG images
-        create_resized_img(file, name, dimension, 1, '.jpg', 'JPEG', 1, quality, L, R)
+        create_resized_img(file, name, dimension, 1, '.jpg', 'JPEG', i, quality, L, R)
         
         # Create 1x WEBP images
-        create_resized_img(file, name, dimension, 1, '.webp', 'WEBP', 1, quality, L, R)
+        create_resized_img(file, name, dimension, 1, '.webp', 'WEBP', i, quality, L, R)
 
       for dimension in dimensions_2x_tuples:
 
         # Create 2x JPEG images
-        create_resized_img(file, name, dimension, 1, '.webp', 'JPEG', 2, quality, L, R)
+        create_resized_img(file, name, dimension, 2, '.webp', 'JPEG', i, quality, L, R)
 
         # Create 2x WEBP images
-        create_resized_img(file, name, dimension, 1, '.webp', 'WEBP', 2, quality, L, R)
+        create_resized_img(file, name, dimension, 2, '.webp', 'WEBP', i, quality, L, R)

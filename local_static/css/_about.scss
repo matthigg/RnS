@@ -6,12 +6,6 @@
     margin: 0;
   }
 
-  // Background Image
-  & .about-page-background {
-    @extend %background-image;
-    @extend %background-fixed;
-  }
-
   // Navbar Spacer
   & .navbar-spacer {
     @extend %navbar-spacer;

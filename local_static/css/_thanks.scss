@@ -5,12 +5,6 @@
     margin: 0;
   }
 
-  // Thanks Background Image
-  & .thanks-background {
-    @extend %background-image;
-    @extend %background-fixed;
-  }
-
   // Navbar Spacer
   // Navbar Spacer
   & .navbar-spacer {
