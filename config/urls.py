@@ -18,6 +18,17 @@ from django.urls import include, path
 from .views import about, contact, index, our_work, services, thanks
 from .views import deck_cleaning_restoration, fence_cleaning, outdoor_stain_removal, soft_wash, surface_cleaning
 
+# Needed to serve MEDIA files associated with the uploaded_images app in local 
+# development
+# https://wsvincent.com/django-image-uploads/
+from django.conf import settings
+from django.conf.urls.static import static
+
+# Sitemap
+# https://docs.djangoproject.com/en/2.2/ref/contrib/sitemaps/
+from django.contrib.sitemaps.views import sitemap
+path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
+     name='django.contrib.sitemaps.views.sitemap')
 
 urlpatterns = [
   path('admin/',    admin.site.urls),
@@ -33,4 +44,4 @@ urlpatterns = [
   path('services/soft-wash/',                  soft_wash,                  name='soft-wash'),
   path('services/outdoor-stain-removal/',      outdoor_stain_removal,      name='outdoor-stain-removal'),
   path('services/deck-cleaning-restoration/',  deck_cleaning_restoration,  name='deck-cleaning-restoration'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
