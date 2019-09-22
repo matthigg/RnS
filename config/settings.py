@@ -102,14 +102,14 @@ DATABASES = {
     # }
 
     # Postgres
-    'default': {
-      'ENGINE':   'django.db.backends.postgresql',
-      'NAME':     os.environ['RNS_DATABASE_NAME'],
-      'USER':     os.environ['RNS_DATABASE_USER'],
-      'PASSWORD': os.environ['RNS_DATABASE_PASSWORD'],
-      'HOST':     os.environ['RNS_DATABASE_HOST'],
-      'PORT':     os.environ['RNS_DATABASE_PORT'],
-    }
+    # 'default': {
+    #   'ENGINE':   'django.db.backends.postgresql',
+    #   'NAME':     os.environ['RNS_DATABASE_NAME'],
+    #   'USER':     os.environ['RNS_DATABASE_USER'],
+    #   'PASSWORD': os.environ['RNS_DATABASE_PASSWORD'],
+    #   'HOST':     os.environ['RNS_DATABASE_HOST'],
+    #   'PORT':     os.environ['RNS_DATABASE_PORT'],
+    # }
 }
 
 
@@ -157,8 +157,8 @@ STATICFILES_DIRS = [
   os.path.join(BASE_DIR, 'local_static'),
 ]
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # This will tell boto that when it uploads files to S3, it should set properties 
 # on them so that when S3 serves them, it'll include some HTTP headers in the 
