@@ -22,9 +22,9 @@ class UploadedImages(Model):
 
   DEGREES = (
     (0, '0 degrees'),
-    (270, '90 degrees (clockwise)'),
+    (270, '90 degrees (90 degrees clockwise)'),
     (180, '180 degrees (upside-down)'),
-    (90, '270 degrees (counter-clockwise)'),
+    (90, '270 degrees (90 degrees counter-clockwise)'),
   )
 
   # Define the user image input fields in the Django admin panel
@@ -103,7 +103,18 @@ class UploadedImages(Model):
     # if the maximum number of iterations has been reached, return.
     if picture.size < size_target:
       print("{} is already less than {} bytes".format(picture, size_target))
-      # need to rotate image here
+
+      # It's possible that the picture file size is already less than the target
+      # file size, but we can still rotate the image here.
+      im = Image.open(picture)
+      if rotation == 90:
+        im = im.transpose(Image.ROTATE_90)
+      elif rotation == 180:
+        im = im.transpose(Image.ROTATE_180)
+      elif rotation == 270:
+        im = im.transpose(Image.ROTATE_270)
+      im_buffer = BytesIO()
+      im.save(im_buffer, "JPEG", quality=quality)
       return im_buffer
     if i > max_i:
       print("Max iterations have been reached for {}".format(picture))
