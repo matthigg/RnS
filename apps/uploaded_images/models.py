@@ -22,9 +22,9 @@ class UploadedImages(Model):
 
   DEGREES = (
     (0, '0 degrees'),
-    (90, '90 degrees (clockwise)'),
+    (270, '90 degrees (clockwise)'),
     (180, '180 degrees (upside-down)'),
-    (270, '270 degrees (counter-clockwise)'),
+    (90, '270 degrees (counter-clockwise)'),
   )
 
   # Define the user image input fields in the Django admin panel
