@@ -9,11 +9,15 @@ def send_email(request_POST):
 
   # Replace sender@example.com with your "From" address.
   # This address must be verified with Amazon SES.
-  SENDER = "<{}>".format(os.environ['RNS_EMAIL_SENDER'])
+  # SENDER = "<{}>".format(os.environ['RNS_EMAIL_SENDER'])
+  SENDER = "Sender Name <mhh129@gmail.com>"
+
 
   # Replace recipient@example.com with a "To" address. If your account 
   # is still in the sandbox, this address must be verified.
-  RECIPIENT = "{}".format(email)
+  # RECIPIENT = "{}".format(email)
+  RECIPIENT = "mhh129@gmail.com"
+
 
   # If necessary, replace us-west-2 with the AWS Region you're using for Amazon SES.
   AWS_REGION = "us-east-1"
@@ -104,7 +108,7 @@ def send_email(request_POST):
       )
   except ClientError as e:
     print("=== ERROR: ", e.response['Error']['Message'])
-    print("=== RECIPIENT: ", RECIPIENT, " === RNS_EMAIL_SENDER: ", RNS_EMAIL_SENDER)
+    # print("=== RECIPIENT: ", RECIPIENT, " === RNS_EMAIL_SENDER: ", RNS_EMAIL_SENDER)
   else:
     print("Email sent! Message ID:"),
     print(response['MessageId'])
