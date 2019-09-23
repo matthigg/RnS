@@ -189,16 +189,19 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_DEFAULT_ACL = None
 
 # Tell the staticfiles app to use S3Boto3 storage when writing the collected 
-# static files (when you run `collectstatic`).
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# static files (when you run `collectstatic`). This setting is used during
+# initial testing -- the S3Boto3Storage class is later subclassed by two custom
+# classes in the custom_storages.py file, located in the root directory (the same
+# directory as manage.py).
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # Use custom storage classes for both static and media file storage by 
 # subclassing S3Boto3Storage. This creates 2 subdirectories in the S3 bucket and
 # conveniently separates static & media files
 # https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
 
-# STATICFILES_LOCATION = 'static'
-# STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
-# MEDIAFILES_LOCATION = 'media'
-# DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
