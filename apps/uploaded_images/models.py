@@ -99,13 +99,10 @@ class UploadedImages(Model):
   # iterations will allow (close, but not perfect, could be memoized I think).
   def binary_search(self, picture, size_target, dimension, dimension_factor, rotation, i, max_i, quality, L, R, im_buffer=None):
 
-    # If the size of the picture (in bytes) is already below the size_target, or 
-    # if the maximum number of iterations has been reached, return.
+    # It's possible that the picture file size is already less than the target
+    # file size, but we can still rotate the image here. 
     if picture.size < size_target:
       print("{} is already less than {} bytes".format(picture, size_target))
-
-      # It's possible that the picture file size is already less than the target
-      # file size, but we can still rotate the image here.
       im = Image.open(picture)
       if rotation == 90:
         im = im.transpose(Image.ROTATE_90)
@@ -116,6 +113,8 @@ class UploadedImages(Model):
       im_buffer = BytesIO()
       im.save(im_buffer, "JPEG", quality=quality)
       return im_buffer
+
+    # If the maximum number of iterations have been reached, return
     if i > max_i:
       print("Max iterations have been reached for {}".format(picture))
       return im_buffer
