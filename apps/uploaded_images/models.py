@@ -20,7 +20,7 @@ class UploadedImages(Model):
     ('Driveways', 'Driveways'),
     ('Fences', 'Fences'),
     ('Graffiti_Removal', 'Graffiti Removal'),
-    ('House_Wash', 'House_Wash'),
+    ('House_Wash', 'House Wash'),
     ('Sidewalks', 'Sidewalks'),
   )
 

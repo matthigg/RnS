@@ -27,24 +27,23 @@
     }
   }
 
-  // Section 1, Before & After Pictures
+  // Our Work, Before & After Pictures
   $baap-transition: 0.2s ease-out;
-
-  & .section-1-row {
+  & .our-work-subsection-heading {
+    color: $quinary-color;
+    font-size: calc(1.25rem + 0.5vw);
+    padding-top: calc(1rem + 1vw);
+    text-align: center;
+  }
+  & .our-work-row {
     background-color: $primary-color;
     justify-content: space-around;
     padding: 0 calc(1rem + 3vw);
-    & .section-1-subsection-heading {
-      color: $quinary-color;
-      font-size: calc(1.25rem + 0.5vw);
-      padding-top: calc(1rem + 1vw);
-      text-align: center;
-    }
-    & .section-1-baap-group {
+    & .our-work-baap-group {
       display: flex;
       justify-content: space-around;
       margin: calc(1rem + 1vw) 0;
-      & .section-1-baap-group-before {
+      & .our-work-baap-group-before {
         border: calc(0.15rem + 0.15vw) solid $secondary-color;
         margin-right: calc(0.25rem + 0.25vw);
         position: relative;
@@ -71,7 +70,7 @@
           z-index: 1;
         }
       }
-      & .section-1-baap-group-after {
+      & .our-work-baap-group-after {
         border: calc(0.15rem + 0.15vw) solid $secondary-color;
         position: relative;
         &::after {
@@ -108,8 +107,8 @@
       }
       &:hover {
         cursor: pointer;
-        & .section-1-baap-group-after,
-        & .section-1-baap-group-before {
+        & .our-work-baap-group-after,
+        & .our-work-baap-group-before {
           &::after {
             height: 100%;
             opacity: 1;
@@ -120,7 +119,7 @@
         }
       }
     }
-    & .section-1-single-image-wrapper {
+    & .our-work-single-image-wrapper {
       border: calc(0.15rem + 0.15vw) solid $secondary-color;
       position: relative;
       display: flex;
