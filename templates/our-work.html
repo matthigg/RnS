@@ -23,6 +23,16 @@
         Your Property To New Condition!</h1>
     </section>
 
+    <!-- BAAP, Houses -->
+    {% if Houses %}
+      <h2 class="our-work-subsection-heading">Houses</h2>
+      <section class="row our-work-row">
+        {% for image in Houses %}
+          {% include 'our-work-baap.html' %}
+        {% endfor %}
+      </section>
+    {% endif %}
+
     <!-- Section 1, Before & After Pictures (BAAP), House Wash -->
     <section class="row section-1-row">
       <h2 class="section-1-subsection-heading">House Wash</h2>
