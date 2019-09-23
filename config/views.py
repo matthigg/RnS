@@ -37,6 +37,15 @@ def our_work(request):
       'After_Picture_Description': img.After_Picture_Description,
       'After_Picture': img.After_Picture,
     })
+  
+  # Do the same thing as above, but for single images as opposed to before &
+  # after images
+  for single_img in UploadedSingleImages.objects.all():
+    context[img.Category].append({
+      'Category': img.Category,
+      'Single_Picture_Description': img.Single_Picture_Description,
+      'Single_Picture': img.Single_Picture,
+    })
 
   return render(request, 'our-work.html', context)
 

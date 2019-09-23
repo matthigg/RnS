@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.contact_form',
     'apps.uploaded_images',
+    'apps.uploaded_single_images',
     'storages',
 ]
 
