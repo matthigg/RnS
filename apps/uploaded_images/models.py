@@ -80,8 +80,11 @@ class UploadedImages(Model):
     # 
     # Syntax:
     # InMemoryUploadedFile(file, field_name, name, content_type, size, charset)
-    im_resized_file = InMemoryUploadedFile(im_buffer, None, picture.name, 'image/jpeg', im_buffer.getbuffer().nbytes, None)
-    return im_resized_file
+    if im_buffer is not None:
+      im_resized_file = InMemoryUploadedFile(im_buffer, None, picture.name, 'image/jpeg', im_buffer.getbuffer().nbytes, None)
+      return im_resized_file
+    else:
+      return picture
 
   # Binary search algorithm that uses 3 pointers -- L, R, and quality, where the
   # value for quality is used by PIL's *.save() method to set the quality of an
@@ -94,7 +97,7 @@ class UploadedImages(Model):
     # if the maximum number of iterations has been reached, return.
     if picture.size < size_target:
       print("{} is already less than {} bytes".format(picture, size_target))
-      return 
+      return im_buffer
     if i > max_i:
       print("Max iterations have been reached for {}".format(picture))
       return im_buffer
