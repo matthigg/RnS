@@ -20,17 +20,24 @@ class UploadedImages(Model):
     ('Stain_Removal', 'Stain Removal'),
   )
 
+  DEGREES = (
+    (0, '0 degrees'),
+    (90, '90 degrees (clockwise)'),
+    (180, '180 degrees (upside-down)'),
+    (270, '270 degrees (counter-clockwise)'),
+  )
+
   # Define the user image input fields in the Django admin panel
-  Category                      = CharField(max_length=64, null=True, choices=CATEGORIES, default='None')
+  Category                      = CharField(max_length=64, null=True, choices=CATEGORIES, default='No_Category')
   Before_Picture_Description    = CharField(max_length=64, null=True, blank=True)
   Before_Picture_Size_kB        = IntegerField(null=True, default=140)
   Before_Picture_Max_Dimension  = IntegerField(null=True, default=768)
-  Before_Picture_Rotation       = IntegerField(null=True, default=0)
+  Before_Picture_Rotation       = IntegerField(null=True, choices=DEGREES, default=0)
   Before_Picture                = ImageField(upload_to='images/', null=True)
   After_Picture_Description     = CharField(max_length=64, null=True, blank=True)
   After_Picture_Size_kB         = IntegerField(null=True, default=140)
   After_Picture_Max_Dimension   = IntegerField(null=True, default=768)
-  After_Picture_Rotation        = IntegerField(null=True, default=0)
+  After_Picture_Rotation        = IntegerField(null=True, choices=DEGREES, default=0)
   After_Picture                 = ImageField(upload_to='images/', null=True)
   date                          = DateTimeField(auto_now_add=True, null=True)
   Notes                         = TextField(max_length = 200, null=True, blank=True)
@@ -106,7 +113,12 @@ class UploadedImages(Model):
     # named 'im_buffer'.
     if quality <= 95:
       im = Image.open(picture)
-      im = im.rotate(rotation)
+      if rotation == 90:
+        im = im.transpose(Image.ROTATE_90)
+      elif rotation == 180:
+        im = im.transpose(Image.ROTATE_180)
+      elif rotation == 270:
+        im = im.transpose(Image.ROTATE_270)
       new_dimension = (dimension[0] * dimension_factor, dimension[1] * dimension_factor)
       im.thumbnail(new_dimension, Image.ANTIALIAS)
       # new_prefix = '{}x-'.format(dimension_factor)
@@ -121,12 +133,12 @@ class UploadedImages(Model):
         print('Resulting image size is LESS    than {} bytes:'.format(size_target), im_buffer.getbuffer().nbytes, 'bytes, quality =', quality)
         L = quality
         quality = int((R + L) / 2)
-        return self.binary_search(picture, size_target, dimension, dimension_factor, i + 1, max_i, quality, L, R, im_buffer)
+        return self.binary_search(picture, size_target, dimension, dimension_factor, rotation, i + 1, max_i, quality, L, R, im_buffer)
       elif im_buffer.getbuffer().nbytes > size_target:
         print('Resulting image size is GREATER than {} bytes:'.format(size_target), im_buffer.getbuffer().nbytes, 'bytes, quality =', quality)
         R = quality
         quality = int((R + L) / 2)
-        return self.binary_search(picture, size_target, dimension, dimension_factor, i + 1, max_i, quality, L, R, im_buffer)
+        return self.binary_search(picture, size_target, dimension, dimension_factor, rotation, i + 1, max_i, quality, L, R, im_buffer)
       else:
         print('Resulting image size EQUALS {} bytes:'.format(size_target), im_buffer.getbuffer().nbytes, 'bytes, quality =', quality)
         return im_buffer
