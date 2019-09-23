@@ -103,7 +103,7 @@ def send_email(request_POST):
         Source=SENDER,
       )
   except ClientError as e:
-    print("=== ERROR: User input an invalid email address,", e.response['Error']['Message'])
+    print("=== ERROR: Someone is still in the SES Sandbox,", e.response['Error']['Message'])
   else:
     print("Email sent! Message ID:"),
     print(response['MessageId'])
