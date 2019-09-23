@@ -14,14 +14,10 @@ class UploadedImages(Model):
   # Define image categories to be displayed under in ~/templates/our-work.html
   CATEGORIES = (
     ('No_Category', 'Select a Category'),
-    ('Concrete_and_Brick', 'Concrete & Brick'),
-    ('Decks', 'Decks'),
-    ('Deck_Staining', 'Deck Staining'),
-    ('Driveways', 'Driveways'),
-    ('Fences', 'Fences'),
-    ('Graffiti_Removal', 'Graffiti Removal'),
     ('House_Wash', 'House Wash'),
-    ('Sidewalks', 'Sidewalks'),
+    ('Wood_Restoring', 'Wood Restoring'),
+    ('Oxidation_Removal', 'Oxidation Removal'),
+    ('Stain_Removal', 'Stain Removal'),
   )
 
   # Define the user image input fields in the Django admin panel

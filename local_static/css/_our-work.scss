@@ -30,8 +30,11 @@
   // Our Work, Before & After Pictures
   $baap-transition: 0.2s ease-out;
   & .our-work-subsection-heading {
+    background-color: $primary-color;
     color: $quinary-color;
     font-size: calc(1.25rem + 0.5vw);
+    font-style: italic;
+    margin-bottom: none;
     padding-top: calc(1rem + 1vw);
     text-align: center;
   }
