@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from apps.contact_form.forms import CreateContactForm
+from apps.uploaded_images.models import UploadedImages
 
 
 form = CreateContactForm
