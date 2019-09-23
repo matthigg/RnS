@@ -96,20 +96,20 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
 
     # SQLite3
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 
     # Postgres
-    # 'default': {
-    #   'ENGINE':   'django.db.backends.postgresql',
-    #   'NAME':     os.environ['RNS_DATABASE_NAME'],
-    #   'USER':     os.environ['RNS_DATABASE_USER'],
-    #   'PASSWORD': os.environ['RNS_DATABASE_PASSWORD'],
-    #   'HOST':     os.environ['RNS_DATABASE_HOST'],
-    #   'PORT':     os.environ['RNS_DATABASE_PORT'],
-    # }
+    'default': {
+      'ENGINE':   'django.db.backends.postgresql',
+      'NAME':     os.environ['RNS_DATABASE_NAME'],
+      'USER':     os.environ['RNS_DATABASE_USER'],
+      'PASSWORD': os.environ['RNS_DATABASE_PASSWORD'],
+      'HOST':     os.environ['RNS_DATABASE_HOST'],
+      'PORT':     os.environ['RNS_DATABASE_PORT'],
+    }
 }
 
 
@@ -145,7 +145,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Django's built-in message object that can be used to sent success messages,
+# Django's built-in message object that can be used to send success messages,
 # warnings, alerts, etc.
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
