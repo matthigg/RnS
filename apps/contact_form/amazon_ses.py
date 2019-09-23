@@ -104,6 +104,8 @@ def send_email(request_POST):
       )
   except ClientError as e:
     print("=== ERROR: Someone is still in the SES Sandbox,", e.response['Error']['Message'])
+    print("=== RECIPIENT: ", RECIPIENT)
+    print("=== RNS_EMAIL_SENDER: ", RNS_EMAIL_SENDER)
   else:
     print("Email sent! Message ID:"),
     print(response['MessageId'])
