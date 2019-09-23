@@ -25,10 +25,12 @@ class UploadedImages(Model):
   Before_Picture_Description    = CharField(max_length=64, null=True, blank=True)
   Before_Picture_Size_kB        = IntegerField(null=True, default=140)
   Before_Picture_Max_Dimension  = IntegerField(null=True, default=768)
+  Before_Picture_Rotation       = IntegerField(null=True, default=0)
   Before_Picture                = ImageField(upload_to='images/', null=True)
   After_Picture_Description     = CharField(max_length=64, null=True, blank=True)
   After_Picture_Size_kB         = IntegerField(null=True, default=140)
   After_Picture_Max_Dimension   = IntegerField(null=True, default=768)
+  After_Picture_Rotation        = IntegerField(null=True, default=0)
   After_Picture                 = ImageField(upload_to='images/', null=True)
   date                          = DateTimeField(auto_now_add=True, null=True)
   Notes                         = TextField(max_length = 200, null=True, blank=True)
@@ -39,13 +41,13 @@ class UploadedImages(Model):
     if self.Before_Picture:
 
       # Note: this will overwrite the image uploaded by the user
-      self.Before_Picture = self.resize_image(self.Before_Picture, self.Before_Picture_Size_kB, self.Before_Picture_Max_Dimension)
-      self.After_Picture = self.resize_image(self.After_Picture, self.After_Picture_Size_kB, self.After_Picture_Max_Dimension)
+      self.Before_Picture = self.resize_image(self.Before_Picture, self.Before_Picture_Size_kB, self.Before_Picture_Max_Dimension, self.Before_Picture_Rotation)
+      self.After_Picture = self.resize_image(self.After_Picture, self.After_Picture_Size_kB, self.After_Picture_Max_Dimension, self.After_Picture_Rotation)
     super(UploadedImages, self).save(*args, **kwargs)
 
   # Resize user-uploaded images
   # https://stackoverflow.com/questions/3723220/how-do-you-convert-a-pil-image-to-a-django-file
-  def resize_image(self, picture, size_target, max_dim):
+  def resize_image(self, picture, size_target, max_dim, rotation):
 
     # Set variables for the *.binary_search() method
     size_target = size_target * 1000   # Ideal image size (in bytes)
@@ -63,7 +65,7 @@ class UploadedImages(Model):
     # the FOR loop here anyways so I know where to start if I implement multiple
     # dimensions later in order to support responsive images.
     for dimension in dimensions:
-      im_buffer = self.binary_search(picture, size_target, dimension, dimension_factor, i, max_i, quality, L, R)
+      im_buffer = self.binary_search(picture, size_target, dimension, dimension_factor, rotation, i, max_i, quality, L, R)
 
     # When files are uploaded in Django they are stored in a dictionary called
     # request.FILES as "UploadedFile" objects (or a subclass like 
@@ -80,6 +82,7 @@ class UploadedImages(Model):
       im_resized_file = InMemoryUploadedFile(im_buffer, None, picture.name, 'image/jpeg', im_buffer.getbuffer().nbytes, None)
       return im_resized_file
     else:
+      print("{} was not altered".format(picture))
       return picture
 
   # Binary search algorithm that uses 3 pointers -- L, R, and quality, where the
@@ -87,12 +90,13 @@ class UploadedImages(Model):
   # image -- in an attempt to find a quality that produces an image with an file
   # size that is as close to the value for size_target as max_i number of
   # iterations will allow (close, but not perfect, could be memoized I think).
-  def binary_search(self, picture, size_target, dimension, dimension_factor, i, max_i, quality, L, R, im_buffer=None):
+  def binary_search(self, picture, size_target, dimension, dimension_factor, rotation, i, max_i, quality, L, R, im_buffer=None):
 
     # If the size of the picture (in bytes) is already below the size_target, or 
     # if the maximum number of iterations has been reached, return.
     if picture.size < size_target:
       print("{} is already less than {} bytes".format(picture, size_target))
+      # need to rotate image here
       return im_buffer
     if i > max_i:
       print("Max iterations have been reached for {}".format(picture))
@@ -102,6 +106,7 @@ class UploadedImages(Model):
     # named 'im_buffer'.
     if quality <= 95:
       im = Image.open(picture)
+      im = im.rotate(rotation)
       new_dimension = (dimension[0] * dimension_factor, dimension[1] * dimension_factor)
       im.thumbnail(new_dimension, Image.ANTIALIAS)
       # new_prefix = '{}x-'.format(dimension_factor)

@@ -63,6 +63,15 @@
       </section>
     {% endif %}
 
+    <!-- BAAP, No Category/Other Images -->
+    {% if No_Category %}
+      <h2 class="our-work-subsection-heading">Other Images</h2>
+      <section class="row our-work-row">
+        {% for image in No_Category %}
+          {% include 'our-work-baap.html' %}
+        {% endfor %}
+      </section>
+    {% endif %}
 
     <!-- Section 1, BAAP Modals -->
     {% include 'modals/our-work-modals.html' %}
