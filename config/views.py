@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from apps.contact_form.forms import CreateContactForm
 from apps.uploaded_images.models import UploadedImages
+from apps.uploaded_single_images.models import UploadedSingleImages
 
 
 form = CreateContactForm
@@ -42,9 +43,9 @@ def our_work(request):
   # after images
   for single_img in UploadedSingleImages.objects.all():
     context[img.Category].append({
-      'Category': img.Category,
-      'Single_Picture_Description': img.Single_Picture_Description,
-      'Single_Picture': img.Single_Picture,
+      'Category': single_img.Category,
+      'Single_Picture_Description': single_img.Single_Picture_Description,
+      'Single_Picture': single_img.Single_Picture,
     })
 
   return render(request, 'our-work.html', context)

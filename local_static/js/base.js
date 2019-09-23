@@ -103,26 +103,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.modal-baap-group-img-after').src = after_src
   }
 
-//   // Modals, single images
-//   const single_images = document.querySelectorAll('.section-1-single-image-group');
-//   single_images.forEach((single_image) => {
-//     single_image.addEventListener('click', (event) => {
-//       let element = event.target;
-//       if (element.dataset.id === undefined) {
-//         while (element.parentNode) {
-//           element = element.parentNode;
-//           if (element.dataset.id) {
-//             assignModalSingleImage(element.dataset.src, element.dataset.id);
-//             return
-//           } 
-//         }
-//       } else {
-//         assignModalSingleImage(element.dataset.src, element.dataset.id);
-//       }
-//     })
-//   })
-//   function assignModalSingleImage(src, id) {
-//     const img_src = src + '/' + id + '.jpg';
-//     document.querySelector('.modal-single-image-element').src = img_src;
-//   }
+  // Modals, single images
+  const single_images = document.querySelectorAll('.our-work-single-image-wrapper');
+  single_images.forEach((single_image) => {
+    single_image.addEventListener('click', (event) => {
+      let element = event.target;
+      if (element.dataset.category === undefined) {
+        while (element.parentNode) {
+          element = element.parentNode;
+          if (element.dataset.category) {
+            console.log(element.dataset.category)
+            assignModalSingleImage(element.dataset.singleSrc);
+            return
+          } 
+        }
+      } else {
+        console.log(element.dataset.category)
+        assignModalSingleImage(element.dataset.singleSrc);
+      }
+    })
+  })
+  function assignModalSingleImage(single_src) {
+    console.log(single_src)
+    document.querySelector('.modal-single-image-element').src = single_src;
+  }
 })

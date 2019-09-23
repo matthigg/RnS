@@ -5,11 +5,11 @@ import os, sys
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from io import BytesIO
 
-class UploadedImages(Model):
+class UploadedSingleImages(Model):
 
   # Fix pluralization in admin panel
   class Meta:
-    verbose_name_plural = "Uploaded Images" 
+    verbose_name_plural = "Uploaded Single Images" 
 
   # Define image categories to be displayed under in ~/templates/our-work.html
   CATEGORIES = (
@@ -29,28 +29,22 @@ class UploadedImages(Model):
 
   # Define the user image input fields in the Django admin panel
   Category                      = CharField(max_length=64, null=True, choices=CATEGORIES, default='No_Category')
-  Before_Picture_Description    = CharField(max_length=64, null=True, blank=True)
-  Before_Picture_Size_kB        = IntegerField(null=True, default=140)
-  Before_Picture_Max_Dimension  = IntegerField(null=True, default=768)
-  Before_Picture_Rotation       = IntegerField(null=True, choices=DEGREES, default=0)
-  Before_Picture                = ImageField(upload_to='images/', null=True)
-  After_Picture_Description     = CharField(max_length=64, null=True, blank=True)
-  After_Picture_Size_kB         = IntegerField(null=True, default=140)
-  After_Picture_Max_Dimension   = IntegerField(null=True, default=768)
-  After_Picture_Rotation        = IntegerField(null=True, choices=DEGREES, default=0)
-  After_Picture                 = ImageField(upload_to='images/', null=True)
+  Single_Picture_Description    = CharField(max_length=64, null=True, blank=True)
+  Single_Picture_Size_kB        = IntegerField(null=True, default=140)
+  Single_Picture_Max_Dimension  = IntegerField(null=True, default=768)
+  Single_Picture_Rotation       = IntegerField(null=True, choices=DEGREES, default=0)
+  Single_Picture                = ImageField(upload_to='images/', null=True)
   date                          = DateTimeField(auto_now_add=True, null=True)
   Notes                         = TextField(max_length = 200, null=True, blank=True)
 
   # Add some extra functionality to the default behavior of the *.save() method
   # via the *.super() method
   def save(self, *args, **kwargs):
-    if self.Before_Picture:
+    if self.Single_Picture:
 
       # Note: this will overwrite the image uploaded by the user
-      self.Before_Picture = self.resize_image(self.Before_Picture, self.Before_Picture_Size_kB, self.Before_Picture_Max_Dimension, self.Before_Picture_Rotation)
-      self.After_Picture = self.resize_image(self.After_Picture, self.After_Picture_Size_kB, self.After_Picture_Max_Dimension, self.After_Picture_Rotation)
-    super(UploadedImages, self).save(*args, **kwargs)
+      self.Single_Picture = self.resize_image(self.Single_Picture, self.Single_Picture_Size_kB, self.Single_Picture_Max_Dimension, self.Single_Picture_Rotation)
+    super(UploadedSingleImages, self).save(*args, **kwargs)
 
   # Resize user-uploaded images
   # https://stackoverflow.com/questions/3723220/how-do-you-convert-a-pil-image-to-a-django-file

@@ -1,14 +1,29 @@
-<div class="our-work-baap-group" 
-  data-category="{{ image.Category }}" 
-  data-before-src="{{ image.Before_Picture.url }}"
-  data-after-src="{{ image.After_Picture.url }}"
-  data-toggle="modal" 
-  data-target="#modal-baap-template"
->
-  <div class="our-work-baap-group-before">
-    <img src="{{ image.Before_Picture.url }}" alt="{{ image.Before_Picture_Description }}" />
+{% if image.Before_Picture %}
+  <div class="our-work-baap-group" 
+    data-category="{{ image.Category }}" 
+    data-before-src="{{ image.Before_Picture.url }}"
+    data-after-src="{{ image.After_Picture.url }}"
+    data-toggle="modal" 
+    data-target="#modal-baap-template"
+  >
+    <div class="our-work-baap-group-before">
+      <img src="{{ image.Before_Picture.url }}" alt="{{ image.Before_Picture_Description }}" />
+    </div>
+    <div class="our-work-baap-group-after">
+      <img src="{{ image.After_Picture.url }}" alt="{{ image.After_Picture_Description }}" />
+    </div>
   </div>
-  <div class="our-work-baap-group-after">
-    <img src="{{ image.After_Picture.url }}" alt="{{ image.After_Picture_Description }}" />
+{% endif %}
+
+{% if image.Single_Picture %}
+  <div class="our-work-single-image-wrapper" 
+    data-category="{{ image.Category }}" 
+    data-single-src="{{ image.Single_Picture.url }}"
+    data-toggle="modal" 
+    data-target="#modal-single-image-template"
+  >
+    <div>
+      <img src="{{ image.Single_Picture.url }}" alt="{{ image.Single_Picture_Description }}" />
+    </div>
   </div>
-</div>
+{% endif %}
