@@ -20,9 +20,24 @@ def contact(request):
   context = { 'form': form, }
   return render(request, 'contact.html', context)
 
-# Our Work Page
+# Our Work
 def our_work(request):
-  context = {}
+
+  # When someone visits our-work.html, query the database for anything in the
+  # table represented by the UploadedImages model and store it in the context{}
+  # dictionary, which contains key:value pairs where each value is a list of
+  # objects that represent each image in a category represented by the 'key'
+  from collections import defaultdict
+  context = defaultdict(list)
+  for img in UploadedImages.objects.all():
+    context[img.Category].append({
+      'Category': img.Category,
+      'Before_Picture_Description': img.Before_Picture_Description,
+      'Before_Picture': img.Before_Picture,
+      'After_Picture_Description': img.After_Picture_Description,
+      'After_Picture': img.After_Picture,
+    })
+
   return render(request, 'our-work.html', context)
 
 # Services Page
