@@ -8,29 +8,26 @@ import requests
 
 def submit(request):
 
-  print('=== request', request)
-
   # reCAPTCHA v3
-  # r = requests.post(
-  #   'https://www.google.com/recaptcha/api/siteverify', 
-  #   params={
-  #     'response': request.POST["g-recaptcha-response"],
-  #     'secret': os.environ["RNS_RECAPTCHA_SECRET_KEY"],
-  #   }
-  # )
+  if os.environ["RNS_LOCAL_HOST"] == 'None' or RNS_LOCAL_HOST_IP == ['None']:
+    print('=== recaptcha fires')
+    r = requests.post(
+      'https://www.google.com/recaptcha/api/siteverify', 
+      params={
+        'response': request.POST["g-recaptcha-response"],
+        'secret': os.environ["RNS_RECAPTCHA_SECRET_KEY"],
+      }
+    )
 
-  # Return 'error' message if reCAPTCHA fails
-  # if r.json()['success'] == False:
-  #     messages.add_message(request, messages.INFO, 'There was an error with your request. We appologize for the inconvenience.')
-  #     print('=== Error: reCAPTCHA verification failed.')
-  #     return redirect('contact')
+    Return 'error' message if reCAPTCHA fails
+    if r.json()['success'] == False:
+        messages.add_message(request, messages.INFO, 'There was an error with your request. We appologize for the inconvenience.')
+        print('=== Error: reCAPTCHA verification failed.')
+        return redirect('contact')
 
-  print('=== request.method', request.method)
-
-  # Continue with normal POST request if reCAPTCHA succeeds
+  # Continue with normal POST request if reCAPTCHA succeeds or you are in local
+  # development
   if request.method == "POST":
-
-    print('=== request.method == "POST"', request.method)
 
     # Send email via Amazon SES
     send_email(request.POST)
