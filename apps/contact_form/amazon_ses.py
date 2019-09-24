@@ -1,6 +1,6 @@
 def send_email(request_POST):
 
-  print('========== request_POST', request_POST)
+  print('=== send_email(request_POST)', request_POST)
 
   import boto3
   from botocore.exceptions import ClientError
