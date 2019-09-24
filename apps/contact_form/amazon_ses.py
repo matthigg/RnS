@@ -19,15 +19,13 @@ def send_email(request_POST):
   if 'deck_cleaning' in request_POST:
     deck_cleaning = 'yes'
 
-  # Replace sender@example.com with your "From" address.
-  # This address must be verified with Amazon SES.
-  # SENDER = "<{}>".format(os.environ['RNS_EMAIL_SENDER'])
-  SENDER = "Sender Name <mhh129@gmail.com>"
+  # Replace sender@example.com with your "From" address. This address must be 
+  # verified with Amazon SES.
+  SENDER = "<{}>".format(os.environ['RNS_EMAIL_SENDER'])
 
-  # Replace recipient@example.com with a "To" address. If your account 
-  # is still in the sandbox, this address must be verified.
-  # RECIPIENT = "{}".format(email)
-  RECIPIENT = "mhh129@gmail.com"
+  # Replace recipient@example.com with a "To" address. If your account is still 
+  # in the sandbox, this address must be verified.
+  RECIPIENT = "{}".format(email)
 
 
   # If necessary, replace us-west-2 with the AWS Region you're using for Amazon SES.
@@ -92,27 +90,29 @@ def send_email(request_POST):
   client = boto3.client('ses',region_name=AWS_REGION)
 
   # Try to send a response email to the person who submitted the contact form.
-  try:
-    response = client.send_email(
-      Destination={
-        'ToAddresses': [
-          RECIPIENT,
-        ],
-      },
-      Message={
-        'Body': {
-            'Html': { 'Charset': CHARSET, 'Data': BODY_HTML, },
-            'Text': { 'Charset': CHARSET, 'Data': BODY_TEXT, },
-          },
-          'Subject': { 'Charset': CHARSET, 'Data': SUBJECT, },
-        },
-        Source=SENDER,
-      )
-  except ClientError as e:
-    print("=== ERROR: ", e.response['Error']['Message'])
-  else:
-    print("Email sent! Message ID:"),
-    print(response['MessageId'])
+  # Note - this won't work unless the Amazon SES account is out of the sandbox,
+  # or the recipient address has been verified.
+  # try:
+  #   response = client.send_email(
+  #     Destination={
+  #       'ToAddresses': [
+  #         RECIPIENT,
+  #       ],
+  #     },
+  #     Message={
+  #       'Body': {
+  #           'Html': { 'Charset': CHARSET, 'Data': BODY_HTML, },
+  #           'Text': { 'Charset': CHARSET, 'Data': BODY_TEXT, },
+  #         },
+  #         'Subject': { 'Charset': CHARSET, 'Data': SUBJECT, },
+  #       },
+  #       Source=SENDER,
+  #     )
+  # except ClientError as e:
+  #   print("=== ERROR: ", e.response['Error']['Message'])
+  # else:
+  #   print("Email sent! Message ID:"),
+  #   print(response['MessageId'])
 
   # Try to send the email to the website owner.
   try:
