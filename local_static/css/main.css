@@ -87,14 +87,14 @@
   padding: 0;
 }
 
-.about-page .rns-logo {
+.about-page .rns-logo-jpg {
   display: block;
   margin: auto;
   width: 20vw;
 }
 
 @media (max-width: 767.98px) {
-  .about-page .rns-logo {
+  .about-page .rns-logo-jpg {
     width: 70vw;
     margin-bottom: calc(2rem + 1vw);
   }
@@ -353,6 +353,8 @@
 
 .contact-form .contact-form-input input[type='checkbox'] {
   display: inline;
+  height: calc(1rem + 0.25vw);
+  width: auto;
 }
 
 .contact-form .contact-form-input label[for='id_number_of_stories'],
