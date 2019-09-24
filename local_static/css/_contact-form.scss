@@ -119,8 +119,6 @@ $contact-form-border: 2px solid $secondary-color;
     text-align: left;
     & input[type='checkbox'] {
       display: inline;
-      height: calc(1rem + 0.1vw);
-      width: max-content;
     }
     & label[for='id_number_of_stories'],
     & label[for='id_type_of_exterior'],

@@ -353,10 +353,6 @@
 
 .contact-form .contact-form-input input[type='checkbox'] {
   display: inline;
-  height: calc(1rem + 0.1vw);
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 
 .contact-form .contact-form-input label[for='id_number_of_stories'],
@@ -383,6 +379,7 @@
 
 @font-face {
   font-family: "Stencil";
+  font-display: swap;
   src: url("fonts/STENCIL.woff") format("woff");
 }
 
