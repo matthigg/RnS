@@ -8,8 +8,6 @@ import requests
 
 def submit(request):
 
-  print('========== request: ', request)
-
   # reCAPTCHA v3
   r = requests.post(
     'https://www.google.com/recaptcha/api/siteverify', 
@@ -27,6 +25,8 @@ def submit(request):
 
   # Continue with normal POST request if reCAPTCHA succeeds
   if request.method == "POST":
+
+    print('========== request.method == "POST"', request.method)
 
     # Send email via Amazon SES
     send_email(request.POST)
