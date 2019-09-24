@@ -69,7 +69,7 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 MIDDLEWARE = [
-    'django.middleware.gzip.GZipMiddleware',
+    # 'django.middleware.gzip.GZipMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -185,11 +185,11 @@ AWS_STORAGE_BUCKET_NAME = 'rns-static-and-media-files'
 AWS_S3_REGION_NAME = 'us-east-1'
 AWS_ACCESS_KEY_ID = os.environ['RNS_AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['RNS_AWS_SECRET_ACCESS_KEY']
-# AWS_CLOUDFRONT_DOMAIN = 'dczid2jsu4h09.cloudfront.net'
+AWS_CLOUDFRONT_DOMAIN = 'd164wwi3uz99zn.cloudfront.net'
 
 # Tell django-storages the domain to use to refer to static files.
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-# AWS_S3_CUSTOM_DOMAIN = AWS_CLOUDFRONT_DOMAIN
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = AWS_CLOUDFRONT_DOMAIN
 
 # While using S3Boto3Storage this setting is supposed to allow static and media
 # files (or whatever is stored in S3 via Boto3) to inherit the bucket's ACL, or
