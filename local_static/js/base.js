@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'event_label': 'User clicked the call button to make a phone call',
       'value': '50',
       'event_callback': function() {
-        window.open('tel:+1-804-258-0403', '_self')
+        window.open('tel:+1-602-301-2584', '_self')
       },
     });
   })
