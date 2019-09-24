@@ -11,31 +11,42 @@
 <style scoped>
 
   .rns-logo {
-    height: 100%;
-    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 12vw;
+    height: 12vw;
+    width: 12vw;
+  }
+
+  @media (max-width: 767.98px) {
+    .rns-logo {
+      background-size: auto 12vh;
+      height: 12vh;
+      width: 12vh;
+    }
   }
 
   @media (min-width: 0px) {
     .rns-logo.show-image {
-      background-image:                   url({% static 'img/deck-cleaning-and-restoration-01/140kb/1x-deck-cleaning-and-restoration-01-320.png' %});
-      background-image: -webkit-image-set(url({% static 'img/deck-cleaning-and-restoration-01/140kb/1x-deck-cleaning-and-restoration-01-320.webp' %}) 1x, url({% static 'img/deck-cleaning-and-restoration-01/140kb/2x-deck-cleaning-and-restoration-01-320.webp' %}) 2x);  
-      background-image:         image-set(url({% static 'img/deck-cleaning-and-restoration-01/140kb/1x-deck-cleaning-and-restoration-01-320.png' %}) 1x, url({% static 'img/deck-cleaning-and-restoration-01/140kb/2x-deck-cleaning-and-restoration-01-320.png' %}) 2x);
+      background-image:                   url({% static 'img/rns-logo-01/340kb/1x-rns-logo-01-160.png' %});
+      background-image: -webkit-image-set(url({% static 'img/rns-logo-01/340kb/1x-rns-logo-01-160.webp' %}) 1x, url({% static 'img/rns-logo-01/340kb/2x-rns-logo-01-160.webp' %}) 2x);  
+      background-image:         image-set(url({% static 'img/rns-logo-01/340kb/1x-rns-logo-01-160.png' %}) 1x, url({% static 'img/rns-logo-01/340kb/2x-rns-logo-01-160.png' %}) 2x);
+    }
+  }
+
+  @media (min-width: 320px) {
+    .rns-logo.show-image {
+      background-image:                   url({% static 'img/rns-logo-01/340kb/1x-rns-logo-01-320.png' %});
+      background-image: -webkit-image-set(url({% static 'img/rns-logo-01/340kb/1x-rns-logo-01-320.webp' %}) 1x, url({% static 'img/rns-logo-01/340kb/2x-rns-logo-01-320.webp' %}) 2x);  
+      background-image:         image-set(url({% static 'img/rns-logo-01/340kb/1x-rns-logo-01-320.png' %}) 1x, url({% static 'img/rns-logo-01/340kb/2x-rns-logo-01-320.png' %}) 2x);
     }
   }
 
   @media (min-width: 576px) {
     .rns-logo.show-image {
-      background-image:                   url({% static 'img/deck-cleaning-and-restoration-01/140kb/1x-deck-cleaning-and-restoration-01-576.png' %});
-      background-image: -webkit-image-set(url({% static 'img/deck-cleaning-and-restoration-01/140kb/1x-deck-cleaning-and-restoration-01-576.webp' %}) 1x, url({% static 'img/deck-cleaning-and-restoration-01/140kb/2x-deck-cleaning-and-restoration-01-576.webp' %}) 2x);  
-      background-image:         image-set(url({% static 'img/deck-cleaning-and-restoration-01/140kb/1x-deck-cleaning-and-restoration-01-576.png' %}) 1x, url({% static 'img/deck-cleaning-and-restoration-01/140kb/2x-deck-cleaning-and-restoration-01-576.png' %}) 2x);
-    }
-  }
-
-  @media (min-width: 768px) {
-    .rns-logo.show-image {
-      background-image:                   url({% static 'img/deck-cleaning-and-restoration-01/140kb/1x-deck-cleaning-and-restoration-01-768.png' %});
-      background-image: -webkit-image-set(url({% static 'img/deck-cleaning-and-restoration-01/140kb/1x-deck-cleaning-and-restoration-01-768.webp' %}) 1x, url({% static 'img/deck-cleaning-and-restoration-01/140kb/2x-deck-cleaning-and-restoration-01-768.webp' %}) 2x);  
-      background-image:         image-set(url({% static 'img/deck-cleaning-and-restoration-01/140kb/1x-deck-cleaning-and-restoration-01-768.png' %}) 1x, url({% static 'img/deck-cleaning-and-restoration-01/140kb/2x-deck-cleaning-and-restoration-01-768.png' %}) 2x);
+      background-image:                   url({% static 'img/rns-logo-01/340kb/1x-rns-logo-01-576.png' %});
+      background-image: -webkit-image-set(url({% static 'img/rns-logo-01/340kb/1x-rns-logo-01-576.webp' %}) 1x, url({% static 'img/rns-logo-01/340kb/2x-rns-logo-01-576.webp' %}) 2x);  
+      background-image:         image-set(url({% static 'img/rns-logo-01/340kb/1x-rns-logo-01-576.png' %}) 1x, url({% static 'img/rns-logo-01/340kb/2x-rns-logo-01-576.png' %}) 2x);
     }
   }
 

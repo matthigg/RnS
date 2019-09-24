@@ -8,14 +8,6 @@ $navbar-transition: 0.2s ease-in;
   position: fixed;
   width: 100%;
   z-index: 10;
-  & .rns-logo {
-    @media (max-width: 767.98px) {
-      height: 15vh;
-    }
-    @media (min-width: 768px) {
-      height: 20vh;
-    }
-  }
   & .navbar-phone {
     @media (max-width: 1059.96px) {
       display: none;

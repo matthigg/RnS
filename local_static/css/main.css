@@ -774,18 +774,6 @@
   z-index: 10;
 }
 
-@media (max-width: 767.98px) {
-  .navbar .rns-logo {
-    height: 15vh;
-  }
-}
-
-@media (min-width: 768px) {
-  .navbar .rns-logo {
-    height: 20vh;
-  }
-}
-
 @media (max-width: 1059.96px) {
   .navbar .navbar-phone {
     display: none;
