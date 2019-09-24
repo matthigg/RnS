@@ -31,15 +31,11 @@
   </div>
 </nav>
 
-<a href="tel:{{ phone_number }}">
-  <button class="navbar-call-now align-items-center">
-    {% include 'svg/phone.svg' %} &nbsp;
-    Call Now
-  </button>
-</a>
+<button class="nav-call-now align-items-center">
+  {% include 'svg/phone.svg' %} &nbsp;
+  Call Now
+</button>
 
-<a href="{% url 'contact' %}">
-  <button class="navbar-free-quote navbar-free-quote-minimized-false" style="display: none;">
-    <span class="navbar-free-quote-large-text">Free Estimate</span>
-  </button>
-</a>
+<button class="nav-free-estimate nav-free-estimate-maximized" data-url="{% url 'contact' %}" style="display: none;">
+  Free Estimate
+</button>

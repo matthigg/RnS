@@ -901,13 +901,13 @@
 }
 
 @media (min-width: 768px) {
-  .navbar-call-now {
+  .nav-call-now {
     display: none;
   }
 }
 
 @media (max-width: 767.98px) {
-  .navbar-call-now {
+  .nav-call-now {
     background-color: #020305;
     border: 2px solid #F3D333;
     border-radius: calc(1rem + 0.1vw);
@@ -929,36 +929,36 @@
     width: max-content;
     z-index: 1;
   }
-  .navbar-call-now .icon-phone {
+  .nav-call-now .icon-phone {
     height: calc(1.5rem + 0.25vw);
   }
-  .navbar-call-now .icon-phone circle {
+  .nav-call-now .icon-phone circle {
     fill: white;
   }
-  .navbar-call-now .icon-phone path {
+  .nav-call-now .icon-phone path {
     fill: #020305;
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
   }
-  .navbar-call-now:hover {
+  .nav-call-now:hover {
     background-color: #F3D333;
     color: white;
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
   }
-  .navbar-call-now:hover .icon-phone path {
+  .nav-call-now:hover .icon-phone path {
     fill: #F3D333;
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
   }
-  .navbar-call-now:focus {
+  .nav-call-now:focus {
     outline: none;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
 }
 
-.navbar-free-quote {
+.nav-free-estimate {
   background-color: #020305;
   border: 2px solid #F3D333;
   border-radius: calc(1rem + 0.1vw);
@@ -977,28 +977,28 @@
   z-index: 1;
 }
 
-.navbar-free-quote:hover {
+.nav-free-estimate:hover {
   background-color: #F3D333;
   color: white;
 }
 
-.navbar-free-quote:focus {
+.nav-free-estimate:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 @media (max-width: 767.98px) {
-  .navbar-free-quote {
+  .nav-free-estimate {
     top: calc(25vh - 5vh);
   }
 }
 
 @media (min-width: 768px) {
-  .navbar-free-quote.navbar-free-quote-minimized-false {
+  .nav-free-estimate.nav-free-estimate-maximized {
     top: calc(30vh + 5vh);
   }
-  .navbar-free-quote.navbar-free-quote-minimized-true {
+  .nav-free-estimate.nav-free-estimate-minimized {
     top: calc(30vh);
   }
 }
