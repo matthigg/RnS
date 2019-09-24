@@ -1,5 +1,7 @@
 def send_email(request_POST):
 
+  print(request_POST)
+
   import boto3
   from botocore.exceptions import ClientError
   import os
