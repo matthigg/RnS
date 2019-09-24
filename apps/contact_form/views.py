@@ -20,6 +20,7 @@ def submit(request):
   # Return 'error' message if reCAPTCHA fails
   if r.json()['success'] == False:
       messages.add_message(request, messages.INFO, 'There was an error with your request. We appologize for the inconvenience.')
+      print('=== Error: reCAPTCHA verification failed.')
       return redirect('contact')
 
   # Continue with normal POST request if reCAPTCHA succeeds
@@ -58,5 +59,6 @@ def submit(request):
     # Django stores error messages in form.error. Create & send a new
     # blank empty form when there's an error.
     else: 
-      form = CreateContactForm() 
-    return render(request, 'contact', { 'form': form })
+      messages.add_message(request, messages.INFO, 'There was an error with your request. We appologize for the inconvenience.')
+      print("=== Error: contact form submission was invalid.")
+      return redirect('contact')

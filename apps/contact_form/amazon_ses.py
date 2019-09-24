@@ -4,14 +4,25 @@ def send_email(request_POST):
   from botocore.exceptions import ClientError
   import os
 
-  # Unpack variables
+  # Unpack and/or assign variables
   name, email, phone, message = request_POST['name'], request_POST['email'], request_POST['phone'], request_POST['message']
+  number_of_stories, type_of_exterior = request_POST['number_of_stories'], request_POST['type_of_exterior']
+  fence_cleaning, surface_cleaning, soft_wash, outdoor_stain_removal, deck_cleaning = 'no', 'no', 'no', 'no', 'no'
+  if 'fence_cleaning' in request_POST:
+    fence_cleaning = 'yes'
+  if 'surface_cleaning' in request_POST:
+    surface_cleaning = 'yes'
+  if 'soft_wash' in request_POST:
+    soft_wash = 'yes'
+  if 'outdoor_stain_removal' in request_POST:
+    outdoor_stain_removal = 'yes'
+  if 'deck_cleaning' in request_POST:
+    deck_cleaning = 'yes'
 
   # Replace sender@example.com with your "From" address.
   # This address must be verified with Amazon SES.
   # SENDER = "<{}>".format(os.environ['RNS_EMAIL_SENDER'])
   SENDER = "Sender Name <mhh129@gmail.com>"
-
 
   # Replace recipient@example.com with a "To" address. If your account 
   # is still in the sandbox, this address must be verified.
@@ -35,7 +46,14 @@ def send_email(request_POST):
               "Name: {} "
               "Email: {} "
               "Phone: {} "
-              "Message: {} ".format(name, email, phone, message)
+              "Message: {} "
+              "Number of stories: {}"
+              "Type of exterior: {}" 
+              "Fence cleaning: {}"
+              "Surface cleaning: {}"
+              "Soft wash: {}"
+              "Outdoor stain removal: {}"
+              "Deck cleaning: {}".format(name, email, phone, message, number_of_stories, type_of_exterior, fence_cleaning, surface_cleaning, soft_wash, outdoor_stain_removal, deck_cleaning)
               )
               
   # The HTML body of the email.
@@ -55,10 +73,17 @@ def send_email(request_POST):
       Email: {}<br>
       Phone: {}<br>
       Address: {}<br>
+      Number of stories: {}<br>
+      Type of exterior: {}<br> 
+      Fence cleaning: {}<br>
+      Surface cleaning: {}<br>
+      Soft wash: {}<br>
+      Outdoor stain removal: {}<br>
+      Deck cleaning: {}<br>
     </p>
   </body>
   </html>
-              """.format(name, email, phone, message)
+              """.format(name, email, phone, message, number_of_stories, type_of_exterior, fence_cleaning, surface_cleaning, soft_wash, outdoor_stain_removal, deck_cleaning)
 
   # The character encoding for the email.
   CHARSET = "UTF-8"
