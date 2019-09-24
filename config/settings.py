@@ -40,7 +40,11 @@ X_FRAME_OPTIONS                 = 'DENY'
 
 DEBUG = os.environ['RNS_DEBUG'] == '1'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+  'rspressurewashing.com',
+  'www.rspressurewashing.com',
+  'Rns-env.vesk4ixifq.us-east-1.elasticbeanstalk.com',
+]
 
 if os.environ['RNS_LOCAL_HOST'] == 'localhost':
   ALLOWED_HOSTS.append(os.environ['RNS_LOCAL_HOST_IP'])
