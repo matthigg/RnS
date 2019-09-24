@@ -3,7 +3,8 @@
 # that only image files and Python scripts (like this one) exist in the
 # current directory.
 #
-# The created images are in JPEG format.
+# The created images can be in something like 30 different formats. This script
+# supports .jpg, .webp, and .png.
 #
 # If an image file size is already lower than the size_limit then the functions
 # resize_1x() and resize_2x() should return and not perform any resizing 
@@ -21,11 +22,21 @@
 #   ... note: the 1st and 2nd arguments will have a forward slash '/' prepended
 #   and appended to them so make sure to -not- include forward slashes before or
 #   after the 1st and 2nd arguments.
+#
+# Both .jpg and .webp images can have their file size adjusted via the "quality"
+# parameter, which (I think) results in lossy compression.
+#
+# However, .png images are unaffected by the "quality" parameter because .png
+# is a lossless image format, so instead it uses a "compression_level" parameter
+# as well as a boolean "optimize" parameter that, if set to true, overrides the
+# "compression_level" parameter.
+# 
+#   1. https://pillow.readthedocs.io/en/5.1.x/handbook/image-file-formats.html#png
 
 from PIL import Image
 import os, sys
 
-size_target = 140000  # Ideal image size (in bytes)
+size_target = 340000  # Ideal image size (in bytes)
 rotation = 0        # Number of degrees of counter-clockwise rotation
 i = 1                 # Starting iteration (1-indexed instead of 0-indexed)
 max_iterations = 7    # Number of iterations to find optimized quality value
@@ -39,9 +50,9 @@ quality = 50          # Starting quality value
 # dimensions_blur = [50]
 # dimensions_blur_tuples = []
 # dimensions_1x = [320, 576, 768, 992, 1200, 1440]
-dimensions_1x = [320, 576, 768]
+dimensions_1x = [160, 320, 576]
 dimensions_1x_tuples = []
-dimensions_2x = [320, 576, 768]
+dimensions_2x = [160, 320, 576]
 dimensions_2x_tuples = []
 def create_dimensions_list_of_tuples(dimensions, dimensions_tuples):
   for value in dimensions:
@@ -88,7 +99,16 @@ def resize_img(file, name, dimension, dimension_factor, rotation, file_ext, file
     im.thumbnail(new_dimension, Image.ANTIALIAS)
     new_prefix = '{}x-'.format(dimension_factor)
     new_name = new_prefix + name + '-' + str(dimension[0]) + file_ext
-    im.save(file_output_path + new_name, file_ext_alias, quality=quality)
+
+    # Use the "quality" parameter for .jpg and .webp files
+    if file_ext == '.jpg' or file_ext == '.webp':
+      im.save(file_output_path + new_name, file_ext_alias, quality=quality)
+
+    # Use the "optimize" parameter for .png files, which negates the need for the
+    # binary search algorithm
+    if file_ext == '.png':
+      im.save(file_output_path + new_name, file_ext_alias, optimize=True)
+      return
 
     # Use L and R pointers to move closer to a value for the 'quality' 
     # parameter that produces an image with a file size, in bytes, as close 
@@ -161,10 +181,12 @@ for root, dirs, files in os.walk(file_input_path, topdown=False):
 
       # Create 1x JPEG and WEBP images
       for dimension in dimensions_1x_tuples:
-        create_resized_img(file, name, dimension, 1, rotation, '.jpg', 'JPEG', i, quality, L, R)
+        # create_resized_img(file, name, dimension, 1, rotation, '.jpg', 'JPEG', i, quality, L, R)
         create_resized_img(file, name, dimension, 1, rotation, '.webp', 'WEBP', i, quality, L, R)
+        create_resized_img(file, name, dimension, 1, rotation, '.png', 'PNG', i, quality, L, R)
 
       # Create 2x JPEG and WEBP images
       for dimension in dimensions_2x_tuples:
-        create_resized_img(file, name, dimension, 2, rotation, '.jpg', 'JPEG', i, quality, L, R)
+        # create_resized_img(file, name, dimension, 2, rotation, '.jpg', 'JPEG', i, quality, L, R)
         create_resized_img(file, name, dimension, 2, rotation, '.webp', 'WEBP', i, quality, L, R)
+        create_resized_img(file, name, dimension, 2, rotation, '.png', 'PNG', i, quality, L, R)

@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-md navbar-minimized-false">
   <a href="{% url 'index' %}">
-    <img class="rns-logo" src="{% static 'img/R&S-logo.png' %}" alt="R & S Logo">
+    {% include 'responsive_images/ri-logo.html' %}
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-rns" aria-controls="navbar-rns" aria-expanded="false" aria-label="Toggle navigation">
     <img class="icon-hamburger" src="{% static 'img/icon-hamburger.svg' %}">
