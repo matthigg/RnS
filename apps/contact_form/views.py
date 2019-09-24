@@ -19,7 +19,7 @@ def submit(request):
       }
     )
 
-    Return 'error' message if reCAPTCHA fails
+    # Return 'error' message if reCAPTCHA fails
     if r.json()['success'] == False:
         messages.add_message(request, messages.INFO, 'There was an error with your request. We appologize for the inconvenience.')
         print('=== Error: reCAPTCHA verification failed.')
