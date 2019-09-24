@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.remove('navbar-minimized-false');
 
       // Reposition/move up the 'free estimate' button
-      nav_free_estimate.classList.add('nav-free-quote-minimized');
-      nav_free_estimate.classList.remove('nav-free-quote-maximized');
+      nav_free_estimate.classList.add('nav-free-estimate-minimized');
+      nav_free_estimate.classList.remove('nav-free-estimate-maximized');
     } else {
 
       // Expand the navbar
@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.remove('navbar-minimized-true');
 
       // Reposition/move down the 'free estimate' button
-      nav_free_estimate.classList.add('nav-free-quote-maximized');
-      nav_free_estimate.classList.remove('nav-free-quote-minimized');
+      nav_free_estimate.classList.add('nav-free-estimate-maximized');
+      nav_free_estimate.classList.remove('nav-free-estimate-minimized');
     }
   })
 
