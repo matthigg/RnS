@@ -8,6 +8,8 @@ import requests
 
 def submit(request):
 
+  print('========== request: ', request)
+
   # reCAPTCHA v3
   r = requests.post(
     'https://www.google.com/recaptcha/api/siteverify', 
