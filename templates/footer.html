@@ -20,47 +20,23 @@
       </div>
     </div>
 
-    <div class="col-lg-4 footer-google-maps-wrapper">
-      <iframe class="footer-google-maps"></iframe>
-    </div>
-
     <!-- Lazy-load the footer map -->
     <script>
-
-      // This object contains information about the element that is being watched
-      let options = {
-        root: document.querySelector(".footer-google-maps-wrapper"),
-        rootMargin: '0px',
-        threshold: 0.1
-      }
-
-      // The observer goes here. Its first argument is a callback function which
-      // is the business-end of this API.
-      //
-      // The second argument, named 'options', is eventually passed to an
-      // instance of the IntersectionObserver class' *.observe() method, and its 
-      // 'root' attribute points to the HTML DOM element being watched that 
-      // triggers the first argument, ie. the callback function.
-      let observer = new IntersectionObserver(showMap, options);
-
-      // Triggering this function is the end result of using the Intersection
-      // Observer API, in an attempt to get a better rating on Google PageSpeed
-      // Insights
       function showMap() {
         document.querySelector('.footer-google-maps').src = "https://www.google.com/maps/d/embed?mid=1M99_6FQvTVBMWYAtWUuxLdrTQzM&hl=en&z=9"
       }
-
-      // The target of the observer goes here
-      let target = document.querySelector('.footer-google-maps');
-      observer.observe(target);
-
     </script>
+
+    <div class="col-lg-4 footer-google-maps-wrapper">
+      <iframe class="footer-google-maps"></iframe>
+    </div>
 
     <!-- Flair -->
     <div class="col-lg-4 footer-flair">
       <a href="https://r-s-pressure-washing.business.site/">{% include 'svg/google.svg' %}</a>
       <a href="https://www.facebook.com/RandS0326/?ref=py_c">{% include 'svg/facebook.svg' %}</a>
     </div>
+
   </div>
 
   <!-- Back To Top & Copyright -->
