@@ -41,16 +41,25 @@
 <!-- reCAPTCHA V3 -->
 <script>
 
-  // Download reCAPTCHA after the DOM has loaded to improve page loading speed
-  document.addEventListener('DOMContentLoaded', () => {
-    getRecaptchaLibrary()
+  // Add event listeners to all contact form input fields that, when focused, 
+  // will trigger the download of the reCAPTCHA API library
+  document.querySelectorAll('input').forEach(input_field => {
+    input_field.addEventListener('focus', getRecaptchaLibrary)
   })
+
+  // Remove event listeners that trigger downloading the reCAPTCHA API library
+  function removeRecaptchaEventListeners() {
+    document.querySelectorAll('input').forEach(input_field => {
+      input_field.removeEventListener('focus', getRecaptchaLibrary)
+    })
+  }
 
   // Create a <script> tag used to download the reCAPTCHA API library
   function getRecaptchaLibrary() {
     const script = document.createElement('script')
     script.src = 'https://www.google.com/recaptcha/api.js?render=6Lfnk68UAAAAAEfWhU7T8utsv1d-gS5q292sXXI1&onload=onloadCallback'
     document.querySelector('.contact-form-wrapper').appendChild(script)
+    removeRecaptchaEventListeners()
   }
 
   // Execute this code as a part of a callback function appended to the end of
