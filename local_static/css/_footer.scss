@@ -77,15 +77,12 @@
     flex-direction: row;
     justify-content: space-around;
     margin: calc(1rem + 1vw) 0;
-    // & .footer-icon-flair-google {
-    //   height: calc(3.5rem + 2.5vw);
-    // }
-    // & .footer-icon-flair-facebook {
-    //   height: calc(3rem + 2.5vw);
-    // }
-    & .google-wrapper,
-    & .facebook-wrapper {
-      margin: calc(1rem);
+    & .footer-icon-flair-google {
+      height: calc(3.5rem + 2.5vw);
+      margin: calc(1rem + 1vw);
+    }
+    & .footer-icon-flair-facebook {
+      height: calc(3rem + 2.5vw);
     }
   }
 

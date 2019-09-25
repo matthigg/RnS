@@ -487,9 +487,13 @@
   margin: calc(1rem + 1vw) 0;
 }
 
-.footer .footer-flair .google-wrapper,
-.footer .footer-flair .facebook-wrapper {
-  margin: calc(1rem);
+.footer .footer-flair .footer-icon-flair-google {
+  height: calc(3.5rem + 2.5vw);
+  margin: calc(1rem + 1vw);
+}
+
+.footer .footer-flair .footer-icon-flair-facebook {
+  height: calc(3rem + 2.5vw);
 }
 
 .footer .footer-back-to-top-and-copyright {
