@@ -20,16 +20,28 @@
       </div>
     </div>
 
-    <!-- Lazy-load the footer map -->
-    <script>
-      function showMap() {
-        document.querySelector('.footer-google-maps').src = "https://www.google.com/maps/d/embed?mid=1M99_6FQvTVBMWYAtWUuxLdrTQzM&hl=en&z=9"
-      }
-    </script>
-
+    <!-- Footer map -->
     <div class="col-lg-4 footer-google-maps-wrapper">
       <iframe class="footer-google-maps"></iframe>
     </div>
+
+    <!-- Lazy-load the footer map -->
+    <script>
+
+      let options = {
+        root: document.querySelector('.footer-google-maps-wrapper'),
+        rootMargin: '0px',
+        threshold: 0.5
+      }
+      let observer = new IntersectionObserver(showMap, options)
+      let target = document.querySelector('.footer-google-maps')
+      observer.observe(target)
+
+      function showMap() {
+        console.log('=== showMap()')
+        document.querySelector('.footer-google-maps').src = "https://www.google.com/maps/d/embed?mid=1M99_6FQvTVBMWYAtWUuxLdrTQzM&hl=en&z=9"
+      }
+    </script>
 
     <!-- Flair -->
     <div class="col-lg-4 footer-flair">
