@@ -72,11 +72,12 @@
 
   // Flair
   .footer-flair {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     margin: calc(1rem + 1vw) 0;
-    & img {
-      margin: calc(0.1rem + 0.1vw);
-    }
     & .footer-icon-flair-google {
+      display: block;
       height: calc(3.5rem + 2.5vw);
     }
     & .footer-icon-flair-facebook {
