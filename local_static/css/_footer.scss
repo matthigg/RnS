@@ -74,7 +74,7 @@
   .footer-flair {
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     margin: calc(1rem + 1vw) 0;
     & .footer-icon-flair-google {
