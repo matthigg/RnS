@@ -40,8 +40,8 @@
     }
   }
 
-  // Phone
-  .footer-phone {
+  // Footer contact
+  .footer-contact {
     color: $primary-color;
     margin: calc(1rem + 1vw) 0;
     text-align: center;
@@ -64,9 +64,22 @@
         fill: $senary-color-rgba;
       }
     }
-    & .footer-hours-of-operation-text {
+    & .footer-paragraph-text {
       font-size: calc(1rem + 0.5vw);
       font-weight: 500;
+    }
+    & .icon-hours-of-operation {
+      height: calc(1.5rem + 1vw);
+      width: calc(1.5rem + 1vw);
+      & circle {
+        fill: none;
+        stroke: $primary-color;
+        stroke-width: 10px;
+      }
+      & line {
+        stroke: $primary-color;
+        stroke-width: 10px;
+      }
     }
   }
 

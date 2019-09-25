@@ -168,6 +168,24 @@
           }
         }
       }
+      & .section-2-text-paragraph-hours-of-operation {
+        font-size: calc(1rem + 0.5vw);
+        font-style: italic;
+        font-weight: 700;
+        & .icon-hours-of-operation {
+          height: calc(1.5rem + 1vw);
+          width: calc(1.5rem + 1vw);
+          & circle {
+            fill: none;
+            stroke: $quinary-color;
+            stroke-width: 10px;
+          }
+          & line {
+            stroke: $quinary-color;
+            stroke-width: 10px;
+          }
+        }
+      }
       & .section-2-text-paragraph-phone {
         font-size: calc(1rem + 1vw);
         font-style: italic;

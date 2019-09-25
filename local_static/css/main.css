@@ -164,7 +164,7 @@
 }
 
 .contact-page .section-1-row .section-1-text .section-1-text-paragraph-email {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(1rem + 0.5vw);
   font-style: italic;
   font-weight: 700;
 }
@@ -179,6 +179,28 @@
 
 .contact-page .section-1-row .section-1-text .section-1-text-paragraph-email .icon-email path {
   fill: white;
+}
+
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-hours-of-operation {
+  font-size: calc(1rem + 0.5vw);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-hours-of-operation .icon-hours-of-operation {
+  height: calc(1.5rem + 1vw);
+  width: calc(1.5rem + 1vw);
+}
+
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-hours-of-operation .icon-hours-of-operation circle {
+  fill: none;
+  stroke: #182013;
+  stroke-width: 10px;
+}
+
+.contact-page .section-1-row .section-1-text .section-1-text-paragraph-hours-of-operation .icon-hours-of-operation line {
+  stroke: #182013;
+  stroke-width: 10px;
 }
 
 .contact-page .section-1-row .section-1-text .section-1-text-paragraph-phone {
@@ -436,39 +458,55 @@
   font-family: "Stencil", "Segoe UI", sans-serif;
 }
 
-.footer .footer-phone {
+.footer .footer-contact {
   color: white;
   margin: calc(1rem + 1vw) 0;
   text-align: center;
 }
 
-.footer .footer-phone .footer-phone-headline {
+.footer .footer-contact .footer-phone-headline {
   font-size: calc(1rem + 1vw);
   font-style: italic;
   font-weight: 700;
 }
 
-.footer .footer-phone .footer-phone-text {
+.footer .footer-contact .footer-phone-text {
   font-size: calc(1.5rem + 1vw);
   font-style: italic;
   font-weight: 800;
 }
 
-.footer .footer-phone .icon-phone {
+.footer .footer-contact .icon-phone {
   height: calc(2rem + 1vw);
 }
 
-.footer .footer-phone .icon-phone circle {
+.footer .footer-contact .icon-phone circle {
   fill: white;
 }
 
-.footer .footer-phone .icon-phone path {
+.footer .footer-contact .icon-phone path {
   fill: rgba(2, 3, 5, 0.8);
 }
 
-.footer .footer-phone .footer-hours-of-operation-text {
+.footer .footer-contact .footer-paragraph-text {
   font-size: calc(1rem + 0.5vw);
   font-weight: 500;
+}
+
+.footer .footer-contact .icon-hours-of-operation {
+  height: calc(1.5rem + 1vw);
+  width: calc(1.5rem + 1vw);
+}
+
+.footer .footer-contact .icon-hours-of-operation circle {
+  fill: none;
+  stroke: white;
+  stroke-width: 10px;
+}
+
+.footer .footer-contact .icon-hours-of-operation line {
+  stroke: white;
+  stroke-width: 10px;
 }
 
 .footer .footer-flair {
@@ -752,6 +790,28 @@
 
 .index-page .section-2-row .section-2-text .section-2-text-paragraph-email .icon-email path {
   fill: white;
+}
+
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-hours-of-operation {
+  font-size: calc(1rem + 0.5vw);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-hours-of-operation .icon-hours-of-operation {
+  height: calc(1.5rem + 1vw);
+  width: calc(1.5rem + 1vw);
+}
+
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-hours-of-operation .icon-hours-of-operation circle {
+  fill: none;
+  stroke: #182013;
+  stroke-width: 10px;
+}
+
+.index-page .section-2-row .section-2-text .section-2-text-paragraph-hours-of-operation .icon-hours-of-operation line {
+  stroke: #182013;
+  stroke-width: 10px;
 }
 
 .index-page .section-2-row .section-2-text .section-2-text-paragraph-phone {
@@ -1628,6 +1688,28 @@
 
 .individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-email .icon-email path {
   fill: white;
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-hours-of-operation {
+  font-size: calc(1rem + 0.5vw);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-hours-of-operation .icon-hours-of-operation {
+  height: calc(1.5rem + 1vw);
+  width: calc(1.5rem + 1vw);
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-hours-of-operation .icon-hours-of-operation circle {
+  fill: none;
+  stroke: #182013;
+  stroke-width: 10px;
+}
+
+.individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-hours-of-operation .icon-hours-of-operation line {
+  stroke: #182013;
+  stroke-width: 10px;
 }
 
 .individual-service-page .section-1-row .section-1-text .section-1-text-paragraph-phone {
