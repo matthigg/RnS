@@ -27,18 +27,21 @@
 
     <!-- Lazy-load the footer map -->
     <script>
-
       let options = {
-        root: document.querySelector('.footer-google-maps-wrapper'),
+        root: null,
         rootMargin: '0px',
-        threshold: 0.5
+        threshold: 0
       }
-      let observer = new IntersectionObserver(showMap, options)
+      let observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            showMap()
+          }
+        })
+      }, options)
       let target = document.querySelector('.footer-google-maps')
       observer.observe(target)
-
       function showMap() {
-        console.log('=== showMap()')
         document.querySelector('.footer-google-maps').src = "https://www.google.com/maps/d/embed?mid=1M99_6FQvTVBMWYAtWUuxLdrTQzM&hl=en&z=9"
       }
     </script>
