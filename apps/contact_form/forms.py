@@ -26,13 +26,13 @@ class CreateContactForm(ModelForm):
       'message',
     ]
     widgets = {
-      'name': TextInput(attrs={'placeholder': 'name'}),
-      'email': TextInput(attrs={'placeholder': 'email'}),
+      'name': TextInput(attrs={'placeholder': 'name', 'aria-required': 'true'}),
+      'email': TextInput(attrs={'placeholder': 'email', 'aria-required': 'true'}),
       'phone': TextInput(attrs={'placeholder': 'phone'}),
       'fence_cleaning': CheckboxInput(attrs={'class': 'test'}),
       'surface_cleaning': CheckboxInput(attrs={'class': 'test'}),
       'soft_wash': CheckboxInput(attrs={'class': 'test'}),
       'outdoor_stain_removal': CheckboxInput(attrs={'class': 'test'}),
       'deck_cleaning': CheckboxInput(attrs={'class': 'test'}),
-      'message': Textarea(attrs={'placeholder': 'message'}),
+      'message': Textarea(attrs={'placeholder': 'message', 'aria-required': 'true'}),
     }
