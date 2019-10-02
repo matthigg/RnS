@@ -70,7 +70,7 @@ def send_email(request_POST):
       Name: {}<br>
       Email: {}<br>
       Phone: {}<br>
-      Address: {}<br>
+      Message: {}<br>
       Number of stories: {}<br>
       Type of exterior: {}<br> 
       Fence cleaning: {}<br>
@@ -116,7 +116,7 @@ def send_email(request_POST):
 
   # Try to send the email to the website owner.
   try:
-    
+
     print(os.environ['RNS_EMAIL_SENDER'],
           os.environ['RNS_EMAIL_SENDER_2'],)
 
