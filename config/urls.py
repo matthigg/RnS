@@ -32,8 +32,6 @@ sitemaps = {
   'static': StaticViewSitemap
 }
 
-print(sitemaps)
-
 urlpatterns = [
   path('admin/',    admin.site.urls),
   path('',          include('apps.contact_form.urls', namespace='contact_form')),

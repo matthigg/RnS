@@ -9,7 +9,7 @@ import requests
 def submit(request):
 
   # reCAPTCHA v3
-  if os.environ["RNS_LOCAL_HOST"] == 'None' or RNS_LOCAL_HOST_IP == ['None']:
+  if os.environ["RNS_LOCAL_HOST"] == 'None' or os.environ["RNS_LOCAL_HOST_IP"] == 'None':
     r = requests.post(
       'https://www.google.com/recaptcha/api/siteverify', 
       params={

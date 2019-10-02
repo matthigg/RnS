@@ -116,10 +116,15 @@ def send_email(request_POST):
 
   # Try to send the email to the website owner.
   try:
+    
+    print(os.environ['RNS_EMAIL_SENDER'],
+          os.environ['RNS_EMAIL_SENDER_2'],)
+
     response = client.send_email(
       Destination={
         'ToAddresses': [
           os.environ['RNS_EMAIL_SENDER'],
+          os.environ['RNS_EMAIL_SENDER_2'],
         ],
       },
       Message={
