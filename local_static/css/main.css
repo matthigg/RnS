@@ -1610,6 +1610,27 @@
   font-weight: 700;
 }
 
+.thanks-page .section-1-row .section-1-text-paragraph-hours-of-operation {
+  font-size: calc(1rem + 0.5vw);
+  font-weight: 700;
+}
+
+.thanks-page .section-1-row .section-1-text-paragraph-hours-of-operation .icon-hours-of-operation {
+  height: calc(1.5rem + 1vw);
+  width: calc(1.5rem + 1vw);
+}
+
+.thanks-page .section-1-row .section-1-text-paragraph-hours-of-operation .icon-hours-of-operation circle {
+  fill: none;
+  stroke: #182013;
+  stroke-width: 10px;
+}
+
+.thanks-page .section-1-row .section-1-text-paragraph-hours-of-operation .icon-hours-of-operation line {
+  stroke: #182013;
+  stroke-width: 10px;
+}
+
 .individual-service-page {
   padding: 0;
 }
