@@ -26,6 +26,7 @@ class ContactForm(models.Model):
   phone = models.CharField(max_length=24, default=None, blank=True)
   number_of_stories = models.CharField(max_length=6, choices=STORIES_CHOICES, default='Select', null=True)
   type_of_exterior = models.CharField(max_length=24, choices=EXTERIOR_CHOICES, default='Select', null=True)
+  square_footage = models.CharField(max_length=24)
   fence_cleaning = models.BooleanField(default=False, blank=True, null=True)
   surface_cleaning = models.BooleanField(default=False, blank=True, null=True)
   soft_wash = models.BooleanField(default=False, blank=True, null=True)

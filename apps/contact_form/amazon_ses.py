@@ -6,7 +6,7 @@ def send_email(request_POST):
 
   # Unpack and/or assign variables
   name, email, phone, message = request_POST['name'], request_POST['email'], request_POST['phone'], request_POST['message']
-  number_of_stories, type_of_exterior = request_POST['number_of_stories'], request_POST['type_of_exterior']
+  number_of_stories, type_of_exterior, square_footage = request_POST['number_of_stories'], request_POST['type_of_exterior'], request_POST['square_footage']
   fence_cleaning, surface_cleaning, soft_wash, outdoor_stain_removal, deck_cleaning = 'no', 'no', 'no', 'no', 'no'
   if 'fence_cleaning' in request_POST:
     fence_cleaning = 'yes'
@@ -27,7 +27,6 @@ def send_email(request_POST):
   # in the sandbox, this address must be verified.
   RECIPIENT = "{}".format(email)
 
-
   # If necessary, replace us-west-2 with the AWS Region you're using for Amazon SES.
   AWS_REGION = "us-east-1"
 
@@ -47,11 +46,12 @@ def send_email(request_POST):
               "Message: {} "
               "Number of stories: {}"
               "Type of exterior: {}" 
+              "Square footage: {}"
               "Fence cleaning: {}"
               "Surface cleaning: {}"
               "Soft wash: {}"
               "Outdoor stain removal: {}"
-              "Deck cleaning: {}".format(name, email, phone, message, number_of_stories, type_of_exterior, fence_cleaning, surface_cleaning, soft_wash, outdoor_stain_removal, deck_cleaning)
+              "Deck cleaning: {}".format(name, email, phone, message, number_of_stories, type_of_exterior, square_footage, fence_cleaning, surface_cleaning, soft_wash, outdoor_stain_removal, deck_cleaning)
               )
               
   # The HTML body of the email.
@@ -73,6 +73,7 @@ def send_email(request_POST):
       Message: {}<br>
       Number of stories: {}<br>
       Type of exterior: {}<br> 
+      Square footage: {}<br>
       Fence cleaning: {}<br>
       Surface cleaning: {}<br>
       Soft wash: {}<br>
@@ -81,7 +82,7 @@ def send_email(request_POST):
     </p>
   </body>
   </html>
-              """.format(name, email, phone, message, number_of_stories, type_of_exterior, fence_cleaning, surface_cleaning, soft_wash, outdoor_stain_removal, deck_cleaning)
+              """.format(name, email, phone, message, number_of_stories, type_of_exterior, square_footage, fence_cleaning, surface_cleaning, soft_wash, outdoor_stain_removal, deck_cleaning)
 
   # The character encoding for the email.
   CHARSET = "UTF-8"
