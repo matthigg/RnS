@@ -38,6 +38,8 @@ def submit(request):
     # object with a success message, and redirect to contact.html
     if form.is_valid():
 
+      print("=== SUCCESS 1")
+
       # Here, we want to add the user's IP address to the database. So far we've
       # gathered the user's contact form submission in an instance of the
       # ModelForm class, and named the instance 'form'.
@@ -56,7 +58,7 @@ def submit(request):
       # Save the complete submission
       form.save()
 
-      print("=== SUCCESS")
+      print("=== SUCCESS 2")
       # messages.add_message(request, messages.INFO, 'Your Message Has Been Sent!')
       return redirect('thanks')
 
