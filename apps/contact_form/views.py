@@ -63,4 +63,6 @@ def submit(request):
     else: 
       messages.add_message(request, messages.INFO, 'There was an error with your request. We appologize for the inconvenience.')
       print("=== Error: contact form submission was invalid.")
+      print("=== form:", form)
+      print("=== form.errors:", form.errors)
       return redirect('contact')
