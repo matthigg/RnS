@@ -55,6 +55,8 @@ def submit(request):
 
       # Save the complete submission
       form.save()
+
+      print("=== SUCCESS")
       # messages.add_message(request, messages.INFO, 'Your Message Has Been Sent!')
       return redirect('thanks')
 
@@ -62,6 +64,6 @@ def submit(request):
     # blank empty form when there's an error.
     else: 
       messages.add_message(request, messages.INFO, 'There was an error with your request. We appologize for the inconvenience.')
-      print("=== Error: contact form submission was invalid x.")
+      print("=== Error: contact form submission was invalid.")
       print("=== form.errors:", form.errors)
       return redirect('contact')
