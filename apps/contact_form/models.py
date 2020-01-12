@@ -22,7 +22,7 @@ class ContactForm(models.Model):
   class Meta:
     verbose_name_plural = "Contact Form Submissions"
   name = models.CharField(max_length=254)
-  email = models.EmailField(max_length=254)
+  email = models.CharField(max_length=254)
   phone = models.CharField(max_length=24, default=None, blank=True)
   number_of_stories = models.CharField(max_length=6, choices=STORIES_CHOICES, default='Select', null=True)
   type_of_exterior = models.CharField(max_length=24, choices=EXTERIOR_CHOICES, default='Select', null=True)
