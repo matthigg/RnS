@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='contactform',
             name='square_footage',
-            field=models.CharField(blank=True, default=None, max_length=24),
+            field=models.CharField(blank=True, default=None, null=True, max_length=24),
         ),
         migrations.AlterField(
             model_name='contactform',
