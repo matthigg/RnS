@@ -52,13 +52,17 @@ def submit(request):
       # resembles HTML to the output of an instance of the ModelForm class.
       form_submission = form.save(commit=False)
 
+      print("=== SUCCESS 2")
+
       # Add the IP address to an instance of the Model object
       form_submission.ip_address = request.META['REMOTE_ADDR']
+
+      print("=== SUCCESS 3")
 
       # Save the complete submission
       form.save()
 
-      print("=== SUCCESS 2")
+      print("=== SUCCESS 4")
       # messages.add_message(request, messages.INFO, 'Your Message Has Been Sent!')
       return redirect('thanks')
 
